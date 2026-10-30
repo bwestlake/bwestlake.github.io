@@ -20,7 +20,7 @@
           content="Understanding Artificial Intelligence: an MSc module portfolio documenting learning, assessments and personal reflection." />
 
     <title>
-        Understanding Artificial Intelligence |  ePortfolio
+        Understanding Artificial Intelligence | ePortfolio
     </title>
 
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -323,6 +323,7 @@
         ===================================== */
 
         .reflection-body {
+            min-width: 0;
             max-width: 73ch;
         }
 
@@ -335,6 +336,68 @@
 
         .reflection-body p:last-child {
             margin-bottom: 0;
+        }
+
+
+        /* =====================================
+           REFLECTION TWO-COLUMN LAYOUT
+        ===================================== */
+
+        .reflection-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.8fr)
+                minmax(220px, 0.8fr);
+
+            gap: 2.5em;
+            align-items: start;
+        }
+
+
+        /* =====================================
+           REFLECTION NOTES PANEL
+        ===================================== */
+
+        .reflection-notes {
+            background: var(--surface);
+            border-left: 3px solid var(--teal);
+            padding: 1.6em;
+        }
+
+        .reflection-notes h3 {
+            color: var(--navy);
+            font-size: 1.15rem;
+            line-height: 1.4;
+            margin: 0 0 1.5em;
+        }
+
+        .reflection-note {
+            margin-bottom: 1.5em;
+            padding-bottom: 1.5em;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .reflection-note:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .reflection-note h4 {
+            color: var(--teal);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin: 0 0 0.6em;
+        }
+
+        .reflection-note p {
+            color: var(--ink);
+            font-size: 0.87rem;
+            line-height: 1.75;
+            margin: 0;
         }
 
 
@@ -413,7 +476,20 @@
            RESPONSIVE DESIGN
         ===================================== */
 
-        @media (max-width: 980px) {
+        @media screen and (max-width: 1100px) {
+
+            .reflection-layout {
+                grid-template-columns: 1fr;
+                gap: 2em;
+            }
+
+            .reflection-body {
+                max-width: 73ch;
+            }
+
+        }
+
+        @media screen and (max-width: 980px) {
 
             .overview-layout {
                 grid-template-columns: 1fr;
@@ -426,7 +502,7 @@
 
         }
 
-        @media (max-width: 700px) {
+        @media screen and (max-width: 700px) {
 
             .artefact-grid {
                 grid-template-columns: 1fr;
@@ -442,6 +518,10 @@
 
             .module-meta {
                 gap: 0.5em 0.6em;
+            }
+
+            .reflection-notes {
+                padding: 1.35em;
             }
 
         }
@@ -524,10 +604,10 @@
                             </div>
 
 
-                            <!-- APPLIED PROJECT -->
+                            <!-- SELECTED PROJECT -->
 
                             <aside class="project-note"
-                                   aria-label="Applied project summary">
+                                   aria-label="Selected project summary">
 
                                 <p class="note-label">
                                     Selected project
@@ -783,103 +863,199 @@
                             Module Reflection
                         </h2>
 
-                        <div class="reflection-body">
 
-                            <p>
-                                This module helped me develop a much
-                                better understanding of artificial
-                                intelligence, particularly how machine
-                                learning can be applied to real-world
-                                business challenges. I found the focus
-                                on financial services especially
-                                interesting, as it allowed me to draw
-                                on my professional experience in banking
-                                technology and core banking transformation.
-                            </p>
+                        <!-- TWO-COLUMN REFLECTION LAYOUT -->
 
-                            <p>
-                                Balancing the module alongside full-time
-                                work was not always straightforward.
-                                I was never able to attend the seminars
-                                live and instead relied entirely on
-                                watching the recordings afterwards.
-                                While this gave me some flexibility,
-                                I did miss the opportunity to participate
-                                in discussions and ask questions as
-                                they arose. I also made a conscious
-                                decision to skip the Python exercises,
-                                partly because of time constraints and
-                                knowing that I would eventually need
-                                to develop these skills as part of the
-                                wider programme. Looking back, I probably
-                                would have benefited from spending more
-                                time on them, particularly as I became
-                                more familiar with the practical aspects
-                                of machine learning.
-                            </p>
+                        <div class="reflection-layout">
 
-                            <p>
-                                I also found the assignments quite
-                                challenging initially. Having not
-                                undertaken any academic writing for
-                                approximately ten years, it took some
-                                time to get back into the habit of
-                                researching, structuring arguments and
-                                referencing academic sources. I was
-                                therefore particularly pleased with
-                                my results, ultimately achieving a
-                                distinction in the module overall.
-                                This gave me more confidence in my
-                                ability to return to postgraduate
-                                study after such a long break.
-                            </p>
 
-                            <p>
-                                The AI Solution Implementation assessment
-                                was probably the most interesting part
-                                of the module, although it was also
-                                one of the more frustrating at times.
-                                I enjoyed experimenting with different
-                                machine learning algorithms in WEKA,
-                                but initially struggled with configuring
-                                some of the parameters. At one point,
-                                I incorrectly adjusted the settings
-                                for AdaBoost, which resulted in the
-                                model taking over an hour to run.
-                                Experiences like this helped me
-                                appreciate how much difference seemingly
-                                small configuration changes can make.
-                                More importantly, comparing different
-                                models for credit risk assessment
-                                reinforced that choosing an algorithm
-                                is not simply about achieving the
-                                highest accuracy. Explainability,
-                                fairness and regulatory considerations
-                                are equally important, particularly
-                                in banking.
-                            </p>
+                            <!-- EXISTING REFLECTION TEXT -->
 
-                            <p>
-                                This module has given me a stronger
-                                foundation in AI and a better appreciation
-                                of the challenges involved in applying
-                                it within a business environment.
-                                It has also highlighted areas where
-                                I need to develop further, particularly
-                                my practical programming skills.
-                                One of my main takeaways is that
-                                successfully implementing AI involves
-                                much more than selecting the right
-                                technology; it also requires appropriate
-                                governance, good-quality data and a
-                                clear understanding of the business
-                                problem being addressed. These are
-                                areas I am keen to explore further
-                                as I progress through the programme,
-                                particularly given my interest in
-                                how AI can support banking modernisation,
-                                risk management and operational efficiency.
-                            </p>
+                            <div class="reflection-body">
+
+                                <p>
+                                    This module helped me develop a much
+                                    better understanding of artificial
+                                    intelligence, particularly how machine
+                                    learning can be applied to real-world
+                                    business challenges. I found the focus
+                                    on financial services especially
+                                    interesting, as it allowed me to draw
+                                    on my professional experience in banking
+                                    technology and core banking transformation.
+                                </p>
+
+                                <p>
+                                    Balancing the module alongside full-time
+                                    work was not always straightforward.
+                                    I was never able to attend the seminars
+                                    live and instead relied entirely on
+                                    watching the recordings afterwards.
+                                    While this gave me some flexibility,
+                                    I did miss the opportunity to participate
+                                    in discussions and ask questions as
+                                    they arose. I also made a conscious
+                                    decision to skip the Python exercises,
+                                    partly because of time constraints and
+                                    knowing that I would eventually need
+                                    to develop these skills as part of the
+                                    wider programme. Looking back, I probably
+                                    would have benefited from spending more
+                                    time on them, particularly as I became
+                                    more familiar with the practical aspects
+                                    of machine learning.
+                                </p>
+
+                                <p>
+                                    I also found the assignments quite
+                                    challenging initially. Having not
+                                    undertaken any academic writing for
+                                    approximately ten years, it took some
+                                    time to get back into the habit of
+                                    researching, structuring arguments and
+                                    referencing academic sources. I was
+                                    therefore particularly pleased with
+                                    my results, ultimately achieving a
+                                    distinction in the module overall.
+                                    This gave me more confidence in my
+                                    ability to return to postgraduate
+                                    study after such a long break.
+                                </p>
+
+                                <p>
+                                    The AI Solution Implementation assessment
+                                    was probably the most interesting part
+                                    of the module, although it was also
+                                    one of the more frustrating at times.
+                                    I enjoyed experimenting with different
+                                    machine learning algorithms in WEKA,
+                                    but initially struggled with configuring
+                                    some of the parameters. At one point,
+                                    I incorrectly adjusted the settings
+                                    for AdaBoost, which resulted in the
+                                    model taking over an hour to run.
+                                    Experiences like this helped me
+                                    appreciate how much difference seemingly
+                                    small configuration changes can make.
+                                    More importantly, comparing different
+                                    models for credit risk assessment
+                                    reinforced that choosing an algorithm
+                                    is not simply about achieving the
+                                    highest accuracy. Explainability,
+                                    fairness and regulatory considerations
+                                    are equally important, particularly
+                                    in banking.
+                                </p>
+
+                                <p>
+                                    This module has given me a stronger
+                                    foundation in AI and a better appreciation
+                                    of the challenges involved in applying
+                                    it within a business environment.
+                                    It has also highlighted areas where
+                                    I need to develop further, particularly
+                                    my practical programming skills.
+                                    One of my main takeaways is that
+                                    successfully implementing AI involves
+                                    much more than selecting the right
+                                    technology; it also requires appropriate
+                                    governance, good-quality data and a
+                                    clear understanding of the business
+                                    problem being addressed. These are
+                                    areas I am keen to explore further
+                                    as I progress through the programme,
+                                    particularly given my interest in
+                                    how AI can support banking modernisation,
+                                    risk management and operational efficiency.
+                                </p>
+
+                            </div>
+
+
+                            <!-- =====================================
+                                 REFLECTION NOTES
+                            ===================================== -->
+
+                            <aside class="reflection-notes"
+                                   aria-labelledby="reflection-notes-title">
+
+                                <h3 id="reflection-notes-title">
+                                    Reflection Notes
+                                </h3>
+
+
+                                <!-- WHAT WENT WELL -->
+
+                                <div class="reflection-note">
+
+                                    <h4>
+                                        What Went Well
+                                    </h4>
+
+                                    <p>
+                                        Returning to academic writing
+                                        after ten years and achieving
+                                        a distinction in the module.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- BIGGEST CHALLENGE -->
+
+                                <div class="reflection-note">
+
+                                    <h4>
+                                        Biggest Challenge
+                                    </h4>
+
+                                    <p>
+                                        Balancing the module alongside
+                                        full-time work and getting to
+                                        grips with configuring machine
+                                        learning models in WEKA.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- AREA FOR DEVELOPMENT -->
+
+                                <div class="reflection-note">
+
+                                    <h4>
+                                        Area for Development
+                                    </h4>
+
+                                    <p>
+                                        Developing my Python programming
+                                        skills and gaining more practical
+                                        experience working with machine
+                                        learning models.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- KEY TAKEAWAY -->
+
+                                <div class="reflection-note">
+
+                                    <h4>
+                                        Key Takeaway
+                                    </h4>
+
+                                    <p>
+                                        Model performance is only one
+                                        consideration. Explainability,
+                                        fairness and governance are
+                                        equally important when applying
+                                        AI in financial services.
+                                    </p>
+
+                                </div>
+
+                            </aside>
 
                         </div>
 
@@ -909,6 +1085,7 @@
                     </header>
 
                     <ul>
+
 
                         <!-- HOME -->
 
@@ -1043,4 +1220,5 @@
     <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>

@@ -2271,3 +2271,31 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+
+/* Sidebar Navigation Icons */
+
+#menu .menu-icon {
+    display: inline-block;
+    width: 1.4em;
+    margin-right: 0.65em;
+    text-align: center;
+    color: #177f83;
+    font-size: 1em;
+    vertical-align: baseline;
+}
+
+/* Icon colour on hover */
+
+#menu a:hover .menu-icon,
+#menu .opener:hover .menu-icon {
+    color: #20344a;
+}
+
+/* Consistent menu spacing */
+
+#menu ul a,
+#menu ul span.opener {
+    line-height: 1.7;
+}
+

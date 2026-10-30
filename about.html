@@ -17,9 +17,9 @@
           content="width=device-width, initial-scale=1" />
 
     <meta name="description"
-          content="About Bernard (Ben) Westlake: banking technology, core banking transformation and artificial intelligence." />
+          content="Bernard (Ben) Westlake - Banking technology, core banking transformation and artificial intelligence." />
 
-    <title>About Me | Bernard (Ben) Westlake</title>
+    <title>Bernard (Ben) Westlake | About</title>
 
     <link rel="stylesheet"
           href="assets/css/main.css" />
@@ -52,10 +52,7 @@
             color: var(--ink);
         }
 
-        h1,
-        h2,
-        h3,
-        strong {
+        h1, h2, h3, strong {
             color: var(--navy);
         }
 
@@ -136,13 +133,6 @@
             gap: clamp(2em, 5vw, 4em);
         }
 
-        .profile-name {
-            font-size: clamp(1.65rem, 2.6vw, 2.2rem);
-            letter-spacing: -0.02em;
-            line-height: 1.25;
-            margin: 0 0 0.6em;
-        }
-
         .profile-role {
             font-size: 0.9rem;
             font-weight: 600;
@@ -213,35 +203,20 @@
             object-position: center top;
         }
 
-        .portrait-caption {
-            color: var(--muted);
-            font-size: 0.78rem;
-            margin: 0.85em 0 0;
-        }
-
 
         /* ========================================
-           CONTACT ICONS
+           LINKEDIN AND EMAIL ICONS
         ======================================== */
 
         .profile-contact {
-            margin-top: 1.5em;
-            padding-top: 1.3em;
-            border-top: 1px solid var(--line);
-        }
-
-        .profile-contact h3 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--navy);
-            letter-spacing: 0.02em;
-            margin: 0 0 1.1em;
-        }
-
-        .contact-icons {
             display: flex;
             align-items: center;
-            gap: 1.4em;
+            justify-content: flex-start;
+
+            gap: 1.3em;
+
+            margin-top: 1.2em;
+            padding: 0.35em 0;
         }
 
         .contact-icon {
@@ -249,18 +224,20 @@
             align-items: center;
             justify-content: center;
 
-            width: 1.5em;
-            height: 1.5em;
+            width: 1.4em;
+            height: 1.4em;
+
             padding: 0;
             margin: 0;
 
-            border: none;
-            border-bottom: none;
-            box-shadow: none;
-            background: transparent;
+            border: none !important;
+            border-bottom: none !important;
+            box-shadow: none !important;
+            background: transparent !important;
 
-            color: var(--teal);
-            font-size: 1.65rem;
+            color: var(--teal) !important;
+
+            font-size: 1.25rem;
             line-height: 1;
             text-decoration: none;
 
@@ -268,13 +245,11 @@
         }
 
         .contact-icon:hover {
-            color: var(--navy);
-            background: transparent;
-            border: none;
+            color: var(--navy) !important;
         }
 
         .contact-icon:focus-visible {
-            color: var(--navy);
+            color: var(--navy) !important;
             outline: 2px solid var(--teal);
             outline-offset: 5px;
         }
@@ -291,8 +266,10 @@
 
         .focus-list {
             display: grid;
+
             grid-template-columns:
                 repeat(3, minmax(0, 1fr));
+
             gap: 1.5em;
             margin-top: 2em;
         }
@@ -467,7 +444,6 @@
 </head>
 
 
-
 <body class="is-preload">
 
     <div id="wrapper">
@@ -486,7 +462,7 @@
 
                 <header id="header">
 
-                    <h1>About Me</h1>
+                    <h1>Bernard (Ben) Westlake</h1>
 
                     <p class="page-subtitle">
                         Banking Technology
@@ -499,12 +475,11 @@
                 </header>
 
 
-
                 <div id="page-content">
 
 
                     <!-- =====================================
-                         PROFESSIONAL PROFILE
+                         PROFESSIONAL BACKGROUND
                     ====================================== -->
 
                     <section class="content-section"
@@ -519,8 +494,8 @@
                             <div class="bio-copy">
 
 
-                                <h2 class="profile-name">
-                                    Bernard (Ben) Westlake
+                                <h2 class="section-heading">
+                                    Professional Background
                                 </h2>
 
 
@@ -578,7 +553,7 @@
                             ====================================== -->
 
                             <aside class="profile-aside"
-                                   aria-label="Profile and contact information">
+                                   aria-label="Profile photograph and contact links">
 
 
                                 <!-- PHOTO -->
@@ -607,15 +582,15 @@
 
                                     TO ADD YOUR OWN PHOTO:
 
-                                    Upload your photograph to
-                                    the images folder.
+                                    Upload a photograph into
+                                    the GitHub images folder.
 
-                                    Name the file:
+                                    Name it:
 
                                     profile.jpg
 
                                     Replace the placeholder DIV
-                                    with:
+                                    above with:
 
                                     <img src="images/profile.jpg"
                                          alt="Portrait of Bernard Westlake"
@@ -624,58 +599,47 @@
                                     -->
 
 
-                                    <figcaption class="portrait-caption">
-                                        Bernard (Ben) Westlake
-                                    </figcaption>
-
-
                                 </figure>
 
 
 
-                                <!-- CONTACT ICONS -->
+                                <!-- =====================================
+                                     LINKEDIN AND EMAIL ICONS
+                                ====================================== -->
 
-                                <div class="profile-contact">
-
-
-                                    <h3>Connect</h3>
-
-
-                                    <div class="contact-icons">
+                                <div class="profile-contact"
+                                     aria-label="Contact links">
 
 
-                                        <!-- LINKEDIN -->
+                                    <!-- LINKEDIN -->
 
-                                        <a href="https://www.linkedin.com/in/bernardwestlake/"
-                                           class="icon brands fa-linkedin-in contact-icon"
-                                           target="_blank"
-                                           rel="noopener noreferrer"
-                                           aria-label="View Bernard Westlake on LinkedIn"
-                                           title="LinkedIn">
+                                    <a href="https://www.linkedin.com/in/bernardwestlake/"
+                                       class="icon brands fa-linkedin-in contact-icon"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="View Bernard Westlake on LinkedIn"
+                                       title="LinkedIn">
 
-                                            <span class="label">
-                                                LinkedIn
-                                            </span>
+                                        <span class="label">
+                                            LinkedIn
+                                        </span>
 
-                                        </a>
+                                    </a>
 
 
 
-                                        <!-- EMAIL -->
+                                    <!-- EMAIL -->
 
-                                        <a href="mailto:Bernard.Westlake@gmail.com"
-                                           class="icon solid fa-envelope contact-icon"
-                                           aria-label="Send an email to Bernard Westlake"
-                                           title="Send an email">
+                                    <a href="mailto:Bernard.Westlake@gmail.com"
+                                       class="icon solid fa-envelope contact-icon"
+                                       aria-label="Send an email to Bernard Westlake"
+                                       title="Send an email">
 
-                                            <span class="label">
-                                                Email
-                                            </span>
+                                        <span class="label">
+                                            Email
+                                        </span>
 
-                                        </a>
-
-
-                                    </div>
+                                    </a>
 
 
                                 </div>
@@ -923,7 +887,7 @@
 
 
 
-                        <!-- ABOUT ME -->
+                        <!-- ABOUT ME - CURRENT PAGE -->
 
                         <li>
 
@@ -1021,13 +985,9 @@
     ====================================== -->
 
     <script src="assets/js/jquery.min.js"></script>
-
     <script src="assets/js/browser.min.js"></script>
-
     <script src="assets/js/breakpoints.min.js"></script>
-
     <script src="assets/js/util.js"></script>
-
     <script src="assets/js/main.js"></script>
 
 

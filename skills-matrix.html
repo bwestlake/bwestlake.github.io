@@ -1,0 +1,1133 @@
+
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+
+    <meta name="description"
+          content="Skills Matrix - MSc Artificial Intelligence ePortfolio." />
+
+    <title>Skills Matrix | ePortfolio</title>
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+
+        /* COLOUR PALETTE */
+
+        :root {
+            --navy: #20344a;
+            --teal: #177f83;
+            --ink: #354459;
+            --muted: #657287;
+            --line: #dce3e7;
+            --paper: #ffffff;
+            --surface: #f7f9fa;
+            --sidebar: #edf2f4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body, #main {
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        h1, h2, h3, strong {
+            color: var(--navy);
+        }
+
+        a {
+            color: var(--teal);
+        }
+
+        a:hover {
+            color: var(--navy);
+        }
+
+
+        /* PAGE HEADER */
+
+        #header {
+            display: block;
+            border-bottom: 1px solid var(--line);
+            padding: 3.3em 0 2.5em;
+            margin-bottom: 0;
+        }
+
+        #header h1 {
+            font-size: clamp(2.25rem, 4vw, 3.7rem);
+            line-height: 1.14;
+            letter-spacing: -0.035em;
+            font-weight: 650;
+            margin: 0;
+        }
+
+        .page-subtitle {
+            color: var(--muted);
+            font-size: 0.93rem;
+            margin: 1em 0 0;
+        }
+
+
+        /* MAIN CONTENT */
+
+        #main > .inner > #page-content {
+            padding-top: 0;
+            padding-bottom: 4em;
+        }
+
+        .content-section {
+            padding: 3.2em 0;
+            border-bottom: 1px solid var(--line);
+            scroll-margin-top: 1.5em;
+        }
+
+        .content-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-heading {
+            font-size: clamp(1.55rem, 2.4vw, 1.95rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin: 0 0 0.85em;
+        }
+
+        .section-intro {
+            max-width: 75ch;
+            color: var(--muted);
+            font-size: 0.98rem;
+            line-height: 1.85;
+            margin-bottom: 1.8em;
+        }
+
+        .overview-copy {
+            max-width: 76ch;
+        }
+
+        .overview-copy p {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1.3em;
+        }
+
+
+        /* PROFICIENCY GUIDE */
+
+        .proficiency-guide {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1em;
+            margin-top: 2em;
+        }
+
+        .proficiency-item {
+            background: var(--surface);
+            border-top: 2px solid var(--teal);
+            padding: 1.2em;
+        }
+
+        .proficiency-item h3 {
+            font-size: 0.95rem;
+            margin: 0 0 0.5em;
+        }
+
+        .proficiency-item p {
+            color: var(--muted);
+            font-size: 0.85rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+
+        /* SKILLS MATRIX */
+
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 0.9rem;
+        }
+
+        .skills-table th,
+        .skills-table td {
+            text-align: left;
+            vertical-align: top;
+            padding: 1.1em 0.9em;
+            line-height: 1.75;
+            overflow-wrap: anywhere;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .skills-table thead th {
+            background: var(--surface);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 0.84rem;
+            border-bottom: 2px solid var(--line);
+        }
+
+        .skills-table tbody th {
+            color: var(--navy);
+            font-weight: 650;
+        }
+
+        .skills-table tbody tr:nth-child(odd) {
+            background: var(--paper);
+        }
+
+        .skills-table tbody tr:nth-child(even) {
+            background: var(--surface);
+        }
+
+        .skills-table th:nth-child(1) {
+            width: 19%;
+        }
+
+        .skills-table th:nth-child(2) {
+            width: 15%;
+        }
+
+        .skills-table th:nth-child(3) {
+            width: 35%;
+        }
+
+        .skills-table th:nth-child(4) {
+            width: 31%;
+        }
+
+        .skill-level {
+            display: inline-block;
+            border-left: 2px solid var(--teal);
+            padding-left: 0.6em;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+
+        /* DEVELOPMENT PRIORITIES */
+
+        .development-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.8fr);
+            gap: 2.5em;
+            align-items: start;
+        }
+
+        .development-copy p {
+            line-height: 1.9;
+            margin-bottom: 1.3em;
+        }
+
+        .development-note {
+            background: var(--surface);
+            border-left: 3px solid var(--teal);
+            padding: 1.6em;
+        }
+
+        .development-note h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1em;
+        }
+
+        .development-note ol {
+            margin: 0;
+            padding-left: 1.25em;
+        }
+
+        .development-note li {
+            font-size: 0.9rem;
+            line-height: 1.75;
+            margin-bottom: 0.9em;
+        }
+
+        .last-updated {
+            color: var(--muted);
+            font-size: 0.8rem;
+            margin-top: 2em;
+        }
+
+
+        /* SIDEBAR */
+
+        #sidebar {
+            background: var(--sidebar);
+        }
+
+        #sidebar > .inner {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #sidebar #menu {
+            flex-shrink: 0;
+        }
+
+        #sidebar header.major > :first-child {
+            border-bottom-color: var(--teal);
+        }
+
+        #menu ul a,
+        #menu ul span {
+            color: var(--navy);
+        }
+
+        #menu ul a:hover,
+        #menu ul span.opener:hover {
+            color: var(--teal);
+        }
+
+        #menu ul span.opener:before {
+            color: var(--teal);
+        }
+
+        #menu ul span.opener.active {
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+
+        /* COPYRIGHT POSITION */
+
+        #sidebar #footer {
+            margin-top: auto;
+            padding-top: 2em;
+            padding-bottom: 1em;
+        }
+
+        #sidebar #footer .copyright {
+            color: var(--muted);
+            font-size: 0.74rem;
+            line-height: 1.7;
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media screen and (max-width: 1100px) {
+
+            .proficiency-guide {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .development-layout {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media screen and (max-width: 760px) {
+
+            #header {
+                padding-top: 2.2em;
+            }
+
+            .content-section {
+                padding: 2.4em 0;
+            }
+
+            .skills-table,
+            .skills-table tbody {
+                display: block;
+            }
+
+            .skills-table thead {
+                display: none;
+            }
+
+            .skills-table tbody tr {
+                display: block;
+                padding: 0.5em 1em;
+                margin-bottom: 1em;
+                border: 1px solid var(--line);
+                background: var(--paper) !important;
+            }
+
+            .skills-table tbody th,
+            .skills-table tbody td {
+                display: block;
+                width: 100%;
+                padding: 0.55em 0;
+            }
+
+            .skills-table tbody td:last-child {
+                border-bottom: none;
+            }
+
+            .skills-table td::before {
+                content: attr(data-label);
+                display: block;
+                color: var(--muted);
+                font-size: 0.75rem;
+                font-weight: 700;
+                margin-bottom: 0.3em;
+            }
+
+        }
+
+        @media screen and (max-width: 440px) {
+
+            .proficiency-guide {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <!-- MAIN CONTENT -->
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- HEADER -->
+
+                <header id="header">
+
+                    <h1>Skills Matrix</h1>
+
+                    <p class="page-subtitle">
+                        MSc Artificial Intelligence
+                        &middot; Programme-wide Development
+                    </p>
+
+                </header>
+
+
+                <div id="page-content">
+
+                    <!-- OVERVIEW -->
+
+                    <section class="content-section"
+                             id="overview">
+
+                        <h2 class="section-heading">
+                            Overview
+                        </h2>
+
+                        <div class="overview-copy">
+
+                            <p>
+                                This matrix provides an overview
+                                of the technical, academic and
+                                professional skills I am developing
+                                throughout the MSc Artificial
+                                Intelligence programme. It draws
+                                on my assessments, practical work
+                                and experience in banking technology.
+                            </p>
+
+                            <p>
+                                The proficiency levels are
+                                self-assessed and reflect where
+                                I currently stand. While some
+                                skills are well established
+                                through my professional experience,
+                                others are still developing.
+                                I intend to revisit the matrix
+                                as I progress through the programme.
+                            </p>
+
+                        </div>
+
+
+                        <h3>Proficiency Levels</h3>
+
+                        <div class="proficiency-guide">
+
+                            <div class="proficiency-item">
+                                <h3>Developing</h3>
+                                <p>
+                                    Building foundational knowledge
+                                    and confidence.
+                                </p>
+                            </div>
+
+                            <div class="proficiency-item">
+                                <h3>Applied</h3>
+                                <p>
+                                    Demonstrated through practical
+                                    exercises or assessments.
+                                </p>
+                            </div>
+
+                            <div class="proficiency-item">
+                                <h3>Proficient</h3>
+                                <p>
+                                    Comfortable applying the
+                                    skill independently.
+                                </p>
+                            </div>
+
+                            <div class="proficiency-item">
+                                <h3>Advanced</h3>
+                                <p>
+                                    Extensive experience applying
+                                    the skill professionally.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- TECHNICAL SKILLS -->
+
+                    <section class="content-section"
+                             id="technical-skills">
+
+                        <h2 class="section-heading">
+                            Technical &amp; Analytical Skills
+                        </h2>
+
+                        <p class="section-intro">
+                            Practical tools and analytical
+                            techniques developed through
+                            the programme's AI and numerical
+                            analysis modules.
+                        </p>
+
+                        <div class="table-wrapper">
+
+                            <table class="skills-table">
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Skill</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Evidence</th>
+                                        <th scope="col">Further Development</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <th scope="row">Python</th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Developing
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Completed a case-insensitive
+                                            duplicate-removal exercise
+                                            in Launch Into Computing.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Develop practical data analysis
+                                            and machine learning skills
+                                            using pandas and scikit-learn.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">WEKA</th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Applied
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Evaluated J48, Random Forest
+                                            and AdaBoost using 30,000
+                                            credit-risk customer records.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Improve model configuration,
+                                            parameter tuning and
+                                            reproducibility.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">R Programming</th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Developing
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Working through descriptive
+                                            statistics and visualisation
+                                            exercises in Numerical Analysis.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Strengthen statistical testing
+                                            and interpretation skills.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Data Preparation</th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Applied
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Performed data cleaning,
+                                            feature selection and
+                                            preprocessing for a
+                                            credit-risk modelling project.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Explore advanced feature
+                                            engineering and data quality
+                                            techniques.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Machine Learning Evaluation
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Applied
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Used cross-validation, recall,
+                                            AUC-ROC, cost-sensitive
+                                            learning and SMOTE to
+                                            evaluate classification models.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Strengthen validation
+                                            methodology and prevent
+                                            data leakage.
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ACADEMIC SKILLS -->
+
+                    <section class="content-section"
+                             id="academic-skills">
+
+                        <h2 class="section-heading">
+                            Academic &amp; Research Skills
+                        </h2>
+
+                        <p class="section-intro">
+                            Skills developed through academic
+                            research, written assessments,
+                            presentations and collaborative
+                            discussions.
+                        </p>
+
+                        <div class="table-wrapper">
+
+                            <table class="skills-table">
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Skill</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Evidence</th>
+                                        <th scope="col">Further Development</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Academic Research &amp; Writing
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Proficient
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Returned to academic writing
+                                            after approximately ten years,
+                                            achieving distinction-level
+                                            results in postgraduate
+                                            assessments.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Further develop critical
+                                            synthesis and research
+                                            methodology.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Critical Analysis
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Proficient
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Evaluated machine learning
+                                            approaches and their trade-offs
+                                            between performance,
+                                            explainability and fairness.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Strengthen comparative
+                                            evaluation of academic
+                                            research and methodologies.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            AI Ethics &amp; Governance
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Applied
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Examined fairness,
+                                            explainability, GDPR
+                                            and regulatory considerations
+                                            in financial services AI.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Explore practical fairness
+                                            assessments and explainable
+                                            AI techniques.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Technical Presentation
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Proficient
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Prepared and delivered
+                                            an academic presentation
+                                            on enterprise AI adoption
+                                            and governance.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Improve visual communication
+                                            of technical findings to
+                                            non-specialist audiences.
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PROFESSIONAL SKILLS -->
+
+                    <section class="content-section"
+                             id="professional-skills">
+
+                        <h2 class="section-heading">
+                            Professional Skills
+                        </h2>
+
+                        <p class="section-intro">
+                            Existing professional capabilities
+                            which complement my academic
+                            development and help connect
+                            AI concepts with practical
+                            business challenges.
+                        </p>
+
+                        <div class="table-wrapper">
+
+                            <table class="skills-table">
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Skill</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Evidence</th>
+                                        <th scope="col">Further Development</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Core Banking Technology
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Advanced
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Over eight years of experience
+                                            in core banking technology,
+                                            including deposit, lending
+                                            and account capabilities.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Explore the practical
+                                            application of AI to
+                                            core banking workflows.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Requirements &amp; Solution Design
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Advanced
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Defined banking product
+                                            requirements and functional
+                                            solutions across transformation
+                                            programmes.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Apply solution design
+                                            experience to AI-driven
+                                            business requirements.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Stakeholder Communication
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Advanced
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Experienced in communicating
+                                            with technical teams,
+                                            business stakeholders
+                                            and senior executives.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Strengthen communication
+                                            of complex AI concepts,
+                                            risks and limitations.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            Delivery Leadership
+                                        </th>
+                                        <td data-label="Level">
+                                            <span class="skill-level">
+                                                Advanced
+                                            </span>
+                                        </td>
+                                        <td data-label="Evidence">
+                                            Led workstreams and
+                                            business analysis teams
+                                            across banking technology
+                                            delivery programmes.
+                                        </td>
+                                        <td data-label="Further Development">
+                                            Develop an understanding
+                                            of AI deployment,
+                                            monitoring and governance.
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- DEVELOPMENT PRIORITIES -->
+
+                    <section class="content-section"
+                             id="development-priorities">
+
+                        <h2 class="section-heading">
+                            Development Priorities
+                        </h2>
+
+                        <div class="development-layout">
+
+                            <div class="development-copy">
+
+                                <p>
+                                    My professional experience
+                                    has given me a strong foundation
+                                    in banking technology and
+                                    delivery. The MSc is helping
+                                    me build on that experience
+                                    by developing a better
+                                    understanding of artificial
+                                    intelligence and its
+                                    practical applications.
+                                </p>
+
+                                <p>
+                                    The programme has also
+                                    highlighted some areas
+                                    where I need to develop
+                                    further, particularly my
+                                    practical programming and
+                                    statistical analysis skills.
+                                    While I have gained experience
+                                    using WEKA, I would like
+                                    to become more confident
+                                    working independently with
+                                    Python and R.
+                                </p>
+
+                                <p>
+                                    As I progress through the
+                                    programme, I intend to
+                                    revisit this matrix and
+                                    update my proficiency levels
+                                    to reflect new knowledge,
+                                    practical experience and
+                                    completed assessments.
+                                </p>
+
+                                <p class="last-updated">
+                                    Last reviewed: October 2026
+                                </p>
+
+                            </div>
+
+
+                            <!-- PRIORITIES PANEL -->
+
+                            <aside class="development-note">
+
+                                <h3>Current Priorities</h3>
+
+                                <ol>
+                                    <li>
+                                        Build confidence using
+                                        Python and R independently.
+                                    </li>
+
+                                    <li>
+                                        Improve machine learning
+                                        evaluation and experimental
+                                        methodology.
+                                    </li>
+
+                                    <li>
+                                        Explore explainable AI
+                                        techniques for practical
+                                        banking use cases.
+                                    </li>
+                                </ol>
+
+                            </aside>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- SIDEBAR -->
+
+        <div id="sidebar">
+
+            <div class="inner">
+
+                <nav id="menu"
+                     aria-label="Portfolio navigation">
+
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+
+                        <!-- MODULES -->
+
+                        <li>
+                            <span class="opener">
+                                Modules
+                            </span>
+
+                            <ul>
+                                <li>
+                                    <a href="understanding-ai.html">
+                                        Understanding Artificial Intelligence
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="launch-into-computing.html">
+                                        Launch Into Computing
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="numerical-analysis.html">
+                                        Numerical Analysis
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <!-- CURRENT PAGE -->
+
+                        <li>
+                            <span class="opener active"
+                                  aria-current="page">
+                                Skills Matrix
+                            </span>
+
+                            <ul>
+
+                                <li>
+                                    <a href="#overview">
+                                        Overview
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#technical-skills">
+                                        Technical &amp; Analytical Skills
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#academic-skills">
+                                        Academic &amp; Research Skills
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#professional-skills">
+                                        Professional Skills
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#development-priorities">
+                                        Development Priorities
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="about.html">
+                                About Me
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/bwestlake"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+                <!-- FOOTER -->
+
+                <footer id="footer">
+
+                    <p class="copyright">
+                        &copy; 2026 Bernard Westlake.
+                        Design:
+                        <a href="https://html5up.net">
+                            HTML5 UP
+                        </a>.
+                    </p>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

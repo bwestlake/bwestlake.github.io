@@ -17,9 +17,7 @@
     <meta name="description"
           content="Understanding Artificial Intelligence MSc module portfolio, including learning outcomes, academic artefacts and professional reflection." />
 
-    <title>
-        Understanding Artificial Intelligence | MSc Portfolio
-    </title>
+    <title>Understanding Artificial Intelligence | MSc Portfolio</title>
 
     <link rel="stylesheet" href="assets/css/main.css" />
 
@@ -119,16 +117,26 @@
 
 
         /* =====================================
-           MODULE OVERVIEW
+           MODULE OVERVIEW WITH IMAGE
         ===================================== */
 
         .module-overview {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            align-items: center;
+            gap: 35px;
+
             background-color: var(--white);
             border: 1px solid var(--border);
             border-left: 4px solid var(--teal);
             border-radius: 6px;
+
             padding: 32px 36px;
             margin-bottom: 3.5em;
+        }
+
+        .overview-text {
+            min-width: 0;
         }
 
         .overview-label {
@@ -146,7 +154,18 @@
             line-height: 1.9;
             color: var(--text);
             margin: 0;
-            max-width: 900px;
+        }
+
+        .overview-image {
+            min-width: 0;
+        }
+
+        .overview-image img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
         }
 
 
@@ -392,6 +411,15 @@
                 grid-template-columns: 1fr;
             }
 
+            .module-overview {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .overview-image img {
+                height: 220px;
+            }
+
         }
 
         @media screen and (max-width: 480px) {
@@ -442,10 +470,7 @@
 
     <div id="wrapper">
 
-        <!-- =====================================
-             MAIN CONTENT
-        ===================================== -->
-
+        <!-- MAIN CONTENT -->
         <div id="main">
 
             <div class="inner">
@@ -468,26 +493,40 @@
                 <section id="module-content">
 
                     <!-- =====================================
-                         MODULE OVERVIEW
+                         MODULE OVERVIEW WITH IMAGE
                     ===================================== -->
 
                     <div class="module-overview">
 
-                        <span class="overview-label">
-                            Module Overview
-                        </span>
+                        <div class="overview-text">
 
-                        <p>
-                            This module explored the foundations
-                            of artificial intelligence, including
-                            machine learning techniques, ethical
-                            considerations and practical business
-                            applications. Through collaborative
-                            discussions and individual assessments,
-                            I examined AI adoption and evaluated
-                            machine learning models for financial
-                            services use cases.
-                        </p>
+                            <span class="overview-label">
+                                Module Overview
+                            </span>
+
+                            <p>
+                                This module explored the foundations
+                                of artificial intelligence, including
+                                machine learning techniques, ethical
+                                considerations and practical business
+                                applications. Through collaborative
+                                discussions and individual assessments,
+                                I examined AI adoption and evaluated
+                                machine learning models for financial
+                                services use cases.
+                            </p>
+
+                        </div>
+
+                        <div class="overview-image">
+
+                            <img
+                                src="images/ai-overview.webp"
+                                alt="Abstract visualisation of an artificial intelligence neural network"
+                                loading="lazy"
+                            />
+
+                        </div>
 
                     </div>
 
@@ -864,9 +903,7 @@
     </div>
 
 
-    <!-- =====================================
-         SCRIPTS
-    ===================================== -->
+    <!-- SCRIPTS -->
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>

@@ -1,1 +1,670 @@
 
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under
+    the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+    <title>Launch into Computing</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+
+        /* =====================================
+           NAVY & TEAL COLOUR SCHEME
+        ===================================== */
+
+        :root {
+            --primary: #142d4e;
+            --accent: #168b91;
+            --background: #f5f8fa;
+            --text: #344054;
+            --muted: #667788;
+            --border: #dce5eb;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        #main {
+            background-color: var(--background);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--primary);
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        strong, b {
+            color: var(--primary);
+        }
+
+        hr {
+            border-bottom-color: var(--border);
+        }
+
+
+        /* =====================================
+           HEADER
+        ===================================== */
+
+        #header {
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 1.5em;
+        }
+
+        #header .logo {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin: 0;
+            color: var(--primary);
+        }
+
+        #header .logo a {
+            color: inherit;
+            border-bottom: none;
+            box-shadow: none;
+            text-decoration: none;
+        }
+
+        #header .logo a:hover {
+            color: var(--accent);
+        }
+
+
+        /* =====================================
+           MAIN CONTENT
+        ===================================== */
+
+        #main > .inner > section#module-content {
+            padding-top: 3em;
+            padding-bottom: 4em;
+        }
+
+        .module-introduction {
+            max-width: 850px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--muted);
+            margin-bottom: 3em;
+        }
+
+        .section-title {
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 1em;
+            color: var(--primary);
+        }
+
+
+        /* =====================================
+           LEARNING OUTCOMES
+        ===================================== */
+
+        .learning-outcomes {
+            margin-bottom: 3em;
+        }
+
+        .learning-outcomes ol {
+            padding-left: 1.5em;
+            margin-bottom: 0;
+        }
+
+        .learning-outcomes li {
+            padding-left: 0.5em;
+            margin-bottom: 1em;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .learning-outcomes li::marker {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+
+        /* =====================================
+           ARTEFACT SECTION
+        ===================================== */
+
+        .artefacts-introduction {
+            color: var(--muted);
+            margin-bottom: 2em;
+            line-height: 1.7;
+        }
+
+        .artefact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 2em;
+        }
+
+
+        /* =====================================
+           ARTEFACT CARDS
+        ===================================== */
+
+        .artefact-card {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 28px;
+            transition: border-color 0.2s ease,
+                        box-shadow 0.2s ease;
+        }
+
+        .artefact-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 6px 18px
+                        rgba(20, 45, 78, 0.07);
+        }
+
+        .artefact-type {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+
+        .artefact-card h3 {
+            font-size: 19px;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .artefact-card p {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+
+        /* =====================================
+           ARTEFACT BUTTONS
+        ===================================== */
+
+        .artefact-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-start;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin-top: auto;
+            padding: 13px 18px;
+
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+
+            color: var(--white) !important;
+            background-color: var(--primary);
+
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            line-height: 1.6;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: none !important;
+
+            transition: background-color 0.2s ease,
+                        color 0.2s ease,
+                        border-color 0.2s ease;
+        }
+
+        .artefact-box:hover {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: var(--white) !important;
+        }
+
+        .artefact-box:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+
+        /* =====================================
+           SIDEBAR
+        ===================================== */
+
+        #sidebar {
+            background-color: #eaf0f4;
+        }
+
+        #sidebar .inner {
+            color: var(--text);
+        }
+
+        #menu ul a,
+        #menu ul span {
+            color: var(--primary);
+        }
+
+        #menu ul a:hover,
+        #menu ul span.opener:hover {
+            color: var(--accent);
+        }
+
+        #menu ul a:hover,
+        #menu ul span.opener:hover {
+            border-bottom-color: transparent;
+        }
+
+        #sidebar header.major > :first-child {
+            border-bottom-color: var(--accent);
+        }
+
+        #sidebar a {
+            border-bottom-color: var(--border);
+        }
+
+        #sidebar a:hover {
+            color: var(--accent);
+        }
+
+        #sidebar #footer {
+            color: var(--muted);
+        }
+
+
+        /* =====================================
+           TEMPLATE ACCENT OVERRIDES
+        ===================================== */
+
+        #sidebar .toggle:before {
+            color: var(--accent);
+        }
+
+        #menu ul a.opener:before,
+        #menu ul span.opener:before {
+            color: var(--accent);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--accent);
+        }
+
+        ::selection {
+            background-color: #d6eef0;
+            color: var(--primary);
+        }
+
+
+        /* =====================================
+           RESPONSIVE DESIGN
+        ===================================== */
+
+        @media screen and (max-width: 800px) {
+
+            .artefact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #header .logo {
+                font-size: 23px;
+            }
+
+            .artefact-card {
+                padding: 24px;
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {
+
+            #header .logo {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .module-introduction {
+                font-size: 15px;
+            }
+
+            .artefact-box {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+
+                    <h1 class="logo">
+                        <a href="understanding-ai.html">
+                            Launch into Computing
+                        </a>
+                    </h1>
+
+                </header>
+
+
+                <!-- Main Content -->
+                <section id="module-content">
+
+                    <!-- Module Introduction -->
+                    <p class="module-introduction">
+
+                      This module explored the foundations of computing, including software engineering, artificial intelligence, cybersecurity and data science. Through collaborative discussions and individual assessments, I focused on AI adoption in enterprise environments and completed a practical programming exercise in Python and JavaScript, examining code quality, maintainability and the ethical implications of software design.
+                    </p>
+
+
+                    <!-- Learning Outcomes -->
+                    <div class="learning-outcomes">
+
+                        <h2 class="section-title">
+                            Learning Outcomes
+                        </h2>
+
+                        <ol>
+
+                            <li>
+                                Identify and critically analyse computing challenges and processes in business systems, accounting for the current enterprise landscape.
+                            </li>
+
+                            <li>
+                                Gather and synthesise information from multiple sources (including internet resources and business publications) to aid in the systematic design and analysis of computing challenges.
+                            </li>
+
+                            <li>
+                                Critically evaluate appropriate methodologies, tools and techniques to mitigate and/or solve computing issues and their business impact.
+                            </li>
+
+                            <li>
+                                Articulate the legal, social, ethical, and professional issues faced by computing professionals.
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                    <hr />
+
+
+                    <!-- Artefacts -->
+
+                    <h2 class="section-title">
+                        Module Artefacts
+                    </h2>
+
+                    <p class="artefacts-introduction">
+                        The following artefacts demonstrate
+                        the knowledge and practical skills
+                        developed throughout this module.
+                    </p>
+
+
+                    <!-- Artefact Grid -->
+                    <div class="artefact-grid">
+
+
+                        <!-- Artefact 1 -->
+                        <article class="artefact-card">
+
+                            <span class="artefact-type">
+                                Collaborative Discussion
+                            </span>
+
+                            <h3>
+                                AI Adoption and Investment
+                            </h3>
+
+                            <p>
+                                Placeholder
+                            </p>
+
+                            <a
+                                href="artefacts/LIC-collaborative-discussion.pdf"
+                                class="artefact-box"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                View Discussion Summary
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Artefact 2 -->
+                        <article class="artefact-card">
+
+                            <span class="artefact-type">
+                                Programming Exercise
+                            </span>
+
+                            <h3>
+                                Comparing Programming Langugauges
+                            </h3>
+
+                            <p>
+                                Evaluated and compared Python and JavaScript, outlining the importance of readable and ethical code.
+                            </p>
+
+                            <a
+                                href="artefacts/LIC-comparing-coding-languages.pdf"
+                                class="artefact-box"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                View Programming Exercise Report & Code
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Artefact 3 -->
+                        <article class="artefact-card">
+
+                            <span class="artefact-type">
+                                Individual Reflection Presentation with Gen-AI Comparison
+                            </span>
+
+                            <h3>
+                                Artificial Intelligence
+                                in the Enterprise
+                            </h3>
+
+                            <p>
+                                Researched and presented the opportunities, risks and governance considerations associated with
+                                enterprise AI adpoption. Examined applications across financial services and other industries,
+                                assessing ethical challenges, cybersecurity threats and regulatory requirements.
+                      
+                            </p>
+
+                            <a
+                                href="artefacts/UA1-AI-applications.pdf"
+                                class="artefact-box"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                View Slides
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Artefact 4 -->
+                        <article class="artefact-card">
+
+                            <span class="artefact-type">
+                                Professional Reflection
+                            </span>
+
+                            <h3>
+                                Professional Reflection
+                            </h3>
+
+                            <p>
+                                Placeholder
+                            </p>
+
+                            <a
+                                href="artefacts/UA1-AI-implementation.pdf"
+                                class="artefact-box"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                View Reflection
+
+                            </a>
+
+                        </article>
+
+                    </div>
+                    <!-- End Artefact Grid -->
+
+                </section>
+                <!-- End Main Content -->
+
+            </div>
+
+        </div>
+        <!-- End Main -->
+
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+
+                    <header class="major">
+                        <h2>Navigation</h2>
+                    </header>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+
+                            <span class="opener">
+                                Modules
+                            </span>
+
+                            <ul>
+
+                                <li>
+                                    <a href="understanding-ai.html">
+                                        Understanding Artificial Intelligence
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="launch-into-computing.html">
+                                        Launch Into Computing
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="numerical-analysis.html">
+                                        Numerical Analysis
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/bwestlake"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+                <!-- Footer -->
+                <footer id="footer">
+
+                    <p class="copyright">
+                        &copy; 2026 Bernard Westlake.
+                        Design:
+                        <a href="https://html5up.net">
+                            HTML5 UP
+                        </a>.
+                    </p>
+
+                </footer>
+
+            </div>
+
+        </div>
+        <!-- End Sidebar -->
+
+    </div>
+    <!-- End Wrapper -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+

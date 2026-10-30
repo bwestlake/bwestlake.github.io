@@ -9,85 +9,88 @@
 <html lang="en">
 
 <head>
-    <title>Understanding Artificial Intelligence</title>
     <meta charset="utf-8" />
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+          content="Understanding Artificial Intelligence MSc module portfolio, including learning outcomes, academic artefacts and professional reflection." />
+
+    <title>
+        Understanding Artificial Intelligence | MSc Portfolio
+    </title>
 
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
 
         /* =====================================
-           NAVY & TEAL COLOUR SCHEME
+           COLOUR PALETTE
         ===================================== */
 
         :root {
-            --primary: #142d4e;
-            --accent: #168b91;
+            --navy: #142d4e;
+            --teal: #168b91;
             --background: #f5f8fa;
             --text: #344054;
             --muted: #667788;
             --border: #dce5eb;
             --white: #ffffff;
+            --light-teal: #eaf4f4;
         }
 
-        body {
+        body,
+        #main {
             background-color: var(--background);
             color: var(--text);
         }
 
-        #main {
-            background-color: var(--background);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--primary);
+        h1, h2, h3, h4, h5, h6,
+        strong, b {
+            color: var(--navy);
         }
 
         a {
-            color: var(--accent);
+            color: var(--teal);
         }
 
         a:hover {
-            color: var(--primary);
-        }
-
-        strong, b {
-            color: var(--primary);
+            color: var(--navy);
         }
 
         hr {
             border-bottom-color: var(--border);
+            margin: 3em 0;
         }
 
 
         /* =====================================
-           HEADER
+           MODULE HEADER
         ===================================== */
 
         #header {
-            border-bottom: 3px solid var(--accent);
-            padding-bottom: 1.5em;
+            display: block;
+            border-bottom: 3px solid var(--teal);
+            padding-bottom: 28px;
         }
 
-        #header .logo {
-            font-size: 28px;
+        .module-label {
+            font-size: 11px;
             font-weight: 700;
-            line-height: 1.3;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 14px;
+        }
+
+        #header h1.module-title {
+            font-size: clamp(30px, 3vw, 42px);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            color: var(--navy);
             margin: 0;
-            color: var(--primary);
-        }
-
-        #header .logo a {
-            color: inherit;
-            border-bottom: none;
-            box-shadow: none;
-            text-decoration: none;
-        }
-
-        #header .logo a:hover {
-            color: var(--accent);
         }
 
 
@@ -100,19 +103,50 @@
             padding-bottom: 4em;
         }
 
-        .module-introduction {
-            max-width: 850px;
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--muted);
-            margin-bottom: 3em;
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
         }
 
-        .section-title {
-            font-size: 25px;
+        .section-description {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+
+        /* =====================================
+           MODULE OVERVIEW
+        ===================================== */
+
+        .module-overview {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--teal);
+            border-radius: 6px;
+            padding: 32px 36px;
+            margin-bottom: 3.5em;
+        }
+
+        .overview-label {
+            display: block;
+            font-size: 11px;
             font-weight: 700;
-            margin-bottom: 1em;
-            color: var(--primary);
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 15px;
+        }
+
+        .module-overview p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--text);
+            margin: 0;
+            max-width: 900px;
         }
 
 
@@ -124,45 +158,63 @@
             margin-bottom: 3em;
         }
 
-        .learning-outcomes ol {
-            padding-left: 1.5em;
-            margin-bottom: 0;
+        .outcomes-list {
+            list-style: none;
+            counter-reset: outcomes;
+            padding: 0;
+            margin: 25px 0 0 0;
         }
 
-        .learning-outcomes li {
-            padding-left: 0.5em;
-            margin-bottom: 1em;
-            line-height: 1.8;
+        .outcomes-list li {
+            counter-increment: outcomes;
+            position: relative;
+
+            padding: 20px 20px 20px 85px;
+            margin-bottom: 12px;
+
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+
             color: var(--text);
+            font-size: 15px;
+            line-height: 1.8;
         }
 
-        .learning-outcomes li::marker {
-            color: var(--accent);
+        .outcomes-list li::before {
+            content: counter(outcomes, decimal-leading-zero);
+
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 42px;
+            height: 42px;
+
+            background-color: var(--light-teal);
+            border-radius: 5px;
+
+            color: var(--teal);
+            font-size: 15px;
             font-weight: 700;
         }
 
 
         /* =====================================
-           ARTEFACT SECTION
+           ARTEFACT GRID
         ===================================== */
-
-        .artefacts-introduction {
-            color: var(--muted);
-            margin-bottom: 2em;
-            line-height: 1.7;
-        }
 
         .artefact-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 24px;
-            margin-top: 2em;
+            margin-top: 25px;
         }
-
-
-        /* =====================================
-           ARTEFACT CARDS
-        ===================================== */
 
         .artefact-card {
             display: flex;
@@ -170,13 +222,14 @@
             background-color: var(--white);
             border: 1px solid var(--border);
             border-radius: 6px;
-            padding: 28px;
+            padding: 30px;
+
             transition: border-color 0.2s ease,
                         box-shadow 0.2s ease;
         }
 
         .artefact-card:hover {
-            border-color: var(--accent);
+            border-color: var(--teal);
             box-shadow: 0 6px 18px
                         rgba(20, 45, 78, 0.07);
         }
@@ -187,22 +240,22 @@
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 14px;
+            color: var(--teal);
+            margin-bottom: 15px;
         }
 
         .artefact-card h3 {
             font-size: 19px;
             line-height: 1.4;
-            margin-bottom: 16px;
-            color: var(--primary);
+            color: var(--navy);
+            margin-bottom: 15px;
         }
 
         .artefact-card p {
             font-size: 14px;
-            line-height: 1.75;
+            line-height: 1.8;
             color: var(--muted);
-            margin-bottom: 24px;
+            margin-bottom: 25px;
         }
 
 
@@ -220,12 +273,11 @@
             margin-top: auto;
             padding: 13px 18px;
 
-            border: 1px solid var(--primary);
+            background-color: var(--navy);
+            border: 1px solid var(--navy);
             border-radius: 4px;
 
             color: var(--white) !important;
-            background-color: var(--primary);
-
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 1.2px;
@@ -236,19 +288,61 @@
             box-shadow: none !important;
 
             transition: background-color 0.2s ease,
-                        color 0.2s ease,
                         border-color 0.2s ease;
         }
 
         .artefact-box:hover {
-            background-color: var(--accent);
-            border-color: var(--accent);
+            background-color: var(--teal);
+            border-color: var(--teal);
             color: var(--white) !important;
         }
 
         .artefact-box:focus-visible {
-            outline: 2px solid var(--accent);
+            outline: 2px solid var(--teal);
             outline-offset: 3px;
+        }
+
+
+        /* =====================================
+           PROFESSIONAL REFLECTION
+        ===================================== */
+
+        .reflection-section {
+            margin-top: 4em;
+        }
+
+        .reflection-panel {
+            background-color: var(--light-teal);
+            border: 1px solid #d0e5e6;
+            border-radius: 6px;
+            padding: 38px 42px;
+        }
+
+        .reflection-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 15px;
+        }
+
+        .reflection-panel h2 {
+            font-size: 26px;
+            color: var(--navy);
+            margin-bottom: 22px;
+        }
+
+        .reflection-panel p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: var(--text);
+            margin-bottom: 18px;
+        }
+
+        .reflection-panel p:last-child {
+            margin-bottom: 0;
         }
 
 
@@ -260,35 +354,27 @@
             background-color: #eaf0f4;
         }
 
-        #sidebar .inner {
-            color: var(--text);
-        }
-
         #menu ul a,
         #menu ul span {
-            color: var(--primary);
+            color: var(--navy);
         }
 
         #menu ul a:hover,
         #menu ul span.opener:hover {
-            color: var(--accent);
-        }
-
-        #menu ul a:hover,
-        #menu ul span.opener:hover {
-            border-bottom-color: transparent;
+            color: var(--teal);
         }
 
         #sidebar header.major > :first-child {
-            border-bottom-color: var(--accent);
-        }
-
-        #sidebar a {
-            border-bottom-color: var(--border);
+            border-bottom-color: var(--teal);
         }
 
         #sidebar a:hover {
-            color: var(--accent);
+            color: var(--teal);
+        }
+
+        #sidebar .toggle:before,
+        #menu ul span.opener:before {
+            color: var(--teal);
         }
 
         #sidebar #footer {
@@ -297,123 +383,131 @@
 
 
         /* =====================================
-           TEMPLATE ACCENT OVERRIDES
-        ===================================== */
-
-        #sidebar .toggle:before {
-            color: var(--accent);
-        }
-
-        #menu ul a.opener:before,
-        #menu ul span.opener:before {
-            color: var(--accent);
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: var(--accent);
-        }
-
-        ::selection {
-            background-color: #d6eef0;
-            color: var(--primary);
-        }
-
-
-        /* =====================================
            RESPONSIVE DESIGN
         ===================================== */
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
 
             .artefact-grid {
                 grid-template-columns: 1fr;
-            }
-
-            #header .logo {
-                font-size: 23px;
-            }
-
-            .artefact-card {
-                padding: 24px;
             }
 
         }
 
         @media screen and (max-width: 480px) {
 
-            #header .logo {
-                font-size: 20px;
+            .module-overview {
+                padding: 24px;
             }
 
-            .section-title {
-                font-size: 22px;
-            }
-
-            .module-introduction {
+            .module-overview p {
                 font-size: 15px;
+            }
+
+            .outcomes-list li {
+                padding: 18px 18px 18px 72px;
+                font-size: 14px;
+            }
+
+            .outcomes-list li::before {
+                left: 15px;
+                width: 38px;
+                height: 38px;
+            }
+
+            .artefact-card {
+                padding: 24px;
             }
 
             .artefact-box {
                 width: 100%;
             }
 
+            .reflection-panel {
+                padding: 26px 24px;
+            }
+
+            .section-title,
+            .reflection-panel h2 {
+                font-size: 23px;
+            }
+
         }
 
     </style>
-
 </head>
+
 
 <body class="is-preload">
 
-    <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Main -->
+        <!-- =====================================
+             MAIN CONTENT
+        ===================================== -->
+
         <div id="main">
 
             <div class="inner">
 
-                <!-- Header -->
+                <!-- MODULE HEADER -->
+
                 <header id="header">
 
-                    <h1 class="logo">
-                        <a href="understanding-ai.html">
-                            Understanding Artificial Intelligence
-                        </a>
+                    <p class="module-label">
+                        MSc Artificial Intelligence / Module Portfolio
+                    </p>
+
+                    <h1 class="module-title">
+                        Understanding Artificial Intelligence
                     </h1>
 
                 </header>
 
 
-                <!-- Main Content -->
                 <section id="module-content">
 
-                    <!-- Module Introduction -->
-                    <p class="module-introduction">
+                    <!-- =====================================
+                         MODULE OVERVIEW
+                    ===================================== -->
 
-                        This module explored the foundations
-                        of artificial intelligence, including
-                        machine learning techniques, ethical
-                        considerations and practical business
-                        applications. Through collaborative
-                        discussions and individual assessments,
-                        I examined AI adoption and evaluated
-                        machine learning models for financial
-                        services use cases.
+                    <div class="module-overview">
 
-                    </p>
+                        <span class="overview-label">
+                            Module Overview
+                        </span>
+
+                        <p>
+                            This module explored the foundations
+                            of artificial intelligence, including
+                            machine learning techniques, ethical
+                            considerations and practical business
+                            applications. Through collaborative
+                            discussions and individual assessments,
+                            I examined AI adoption and evaluated
+                            machine learning models for financial
+                            services use cases.
+                        </p>
+
+                    </div>
 
 
-                    <!-- Learning Outcomes -->
-                    <div class="learning-outcomes">
+                    <!-- =====================================
+                         LEARNING OUTCOMES
+                    ===================================== -->
+
+                    <section class="learning-outcomes">
 
                         <h2 class="section-title">
                             Learning Outcomes
                         </h2>
 
-                        <ol>
+                        <p class="section-description">
+                            The module is structured around the
+                            following four learning outcomes.
+                        </p>
+
+                        <ol class="outcomes-list">
 
                             <li>
                                 Understand the legal, ethical
@@ -423,204 +517,277 @@
                             </li>
 
                             <li>
-                                Understand and critically
-                                analyse the essential concepts,
-                                principles, methods, techniques
-                                and problems of AI.
+                                Understand and critically analyse
+                                the essential concepts, principles,
+                                methods, techniques and problems
+                                of AI.
                             </li>
 
                             <li>
-                                Demonstrate a critical
-                                understanding of data
-                                requirements and programming
+                                Demonstrate a critical understanding
+                                of data requirements and programming
                                 paradigms applicable to AI.
                             </li>
 
                             <li>
-                                Apply and evaluate critically
-                                the various methods, tools
-                                and technologies applied to
-                                an AI project in order to
-                                develop an effective plan and
-                                delivery of solutions to a
-                                business problem.
+                                Apply and evaluate critically the
+                                various methods, tools and
+                                technologies applied to an AI
+                                project in order to develop an
+                                effective plan and delivery of
+                                solutions to a business problem.
                             </li>
 
                         </ol>
 
-                    </div>
+                    </section>
+
 
                     <hr />
 
 
-                    <!-- Artefacts -->
+                    <!-- =====================================
+                         MODULE ARTEFACTS
+                    ===================================== -->
 
-                    <h2 class="section-title">
-                        Module Artefacts
-                    </h2>
+                    <section id="artefacts">
 
-                    <p class="artefacts-introduction">
-                        The following artefacts demonstrate
-                        the knowledge and practical skills
-                        developed throughout this module.
-                    </p>
+                        <h2 class="section-title">
+                            Module Artefacts
+                        </h2>
 
-
-                    <!-- Artefact Grid -->
-                    <div class="artefact-grid">
+                        <p class="section-description">
+                            The following artefacts demonstrate
+                            the knowledge and practical skills
+                            developed throughout this module.
+                        </p>
 
 
-                        <!-- Artefact 1 -->
-                        <article class="artefact-card">
+                        <div class="artefact-grid">
 
-                            <span class="artefact-type">
-                                Collaborative Discussion 01
+
+                            <!-- ARTEFACT 1 -->
+
+                            <article class="artefact-card">
+
+                                <span class="artefact-type">
+                                    Collaborative Discussion 01
+                                </span>
+
+                                <h3>
+                                    AI Adoption and Investment
+                                </h3>
+
+                                <p>
+                                    Discussed why artificial
+                                    intelligence has become
+                                    ubiquitous and examined
+                                    the importance of investment
+                                    in AI technologies for
+                                    organisations.
+                                </p>
+
+                                <a
+                                    href="artefacts/UAI-collaborative-discussion-1.pdf"
+                                    class="artefact-box"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Discussion 1 Summary
+                                </a>
+
+                            </article>
+
+
+                            <!-- ARTEFACT 2 -->
+
+                            <article class="artefact-card">
+
+                                <span class="artefact-type">
+                                    Collaborative Discussion 02
+                                </span>
+
+                                <h3>
+                                    Machine Learning Algorithms
+                                </h3>
+
+                                <p>
+                                    Identified and discussed
+                                    two machine learning
+                                    algorithms, examining
+                                    their characteristics
+                                    and the contexts in which
+                                    they can be employed.
+                                </p>
+
+                                <a
+                                    href="artefacts/UAI-collaborative-discussion-2.pdf"
+                                    class="artefact-box"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Discussion 2 Summary
+                                </a>
+
+                            </article>
+
+
+                            <!-- ARTEFACT 3 -->
+
+                            <article class="artefact-card">
+
+                                <span class="artefact-type">
+                                    Individual Essay
+                                </span>
+
+                                <h3>
+                                    Artificial Intelligence
+                                    and Its Applications
+                                </h3>
+
+                                <p>
+                                    Examined three potential
+                                    applications of artificial
+                                    intelligence within a
+                                    fictional FinTech company,
+                                    evaluating their business
+                                    benefits and implementation
+                                    challenges.
+                                </p>
+
+                                <a
+                                    href="artefacts/UA1-AI-applications.pdf"
+                                    class="artefact-box"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Essay
+                                </a>
+
+                            </article>
+
+
+                            <!-- ARTEFACT 4 -->
+
+                            <article class="artefact-card">
+
+                                <span class="artefact-type">
+                                    Technical Report
+                                </span>
+
+                                <h3>
+                                    AI Solution Implementation
+                                </h3>
+
+                                <p>
+                                    Developed and evaluated
+                                    machine learning models
+                                    using WEKA to assess the
+                                    feasibility of AI-driven
+                                    credit risk assessment
+                                    within a FinTech company.
+                                </p>
+
+                                <a
+                                    href="artefacts/UA1-AI-implementation.pdf"
+                                    class="artefact-box"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    View Technical Report
+                                </a>
+
+                            </article>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =====================================
+                         PROFESSIONAL REFLECTION
+                    ===================================== -->
+
+                    <section class="reflection-section"
+                             id="professional-reflection">
+
+                        <div class="reflection-panel">
+
+                            <span class="reflection-label">
+                                Reflective Learning
                             </span>
 
-                            <h3>
-                                AI Adoption and Investment
-                            </h3>
+                            <h2>
+                                Professional Reflection
+                            </h2>
 
                             <p>
-                                Discussed why artificial
-                                intelligence has become
-                                ubiquitous and examined
-                                the importance of investment
-                                in AI technologies for
-                                organisations.
+                                This module strengthened my
+                                understanding of artificial
+                                intelligence, moving beyond
+                                its theoretical foundations
+                                to examine how machine learning
+                                can address practical business
+                                challenges. In particular,
+                                the individual assessments
+                                provided an opportunity to
+                                explore AI applications within
+                                financial services, building
+                                on my professional experience
+                                in banking technology and
+                                core banking transformation.
                             </p>
-
-                            <a
-                                href="artefacts/UAI-collaborative-discussion-1.pdf"
-                                class="artefact-box"
-                                target="_blank"
-                                rel="noopener noreferrer">
-
-                                View Discussion 1 Summary
-
-                            </a>
-
-                        </article>
-
-
-                        <!-- Artefact 2 -->
-                        <article class="artefact-card">
-
-                            <span class="artefact-type">
-                                Collaborative Discussion 02
-                            </span>
-
-                            <h3>
-                                Machine Learning Algorithms
-                            </h3>
 
                             <p>
-                                Identified and discussed
-                                two machine learning
-                                algorithms, examining
-                                their characteristics
-                                and the contexts in which
-                                they can be employed.
+                                The AI Solution Implementation
+                                assessment was particularly
+                                valuable in developing my
+                                understanding of model
+                                evaluation and the trade-offs
+                                involved in selecting machine
+                                learning algorithms. Comparing
+                                different approaches to credit
+                                risk assessment reinforced
+                                the importance of considering
+                                not only predictive performance,
+                                but also explainability,
+                                fairness and the wider
+                                regulatory environment.
                             </p>
-
-                            <a
-                                href="artefacts/UAI-collaborative-discussion-2.pdf"
-                                class="artefact-box"
-                                target="_blank"
-                                rel="noopener noreferrer">
-
-                                View Discussion 2 Summary
-
-                            </a>
-
-                        </article>
-
-
-                        <!-- Artefact 3 -->
-                        <article class="artefact-card">
-
-                            <span class="artefact-type">
-                                Individual Essay
-                            </span>
-
-                            <h3>
-                                Artificial Intelligence
-                                and Its Applications
-                            </h3>
 
                             <p>
-                                Examined three potential
-                                applications of artificial
-                                intelligence within a
-                                fictional FinTech company,
-                                evaluating their business
-                                benefits and implementation
-                                challenges.
+                                Reflecting on the module,
+                                I recognise that successful
+                                AI adoption requires more
+                                than technical capability.
+                                Effective implementation
+                                depends on robust governance,
+                                appropriate data management
+                                and alignment with business
+                                objectives. These insights
+                                are directly relevant to
+                                my interest in applying
+                                emerging AI capabilities
+                                to banking modernisation,
+                                risk management and
+                                operational efficiency.
                             </p>
 
-                            <a
-                                href="artefacts/UAI-AI-applications.pdf"
-                                class="artefact-box"
-                                target="_blank"
-                                rel="noopener noreferrer">
+                        </div>
 
-                                View Essay
-
-                            </a>
-
-                        </article>
-
-
-                        <!-- Artefact 4 -->
-                        <article class="artefact-card">
-
-                            <span class="artefact-type">
-                                Technical Report
-                            </span>
-
-                            <h3>
-                                AI Solution Implementation
-                            </h3>
-
-                            <p>
-                                Developed and evaluated
-                                machine learning models
-                                using WEKA to assess the
-                                feasibility of AI-driven
-                                credit risk assessment
-                                within a FinTech company.
-                            </p>
-
-                            <a
-                                href="artefacts/UAI-AI-implementation.pdf"
-                                class="artefact-box"
-                                target="_blank"
-                                rel="noopener noreferrer">
-
-                                View Technical Report
-
-                            </a>
-
-                        </article>
-
-                    </div>
-                    <!-- End Artefact Grid -->
+                    </section>
 
                 </section>
-                <!-- End Main Content -->
 
             </div>
 
         </div>
-        <!-- End Main -->
 
 
-        <!-- Sidebar -->
+        <!-- =====================================
+             SIDEBAR
+        ===================================== -->
+
         <div id="sidebar">
 
             <div class="inner">
 
-                <!-- Menu -->
                 <nav id="menu">
 
                     <header class="major">
@@ -678,7 +845,6 @@
                 </nav>
 
 
-                <!-- Footer -->
                 <footer id="footer">
 
                     <p class="copyright">
@@ -694,13 +860,14 @@
             </div>
 
         </div>
-        <!-- End Sidebar -->
 
     </div>
-    <!-- End Wrapper -->
 
 
-    <!-- Scripts -->
+    <!-- =====================================
+         SCRIPTS
+    ===================================== -->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>

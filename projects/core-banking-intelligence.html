@@ -2,16 +2,18 @@
 <!--
     Core Banking Intelligence Digest
     Professional Portfolio — Bernard (Ben) Westlake
+
     Based on Editorial by HTML5 UP
     html5up.net | CCA 3.0 License
 
-    This is a public project case study.
-    The application's source repository remains private.
+    Public project case study.
+    Application source repository remains private.
 -->
 
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
 
     <meta name="viewport"
@@ -24,16 +26,17 @@
         Core Banking Intelligence Digest | Bernard Westlake
     </title>
 
-    <!-- SHARED WEBSITE STYLESHEET -->
+    <!-- MAIN WEBSITE STYLESHEET -->
+
     <link rel="stylesheet"
           href="../assets/css/main.css" />
 
     <style>
 
-        /* =====================================
+        /* ==========================================
            COLOUR PALETTE
-           Matches redesigned About Me page
-        ===================================== */
+           Same as professional About Me page
+        ========================================== */
 
         :root {
             --navy: #101f30;
@@ -41,9 +44,14 @@
             --teal: #67c5c1;
             --white: #f7fafb;
             --muted: #b4c5d0;
-            --line: rgba(224, 242, 246, 0.17);
+            --line: rgba(224,242,246,0.17);
             --panel: #20364b;
             --sidebar: #eaf0f2;
+
+            --sidebar-navy: #20344a;
+            --sidebar-teal: #177f83;
+            --sidebar-muted: #657287;
+            --sidebar-line: #dce3e7;
         }
 
         html {
@@ -88,67 +96,62 @@
         }
 
 
-        /* =====================================
+        /* ==========================================
            PAGE HEADER
-        ===================================== */
+        ========================================== */
 
         #header {
             display: block;
-            padding: 4.25em 0 3.4em;
+            padding: 4.5em 0 3.8em;
             border-bottom: 1px solid var(--line);
         }
 
-        .eyebrow,
-        .section-kicker {
+        .eyebrow {
             color: var(--teal) !important;
             text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .eyebrow {
+            letter-spacing: 0.2em;
             font-size: 0.74rem;
-            letter-spacing: 0.20em;
+            font-weight: 700;
             margin: 0 0 1.6em;
         }
 
         #header h1 {
-            font-size: clamp(2.6rem, 5.1vw, 5.2rem);
-            line-height: 1.09;
+            font-size: clamp(2.8rem, 5.5vw, 5.5rem);
+            line-height: 1.07;
+            letter-spacing: -0.055em;
             font-weight: 700;
-            letter-spacing: -0.05em;
             margin: 0;
-            max-width: 900px;
+            max-width: 950px;
         }
 
         .hero-subtitle {
-            font-size: clamp(1rem, 1.8vw, 1.18rem);
-            line-height: 1.8;
-            max-width: 76ch;
-            margin: 1.35em 0 0;
+            font-size: clamp(1rem, 1.8vw, 1.25rem);
+            line-height: 1.7;
+            margin: 1.5em 0 0;
+            max-width: 750px;
         }
 
         .hero-rule {
             width: 72px;
             height: 3px;
             background: var(--teal);
-            margin-top: 2.4em;
+            margin-top: 2.5em;
         }
 
         .meta-row {
             display: flex;
-            gap: 0.7em;
             flex-wrap: wrap;
-            margin-top: 1.8em;
+            gap: 0.7em;
+            margin-top: 2em;
         }
 
         .meta-pill {
             color: #d9e9ee;
             border: 1px solid var(--line);
-            background: rgba(255,255,255,0.035);
             border-radius: 999px;
+            padding: 0.45em 0.9em;
             font-size: 0.78rem;
-            letter-spacing: 0.02em;
-            padding: 0.4em 0.85em;
+            background: rgba(255,255,255,0.03);
         }
 
         .meta-pill.primary {
@@ -157,31 +160,34 @@
         }
 
 
-        /* =====================================
-           CONTENT SECTIONS
-        ===================================== */
+        /* ==========================================
+           MAIN CONTENT SECTIONS
+        ========================================== */
 
         .content-section {
-            padding: 3.8em 0;
+            padding: 4em 0;
             border-bottom: 1px solid var(--line);
-            scroll-margin-top: 1.5em;
+            scroll-margin-top: 2em;
         }
 
         .content-section:last-child {
-            border-bottom: 0;
+            border-bottom: none;
         }
 
         .section-kicker {
             font-size: 0.75rem;
+            color: var(--teal) !important;
+            text-transform: uppercase;
             letter-spacing: 0.17em;
-            margin: 0 0 0.9em;
+            font-weight: 700;
+            margin: 0 0 0.85em;
         }
 
         .section-heading {
             font-size: clamp(1.65rem, 2.8vw, 2.5rem);
-            line-height: 1.22;
+            line-height: 1.2;
             letter-spacing: -0.035em;
-            margin: 0 0 1.05em;
+            margin: 0 0 1em;
         }
 
         .section-copy {
@@ -191,7 +197,7 @@
         .section-copy p {
             font-size: 1rem;
             line-height: 1.95;
-            margin: 0 0 1.3em;
+            margin: 0 0 1.35em;
         }
 
         .section-copy p:last-child {
@@ -200,113 +206,113 @@
 
         .section-intro {
             max-width: 78ch;
+            font-size: 0.98rem;
             line-height: 1.85;
-            margin: -0.25em 0 1.7em;
+            margin-bottom: 2em;
         }
 
 
-        /* =====================================
+        /* ==========================================
            PROJECT OVERVIEW
-        ===================================== */
+        ========================================== */
 
         .snapshot {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 1em;
-            margin-top: 2.4em;
+            grid-template-columns: repeat(4, minmax(0,1fr));
+            gap: 1.5em;
+            margin-top: 2.7em;
         }
 
         .snapshot-item {
             border-top: 2px solid var(--teal);
-            padding: 1em 0 0.2em;
+            padding-top: 1.1em;
         }
 
         .snapshot-label {
             display: block;
-            color: var(--muted);
-            font-size: 0.74rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.09em;
-            margin-bottom: 0.65em;
+            color: var(--muted);
+            margin-bottom: 0.6em;
         }
 
         .snapshot-item strong {
-            font-size: 1rem;
-            line-height: 1.4;
+            font-size: 0.97rem;
+            line-height: 1.5;
         }
 
 
-        /* =====================================
-           KEY FEATURES
-        ===================================== */
+        /* ==========================================
+           FEATURE CARDS
+        ========================================== */
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.2em;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 1.3em;
         }
 
         .feature {
             background: var(--panel);
             border: 1px solid var(--line);
             border-top: 3px solid var(--teal);
-            padding: 1.6em;
+            padding: 1.7em;
         }
 
         .feature .icon {
-            color: var(--teal);
-            font-size: 1.35em;
-            margin-bottom: 1.05em;
             display: inline-block;
+            color: var(--teal);
+            font-size: 1.35rem;
+            margin-bottom: 1.1em;
         }
 
         .feature h3 {
             font-size: 1.05rem;
-            margin: 0 0 0.7em;
+            margin: 0 0 0.75em;
         }
 
         .feature p {
             font-size: 0.9rem;
-            line-height: 1.82;
+            line-height: 1.85;
             margin: 0;
         }
 
 
-        /* =====================================
-           SOLUTION ARCHITECTURE
-        ===================================== */
+        /* ==========================================
+           ARCHITECTURE
+        ========================================== */
 
         .architecture {
+            margin: 1.8em 0;
             padding: 1.5em;
             background: var(--navy-soft);
             border: 1px solid var(--line);
-            margin: 1.8em 0 1em;
         }
 
         .flow-grid {
             display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
+            grid-template-columns: repeat(5,minmax(0,1fr));
             gap: 0.8em;
-            align-items: stretch;
         }
 
         .flow-step {
             position: relative;
             background: var(--panel);
             border: 1px solid var(--line);
-            padding: 1.1em 0.85em;
-            min-height: 130px;
+            padding: 1.15em 0.9em;
+            min-height: 140px;
         }
 
-        .flow-step:not(:last-child):after {
+        .flow-step:not(:last-child)::after {
             content: '\2192';
             position: absolute;
             right: -0.67em;
-            top: 48%;
+            top: 46%;
             z-index: 2;
+            color: var(--teal);
             font-size: 1.35rem;
             font-weight: 700;
-            color: var(--teal);
         }
 
         .step-number {
@@ -315,13 +321,13 @@
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.12em;
-            margin-bottom: 0.7em;
+            margin-bottom: 0.8em;
         }
 
         .flow-step strong {
             display: block;
-            font-size: 0.94rem;
-            margin-bottom: 0.45em;
+            font-size: 0.93rem;
+            margin-bottom: 0.5em;
         }
 
         .flow-step span:last-child {
@@ -334,57 +340,54 @@
         .architecture figcaption {
             color: var(--muted);
             font-size: 0.82rem;
-            line-height: 1.75;
-            margin-top: 1.25em;
+            line-height: 1.8;
+            margin-top: 1.4em;
         }
 
         .implementation-note {
             border-left: 3px solid var(--teal);
-            padding: 0.25em 0 0.25em 1.35em;
-            margin-top: 1.8em;
+            padding: 0.3em 0 0.3em 1.3em;
+            margin-top: 2em;
         }
 
         .implementation-note p {
             font-size: 0.92rem;
-            line-height: 1.8;
+            line-height: 1.9;
             margin: 0;
         }
 
 
-        /* =====================================
-           TESTING AND EVIDENCE
-        ===================================== */
+        /* ==========================================
+           TESTING EVIDENCE
+        ========================================== */
 
         .evidence-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.25em;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 1.3em;
         }
 
         .evidence {
-            margin: 0;
             background: var(--navy-soft);
             border: 1px solid var(--line);
+            margin: 0;
         }
 
         .evidence-placeholder {
-            aspect-ratio: 16 / 10;
+            aspect-ratio: 16/10;
             background: linear-gradient(
                 140deg,
                 #21394d,
                 #15283c
             );
-
             border-bottom: 1px solid var(--line);
-
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
+            gap: 0.8em;
             padding: 1.2em;
             text-align: center;
-            gap: 0.75em;
         }
 
         .evidence-placeholder .icon {
@@ -395,66 +398,67 @@
         .evidence-placeholder span {
             color: var(--muted);
             font-size: 0.85rem;
-            line-height: 1.55;
+            line-height: 1.6;
+        }
+
+        .evidence-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: contain;
+            background: var(--navy-soft);
+            border-bottom: 1px solid var(--line);
         }
 
         .evidence figcaption {
-            padding: 1.25em 1.3em 1.4em;
+            padding: 1.3em;
         }
 
         .evidence figcaption strong {
             display: block;
             font-size: 0.95rem;
-            margin-bottom: 0.55em;
+            margin-bottom: 0.6em;
         }
 
         .evidence figcaption span {
             display: block;
-            font-size: 0.87rem;
             color: var(--muted);
-            line-height: 1.72;
-        }
-
-        .evidence-image {
-            width: 100%;
-            display: block;
-            aspect-ratio: 16 / 10;
-            object-fit: cover;
-            border-bottom: 1px solid var(--line);
+            font-size: 0.87rem;
+            line-height: 1.75;
         }
 
         .privacy-note {
-            margin-top: 1.5em;
-            font-size: 0.88rem;
-            line-height: 1.8;
+            margin-top: 1.7em;
+            font-size: 0.87rem;
+            line-height: 1.85;
         }
 
 
-        /* =====================================
-           PROJECT EVOLUTION
-        ===================================== */
+        /* ==========================================
+           DEVELOPMENT TIMELINE
+        ========================================== */
 
         .timeline {
             border-left: 1px solid var(--line);
-            margin: 1.7em 0 0 0.55em;
+            margin: 2em 0 0 0.55em;
         }
 
         .timeline-entry {
             position: relative;
-            padding: 0 0 2.1em 2em;
+            padding: 0 0 2.3em 2em;
         }
 
         .timeline-entry:last-child {
             padding-bottom: 0;
         }
 
-        .timeline-entry:before {
+        .timeline-entry::before {
             content: '';
             position: absolute;
             left: -6px;
             top: 0.25em;
-            width: 11px;
             height: 11px;
+            width: 11px;
             border-radius: 50%;
             background: var(--navy);
             border: 2px solid var(--teal);
@@ -462,10 +466,10 @@
 
         .timeline-head {
             display: flex;
-            gap: 0.75em;
             align-items: baseline;
             flex-wrap: wrap;
-            margin-bottom: 0.55em;
+            gap: 0.8em;
+            margin-bottom: 0.6em;
         }
 
         .timeline-head h3 {
@@ -475,9 +479,9 @@
 
         .timeline-state {
             font-size: 0.75rem;
-            color: var(--muted);
             text-transform: uppercase;
-            letter-spacing: 0.09em;
+            letter-spacing: 0.08em;
+            color: var(--muted);
         }
 
         .timeline-entry:first-child .timeline-state {
@@ -486,30 +490,30 @@
 
         .timeline-entry p {
             font-size: 0.91rem;
-            line-height: 1.8;
-            max-width: 75ch;
+            line-height: 1.85;
+            max-width: 76ch;
             margin: 0;
         }
 
 
-        /* =====================================
+        /* ==========================================
            LESSONS LEARNED
-        ===================================== */
+        ========================================== */
 
         .lessons {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.6em 2em;
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            gap: 2em;
         }
 
         .lesson {
-            padding-top: 1em;
             border-top: 1px solid var(--line);
+            padding-top: 1.2em;
         }
 
         .lesson h3 {
             font-size: 1.03rem;
-            margin: 0 0 0.7em;
+            margin: 0 0 0.8em;
         }
 
         .lesson p {
@@ -521,13 +525,13 @@
         .disclosure {
             background: var(--navy-soft);
             border-left: 3px solid var(--teal);
-            padding: 1.45em 1.6em;
-            margin-top: 2.3em;
+            padding: 1.5em 1.7em;
+            margin-top: 2.5em;
         }
 
         .disclosure h3 {
             font-size: 0.98rem;
-            margin: 0 0 0.6em;
+            margin: 0 0 0.7em;
         }
 
         .disclosure p {
@@ -537,9 +541,9 @@
         }
 
 
-        /* =====================================
-           SIDEBAR NAVIGATION
-        ===================================== */
+        /* ==========================================
+           SIDEBAR — PROFESSIONAL THEME
+        ========================================== */
 
         #sidebar {
             background: var(--sidebar);
@@ -556,21 +560,25 @@
         }
 
         #sidebar header.major > :first-child {
-            border-bottom-color: #177f83;
+            border-bottom-color: var(--sidebar-teal);
         }
 
         #menu ul a,
         #menu ul span {
-            color: #20344a;
+            color: var(--sidebar-navy);
         }
 
         #menu ul a:hover,
-        #menu ul span.opener:hover,
-        #menu ul a[aria-current="page"] {
-            color: #177f83;
+        #menu ul span.opener:hover {
+            color: var(--sidebar-teal);
+        }
+
+        #menu ul span.opener::before {
+            color: var(--sidebar-teal);
         }
 
         #menu ul a[aria-current="page"] {
+            color: var(--sidebar-teal);
             font-weight: 700;
         }
 
@@ -579,8 +587,90 @@
             width: 1.4em;
             margin-right: 0.65em;
             text-align: center;
-            color: #177f83;
+            color: var(--sidebar-teal);
         }
+
+
+        /* ==========================================
+           PROJECTS DROPDOWN
+           SAME APPROACH AS UoE MODULE NAVIGATION
+        ========================================== */
+
+        #menu .projects-menu > .opener.active + ul {
+            display: block;
+        }
+
+        /*
+           The Projects heading uses HTML5 UP's
+           built-in opener functionality.
+
+           Adding "active" keeps it open initially.
+           Clicking Projects toggles it open/closed.
+        */
+
+
+        /* ==========================================
+           NESTED PROJECT SECTION LINKS
+        ========================================== */
+
+        #menu ul.project-section-links {
+            display: block !important;
+            border-left: 2px solid var(--sidebar-line);
+            margin: 0.35em 0 0.9em 0.85em;
+            padding: 0 0 0 0.65em;
+            list-style: none;
+        }
+
+        #menu ul.project-section-links > li {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+
+        #menu ul.project-section-links > li > a {
+            display: block;
+
+            border: 0;
+            border-left: 2px solid transparent;
+
+            margin-left: -2px;
+            padding: 0.48em 0.75em;
+
+            color: var(--sidebar-muted);
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.5;
+            text-transform: none;
+            text-decoration: none;
+
+            transition:
+                color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        #menu ul.project-section-links > li > a:hover {
+            color: var(--sidebar-teal);
+            border-left-color: var(--sidebar-teal);
+            background: rgba(23,127,131,0.05);
+        }
+
+        /* Highlight the section being viewed */
+
+        #menu ul.project-section-links > li >
+        a[aria-current="location"] {
+
+            color: var(--sidebar-teal);
+            border-left-color: var(--sidebar-teal);
+            background: rgba(23,127,131,0.05);
+            font-weight: 600;
+        }
+
+
+        /* ==========================================
+           COPYRIGHT FOOTER
+        ========================================== */
 
         #sidebar #footer {
             margin-top: auto;
@@ -591,61 +681,30 @@
         #sidebar #footer .copyright {
             font-size: 0.74rem;
             line-height: 1.7;
+            color: var(--sidebar-muted);
         }
 
 
-        /* =====================================
-           ON THIS PAGE NAVIGATION
-        ===================================== */
-
-        .page-anchor-list {
-            border-top: 1px solid #cbd6db;
-            margin-top: 1.8em;
-            padding-top: 1.6em;
-        }
-
-        .page-anchor-list h3 {
-            font-size: 0.78rem;
-            color: #20344a;
-            letter-spacing: 0.09em;
-            text-transform: uppercase;
-            margin-bottom: 0.9em;
-        }
-
-        .page-anchor-list a {
-            display: block;
-            color: #475f6e;
-            border-bottom: 0;
-            font-size: 0.87rem;
-            padding: 0.43em 0.2em;
-            text-decoration: none;
-        }
-
-        .page-anchor-list a:hover {
-            color: #177f83;
-        }
-
-
-        /* =====================================
+        /* ==========================================
            RESPONSIVE DESIGN
-        ===================================== */
+        ========================================== */
 
-        @media (max-width: 1100px) {
+        @media screen and (max-width:1100px) {
 
             .flow-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3,1fr);
             }
 
-            .flow-step:after {
+            .flow-step::after {
                 display: none;
             }
 
             .snapshot {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2,1fr);
             }
         }
 
-        @media (max-width: 760px) {
+        @media screen and (max-width:760px) {
 
             #header {
                 padding: 2.8em 0;
@@ -670,22 +729,18 @@
             }
 
             .snapshot {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2,1fr);
             }
         }
 
-        @media (max-width: 420px) {
+        @media screen and (max-width:420px) {
 
             .snapshot {
                 grid-template-columns: 1fr;
             }
-
-            .architecture {
-                padding: 1em;
-            }
         }
 
-        @media (prefers-reduced-motion: reduce) {
+        @media (prefers-reduced-motion:reduce) {
 
             html {
                 scroll-behavior: auto;
@@ -693,6 +748,7 @@
         }
 
     </style>
+
 </head>
 
 
@@ -700,11 +756,12 @@
 
     <div id="wrapper">
 
-        <!-- =====================================
-             MAIN PAGE CONTENT
-        ===================================== -->
+        <!-- ==========================================
+             MAIN CONTENT
+        ========================================== -->
 
         <div id="main">
+
             <div class="inner">
 
                 <!-- PAGE HEADER -->
@@ -730,8 +787,7 @@
                     <div class="hero-rule"
                          aria-hidden="true"></div>
 
-                    <div class="meta-row"
-                         aria-label="Project summary">
+                    <div class="meta-row">
 
                         <span class="meta-pill primary">
                             Version 1.0 · Deployed
@@ -742,11 +798,11 @@
                         </span>
 
                         <span class="meta-pill">
-                            Python · Google Colab · GitHub Actions · RSS
+                            Python · Google Colab · GitHub Actions
                         </span>
 
                         <span class="meta-pill">
-                            Source Repository Private
+                            Private Source Repository
                         </span>
 
                     </div>
@@ -755,6 +811,7 @@
 
 
                 <main id="page-content">
+
 
                     <!-- =====================================
                          01 PROJECT OVERVIEW
@@ -768,7 +825,7 @@
                         </p>
 
                         <h2 class="section-heading">
-                            Why I Built It
+                            Project Overview
                         </h2>
 
                         <div class="section-copy">
@@ -779,66 +836,88 @@
                                 developments across core banking platforms,
                                 modernisation programmes and the growing
                                 use of artificial intelligence in financial
-                                services. Checking several sources
+                                services. Checking several news sources
                                 individually was time-consuming, so I
                                 decided to automate the process.
                             </p>
 
                             <p>
-                                The result is a Python-based news monitoring
-                                application that collects relevant headlines,
-                                filters out older or duplicate results,
-                                and prepares a daily email digest. It also
-                                sends a standard update when no new
-                                articles are found. If the news feeds
-                                are unavailable, the application reports
-                                that separately rather than incorrectly
-                                treating the day as quiet.
+                                I developed a Python-based application
+                                that collects relevant headlines,
+                                filters older or duplicate results
+                                and prepares a daily email briefing.
+                                It also sends a standard update when
+                                no new articles are identified, rather
+                                than simply remaining silent.
                             </p>
 
                             <p>
-                                I developed and tested the application in
-                                Google Colab before deploying it through
-                                a private GitHub repository. GitHub Actions
-                                handles execution, while a dedicated
-                                sending email account and repository
-                                secrets keep credentials outside the code.
+                                The application was initially developed
+                                and tested using Google Colab before
+                                being deployed through a private GitHub
+                                repository. GitHub Actions manages
+                                scheduled and manual execution, while
+                                a dedicated sending account and
+                                repository secrets protect email
+                                credentials.
                             </p>
 
                         </div>
 
 
-                        <!-- PROJECT SNAPSHOT -->
+                        <!-- PROJECT SUMMARY -->
 
-                        <div class="snapshot"
-                             aria-label="Project at a glance">
+                        <div class="snapshot">
 
                             <div class="snapshot-item">
+
                                 <span class="snapshot-label">
                                     Development
                                 </span>
-                                <strong>Google Colab / Python</strong>
+
+                                <strong>
+                                    Python / Google Colab
+                                </strong>
+
                             </div>
 
+
                             <div class="snapshot-item">
+
                                 <span class="snapshot-label">
                                     Automation
                                 </span>
-                                <strong>GitHub Actions</strong>
+
+                                <strong>
+                                    GitHub Actions
+                                </strong>
+
                             </div>
 
+
                             <div class="snapshot-item">
+
                                 <span class="snapshot-label">
                                     Testing
                                 </span>
-                                <strong>12 Automated Tests</strong>
+
+                                <strong>
+                                    12 Automated Tests
+                                </strong>
+
                             </div>
 
+
                             <div class="snapshot-item">
+
                                 <span class="snapshot-label">
                                     Delivery
                                 </span>
-                                <strong>Daily Email Digest</strong>
+
+                                <strong>
+                                    Email Digest
+                                </strong>
+
                             </div>
 
                         </div>
@@ -863,50 +942,69 @@
 
                         <div class="feature-grid">
 
+
+                            <!-- MONITORING -->
+
                             <div class="feature">
 
                                 <i class="icon solid fa-search"
                                    aria-hidden="true"></i>
 
-                                <h3>Targeted Monitoring</h3>
+                                <h3>
+                                    Targeted Monitoring
+                                </h3>
 
                                 <p>
-                                    Searches RSS results for core banking
-                                    transformation, Temenos, Mambu,
-                                    Thought Machine and AI in banking.
+                                    Retrieves news relating to
+                                    core banking transformation,
+                                    Temenos, Mambu, Thought Machine
+                                    and AI applications within
+                                    financial services.
                                 </p>
 
                             </div>
 
+
+                            <!-- FILTERING -->
 
                             <div class="feature">
 
                                 <i class="icon solid fa-filter"
                                    aria-hidden="true"></i>
 
-                                <h3>News Filtering</h3>
+                                <h3>
+                                    News Filtering
+                                </h3>
 
                                 <p>
-                                    Checks publication dates, removes
-                                    duplicate headlines within each
-                                    run and limits the briefing
-                                    to 12 results.
+                                    Uses publication dates to
+                                    identify recent articles,
+                                    removes duplicate headlines
+                                    within each execution and
+                                    limits the digest to
+                                    12 stories.
                                 </p>
 
                             </div>
 
+
+                            <!-- EMAIL -->
 
                             <div class="feature">
 
                                 <i class="icon solid fa-envelope"
                                    aria-hidden="true"></i>
 
-                                <h3>Reliable Messaging Logic</h3>
+                                <h3>
+                                    Automated Email Delivery
+                                </h3>
 
                                 <p>
-                                    Produces a daily digest, a no-news
-                                    confirmation or a source-unavailable
-                                    warning, with manual testing supported.
+                                    Generates a daily briefing,
+                                    a default no-news notification
+                                    or an unavailable-source
+                                    warning depending on the
+                                    results of each execution.
                                 </p>
 
                             </div>
@@ -928,14 +1026,17 @@
                         </p>
 
                         <h2 class="section-heading">
-                            Architecture
+                            Solution Architecture
                         </h2>
 
                         <p class="section-intro">
-                            The first release uses a straightforward,
-                            rule-based workflow. There is no large
-                            language model involved in selecting or
-                            summarising articles at this stage.
+                            The initial release uses a
+                            rule-based workflow. Rather than
+                            introducing an LLM immediately,
+                            I focused on establishing a
+                            functioning automated process
+                            that could be tested and
+                            extended over time.
                         </p>
 
 
@@ -943,8 +1044,10 @@
 
                             <div class="flow-grid"
                                  role="img"
-                                 aria-label="Workflow from GitHub Actions to RSS search, Python filtering, email generation and Gmail delivery.">
+                                 aria-label="GitHub Actions triggers RSS collection, Python filtering, email generation and Gmail delivery.">
 
+
+                                <!-- STEP 1 -->
 
                                 <div class="flow-step">
 
@@ -952,15 +1055,19 @@
                                         01 / TRIGGER
                                     </span>
 
-                                    <strong>GitHub Actions</strong>
+                                    <strong>
+                                        GitHub Actions
+                                    </strong>
 
                                     <span>
-                                        Scheduled daily or
-                                        launched manually
+                                        Daily schedule
+                                        or manual execution
                                     </span>
 
                                 </div>
 
+
+                                <!-- STEP 2 -->
 
                                 <div class="flow-step">
 
@@ -968,15 +1075,19 @@
                                         02 / COLLECT
                                     </span>
 
-                                    <strong>RSS Search</strong>
+                                    <strong>
+                                        RSS Search
+                                    </strong>
 
                                     <span>
-                                        Topic-specific
-                                        Google News queries
+                                        Google News
+                                        topic-specific queries
                                     </span>
 
                                 </div>
 
+
+                                <!-- STEP 3 -->
 
                                 <div class="flow-step">
 
@@ -984,15 +1095,20 @@
                                         03 / PROCESS
                                     </span>
 
-                                    <strong>Python</strong>
+                                    <strong>
+                                        Python
+                                    </strong>
 
                                     <span>
-                                        Time window, validation
-                                        and deduplication
+                                        Date filtering,
+                                        validation and
+                                        deduplication
                                     </span>
 
                                 </div>
 
+
+                                <!-- STEP 4 -->
 
                                 <div class="flow-step">
 
@@ -1000,15 +1116,20 @@
                                         04 / FORMAT
                                     </span>
 
-                                    <strong>Email Builder</strong>
+                                    <strong>
+                                        Email Builder
+                                    </strong>
 
                                     <span>
-                                        Headlines, no-news
-                                        or source error
+                                        News, no-news
+                                        or source-error
+                                        message
                                     </span>
 
                                 </div>
 
+
+                                <!-- STEP 5 -->
 
                                 <div class="flow-step">
 
@@ -1016,11 +1137,13 @@
                                         05 / DELIVER
                                     </span>
 
-                                    <strong>Gmail SMTP</strong>
+                                    <strong>
+                                        Gmail SMTP
+                                    </strong>
 
                                     <span>
                                         Briefing delivered
-                                        to a personal inbox
+                                        to personal inbox
                                     </span>
 
                                 </div>
@@ -1029,10 +1152,14 @@
 
 
                             <figcaption>
-                                GitHub Actions orchestrates the run.
-                                Email account credentials are supplied
-                                through GitHub repository secrets and
-                                are not committed to source control.
+
+                                GitHub Actions orchestrates the
+                                scheduled workflow. Credentials
+                                are maintained in GitHub repository
+                                secrets rather than being
+                                stored directly in the
+                                Python source code.
+
                             </figcaption>
 
                         </figure>
@@ -1041,13 +1168,21 @@
                         <div class="implementation-note">
 
                             <p>
-                                <strong>Deployment note.</strong>
-                                The workflow has been successfully
-                                triggered manually and email delivery
-                                has been confirmed. Automatic delivery
-                                is configured for 07:17 London time;
-                                scheduled execution is subject to
-                                GitHub Actions availability.
+
+                                <strong>
+                                    Deployment:
+                                </strong>
+
+                                The workflow has been executed
+                                successfully through GitHub
+                                Actions, with manual email
+                                delivery confirmed.
+
+                                Daily execution is configured
+                                for 07:17 London time, subject
+                                to GitHub Actions scheduling
+                                availability.
+
                             </p>
 
                         </div>
@@ -1071,56 +1206,63 @@
                         </h2>
 
                         <p class="section-intro">
-                            Development included automated unit tests
-                            and manual deployment checks. The first
-                            GitHub Actions run completed successfully
-                            and the test email was received.
-                            The screenshots below are placeholders
-                            for redacted project evidence.
+
+                            Development included automated
+                            Python unit tests and manual
+                            deployment checks. The application
+                            was tested for news filtering,
+                            duplicate handling, fallback
+                            notifications and email delivery.
+
+                            The following placeholders can
+                            be replaced with screenshots of
+                            the completed tests and outputs.
+
                         </p>
 
 
                         <div class="evidence-grid">
 
 
-                            <!-- EVIDENCE 1: COLAB TESTS -->
+                            <!-- EVIDENCE 1 -->
 
                             <figure class="evidence">
 
-                                <div class="evidence-placeholder"
-                                     role="img"
-                                     aria-label="Placeholder for Google Colab unit test screenshot">
+                                <div class="evidence-placeholder">
 
                                     <i class="icon solid fa-check-circle"
                                        aria-hidden="true"></i>
 
                                     <span>
-                                        Colab Test Results<br />
-                                        Add Screenshot
+                                        Google Colab<br />
+                                        Test Results
                                     </span>
 
                                 </div>
 
                                 <!--
-                                To add your actual screenshot,
-                                replace the placeholder DIV with:
+                                Replace placeholder above with:
 
                                 <img
-                                    class="evidence-image"
-                                    src="../images/projects/core-banking/colab-tests.png"
-                                    alt="Google Colab output showing 12 passing unit tests"
+                                  class="evidence-image"
+                                  src="../images/projects/core-banking/colab-tests.png"
+                                  alt="Google Colab showing 12 passing tests"
                                 />
                                 -->
 
                                 <figcaption>
 
-                                    <strong>Automated Tests</strong>
+                                    <strong>
+                                        Automated Testing
+                                    </strong>
 
                                     <span>
-                                        Twelve unit tests covering date
-                                        filtering, duplicate handling,
-                                        safe HTML, no-news messaging
-                                        and email delivery logic.
+                                        Twelve tests covering
+                                        article filtering,
+                                        date validation,
+                                        duplicate detection,
+                                        email generation
+                                        and exception handling.
                                     </span>
 
                                 </figcaption>
@@ -1129,43 +1271,45 @@
 
 
 
-                            <!-- EVIDENCE 2: EMAIL OUTPUT -->
+                            <!-- EVIDENCE 2 -->
 
                             <figure class="evidence">
 
-                                <div class="evidence-placeholder"
-                                     role="img"
-                                     aria-label="Placeholder for email briefing screenshot">
+                                <div class="evidence-placeholder">
 
                                     <i class="icon solid fa-envelope-open-text"
                                        aria-hidden="true"></i>
 
                                     <span>
-                                        Redacted Email Briefing<br />
-                                        Add Screenshot
+                                        Email Briefing<br />
+                                        Screenshot
                                     </span>
 
                                 </div>
 
                                 <!--
-                                Replace the placeholder with:
+                                Replace placeholder above with:
 
                                 <img
-                                    class="evidence-image"
-                                    src="../images/projects/core-banking/email-briefing.png"
-                                    alt="Redacted sample of the Core Banking Intelligence Digest email"
+                                  class="evidence-image"
+                                  src="../images/projects/core-banking/email-briefing.png"
+                                  alt="Redacted example email briefing"
                                 />
                                 -->
 
                                 <figcaption>
 
-                                    <strong>Email Output</strong>
+                                    <strong>
+                                        Email Output
+                                    </strong>
 
                                     <span>
-                                        The fallback briefing is sent
-                                        even when no matching headlines
-                                        are returned, providing
-                                        confirmation of execution.
+                                        The application sends
+                                        a default briefing
+                                        when no matching articles
+                                        are identified, confirming
+                                        that the workflow
+                                        executed.
                                     </span>
 
                                 </figcaption>
@@ -1174,43 +1318,44 @@
 
 
 
-                            <!-- EVIDENCE 3: GITHUB ACTIONS -->
+                            <!-- EVIDENCE 3 -->
 
                             <figure class="evidence">
 
-                                <div class="evidence-placeholder"
-                                     role="img"
-                                     aria-label="Placeholder for successful GitHub Actions screenshot">
+                                <div class="evidence-placeholder">
 
                                     <i class="icon solid fa-play-circle"
                                        aria-hidden="true"></i>
 
                                     <span>
-                                        Successful GitHub Actions Run<br />
-                                        Add Screenshot
+                                        GitHub Actions<br />
+                                        Successful Run
                                     </span>
 
                                 </div>
 
                                 <!--
-                                Replace the placeholder with:
+                                Replace placeholder above with:
 
                                 <img
-                                    class="evidence-image"
-                                    src="../images/projects/core-banking/actions-run.png"
-                                    alt="Successful manual GitHub Actions briefing job"
+                                  class="evidence-image"
+                                  src="../images/projects/core-banking/actions-run.png"
+                                  alt="Successful GitHub Actions execution"
                                 />
                                 -->
 
                                 <figcaption>
 
-                                    <strong>Deployment Verification</strong>
+                                    <strong>
+                                        Deployment Validation
+                                    </strong>
 
                                     <span>
-                                        Successful manual execution on
-                                        the main branch, followed by
-                                        confirmation that the email
-                                        arrived.
+                                        Successful execution
+                                        of the private GitHub
+                                        Actions workflow, followed
+                                        by confirmation that
+                                        the email was received.
                                     </span>
 
                                 </figcaption>
@@ -1222,12 +1367,17 @@
 
                         <p class="privacy-note">
 
-                            <strong>Privacy:</strong>
+                            <strong>
+                                Repository Privacy:
+                            </strong>
 
-                            The source repository is not linked publicly.
-                            Before adding screenshots, remove email
-                            addresses, secrets, account identifiers
-                            and any sensitive workflow details.
+                            The application source code
+                            is maintained in a separate,
+                            private GitHub repository.
+                            Screenshots are redacted to
+                            exclude personal email addresses,
+                            credentials and sensitive
+                            configuration details.
 
                         </p>
 
@@ -1242,7 +1392,7 @@
                              id="evolution">
 
                         <p class="section-kicker">
-                            05 / Iteration
+                            05 / Continuous Development
                         </p>
 
                         <h2 class="section-heading">
@@ -1250,15 +1400,20 @@
                         </h2>
 
                         <p class="section-intro">
-                            I plan to build on the same application,
-                            documenting each significant release
-                            rather than creating a separate project
-                            for every improvement.
+
+                            Future releases will build
+                            on the existing application,
+                            with each significant improvement
+                            documented as part of the
+                            project's development history.
+
                         </p>
 
 
                         <div class="timeline">
 
+
+                            <!-- VERSION 1 -->
 
                             <div class="timeline-entry">
 
@@ -1275,17 +1430,24 @@
                                 </div>
 
                                 <p>
-                                    Rule-based RSS retrieval, date
-                                    filtering, within-run deduplication,
-                                    daily email generation, a no-news
-                                    fallback and automated testing.
-                                    Manual execution and Gmail
-                                    delivery verified.
+                                    Implemented a Python-based
+                                    RSS collection workflow,
+                                    date filtering, duplicate
+                                    headline handling, automated
+                                    email delivery and a
+                                    no-news fallback.
+
+                                    Completed automated
+                                    testing and verified
+                                    manual execution through
+                                    GitHub Actions.
                                 </p>
 
                             </div>
 
 
+
+                            <!-- VERSION 1.1 -->
 
                             <div class="timeline-entry">
 
@@ -1302,14 +1464,18 @@
                                 </div>
 
                                 <p>
-                                    Persist previously sent article
-                                    identifiers to reduce repetition
-                                    across daily briefings.
+                                    Introduce persistent article
+                                    tracking to identify stories
+                                    included in earlier briefings
+                                    and reduce duplication
+                                    across multiple days.
                                 </p>
 
                             </div>
 
 
+
+                            <!-- VERSION 1.2 -->
 
                             <div class="timeline-entry">
 
@@ -1326,22 +1492,26 @@
                                 </div>
 
                                 <p>
-                                    Rank stories by relevance to
-                                    core banking platforms,
-                                    implementation activity and
-                                    financial services modernisation.
+                                    Develop a scoring mechanism
+                                    to prioritise significant
+                                    core banking announcements,
+                                    platform implementations
+                                    and banking technology
+                                    modernisation programmes.
                                 </p>
 
                             </div>
 
 
 
+                            <!-- VERSION 2.0 -->
+
                             <div class="timeline-entry">
 
                                 <div class="timeline-head">
 
                                     <h3>
-                                        V2.0 — AI-Assisted Analysis
+                                        V2.0 — AI-Powered Intelligence
                                     </h3>
 
                                     <span class="timeline-state">
@@ -1351,15 +1521,19 @@
                                 </div>
 
                                 <p>
-                                    Experiment with LLM-generated
-                                    summaries and assessments of why
-                                    announcements matter for banking
-                                    technology practitioners.
+                                    Introduce LLM-generated
+                                    summaries and analysis
+                                    explaining the implications
+                                    of technology developments
+                                    for banks, vendors
+                                    and implementation partners.
                                 </p>
 
                             </div>
 
 
+
+                            <!-- VERSION 3.0 -->
 
                             <div class="timeline-entry">
 
@@ -1376,10 +1550,13 @@
                                 </div>
 
                                 <p>
-                                    Investigate multi-step research,
-                                    controlled tool use and more
-                                    autonomous topic investigation,
-                                    subject to evaluation and safeguards.
+                                    Investigate more autonomous
+                                    research capabilities,
+                                    including multi-step
+                                    investigation, controlled
+                                    tool selection and
+                                    follow-up analysis of
+                                    significant announcements.
                                 </p>
 
                             </div>
@@ -1408,24 +1585,32 @@
                         <div class="lessons">
 
 
+                            <!-- LESSON 1 -->
+
                             <div class="lesson">
 
                                 <h3>
-                                    From Notebook to Deployment
+                                    From Colab to Deployment
                                 </h3>
 
                                 <p>
-                                    Colab worked well for writing
-                                    and testing the application,
-                                    but a cloud-hosted workflow
-                                    was better suited to recurring
-                                    execution without relying on
-                                    an open browser session.
+                                    Google Colab provided a
+                                    straightforward environment
+                                    for developing and testing
+                                    the application. Moving
+                                    it to GitHub Actions
+                                    demonstrated how a Python
+                                    script could operate
+                                    independently of a
+                                    local computer or
+                                    notebook session.
                                 </p>
 
                             </div>
 
 
+
+                            <!-- LESSON 2 -->
 
                             <div class="lesson">
 
@@ -1434,48 +1619,68 @@
                                 </h3>
 
                                 <p>
-                                    The most challenging part was
-                                    resolving Gmail SMTP authentication.
-                                    The issue highlighted the importance
-                                    of dedicated application credentials,
-                                    account verification and keeping
-                                    secrets outside source code.
+                                    Configuring Gmail authentication
+                                    proved more challenging than
+                                    expected. Resolving the SMTP
+                                    errors required understanding
+                                    Google App Passwords and
+                                    account verification.
+
+                                    It also reinforced the
+                                    importance of separating
+                                    credentials from source code.
                                 </p>
 
                             </div>
 
 
 
+                            <!-- LESSON 3 -->
+
                             <div class="lesson">
 
                                 <h3>
-                                    Handling Exceptional Scenarios
+                                    Handling Different Outcomes
                                 </h3>
 
                                 <p>
-                                    A quiet news day is not the same
-                                    as an unavailable source. Designing
-                                    distinct messages for these outcomes
-                                    made the application's behaviour
-                                    easier to interpret and test.
+                                    One important design decision
+                                    was distinguishing between
+                                    days with no relevant news
+                                    and situations where the
+                                    news sources were unavailable.
+
+                                    Treating these as separate
+                                    outcomes made the application
+                                    easier to understand
+                                    and validate.
                                 </p>
 
                             </div>
 
 
 
+                            <!-- LESSON 4 -->
+
                             <div class="lesson">
 
                                 <h3>
-                                    Testing Beyond a Successful Run
+                                    Testing the Complete Workflow
                                 </h3>
 
                                 <p>
-                                    Unit tests checked individual
-                                    behaviours, while manually triggering
-                                    the GitHub workflow and confirming
-                                    delivery helped validate the
-                                    end-to-end process.
+                                    Automated tests provided
+                                    confidence in the individual
+                                    functions, but successfully
+                                    executing the workflow
+                                    in GitHub and receiving
+                                    the email was an
+                                    important final step.
+
+                                    It highlighted the difference
+                                    between testing code and
+                                    validating a deployed
+                                    application.
                                 </p>
 
                             </div>
@@ -1483,7 +1688,7 @@
                         </div>
 
 
-                        <!-- GENERATIVE AI DISCLOSURE -->
+                        <!-- DEVELOPMENT DISCLOSURE -->
 
                         <aside class="disclosure">
 
@@ -1493,15 +1698,18 @@
 
                             <p>
                                 This personal project was developed
-                                with generative AI assistance. I defined
-                                the use case and requirements, worked
-                                through the Colab and GitHub setup,
-                                troubleshot authentication failures
-                                and validated the deployed workflow.
+                                with generative AI assistance.
+                                I defined the use case and
+                                functional requirements, worked
+                                through the Python and GitHub
+                                setup, troubleshot authentication
+                                problems and validated the
+                                deployed application.
 
-                                The application is currently a
-                                rule-based automation rather than
-                                an autonomous AI agent.
+                                The current version is a
+                                rule-based news monitoring
+                                automation rather than a
+                                fully autonomous AI agent.
                             </p>
 
                         </aside>
@@ -1511,29 +1719,34 @@
                 </main>
 
             </div>
+
         </div>
 
 
-        <!-- =====================================
+        <!-- ==========================================
              SIDEBAR
-        ===================================== -->
+        ========================================== -->
 
         <div id="sidebar">
 
             <div class="inner">
 
                 <nav id="menu"
-                     aria-label="Portfolio navigation">
+                     aria-label="Main navigation">
 
                     <header class="major">
+
                         <h2>Navigation</h2>
+
                     </header>
+
 
                     <ul>
 
                         <!-- HOME -->
 
                         <li>
+
                             <a href="../index.html">
 
                                 <i class="icon solid fa-home menu-icon"
@@ -1542,12 +1755,15 @@
                                 Home
 
                             </a>
+
                         </li>
 
 
-                        <!-- UNIVERSITY E-PORTFOLIO -->
+                        <!-- =====================================
+                             UNIVERSITY E-PORTFOLIO DROPDOWN
+                        ===================================== -->
 
-                        <li>
+                        <li class="modules-menu">
 
                             <span class="opener">
 
@@ -1558,24 +1774,39 @@
 
                             </span>
 
+
                             <ul>
 
                                 <li>
+
                                     <a href="../modules/understanding-ai.html">
+
                                         Understanding Artificial Intelligence
+
                                     </a>
+
                                 </li>
 
+
                                 <li>
+
                                     <a href="../modules/launch-into-computing.html">
+
                                         Launch Into Computing
+
                                     </a>
+
                                 </li>
 
+
                                 <li>
+
                                     <a href="../modules/numerical-analysis.html">
+
                                         Numerical Analysis
+
                                     </a>
+
                                 </li>
 
                             </ul>
@@ -1583,9 +1814,152 @@
                         </li>
 
 
-                        <!-- SKILLS MATRIX -->
+
+                        <!-- =====================================
+                             PROJECTS DROPDOWN
+                             CURRENT PROJECT EXPANDED
+                        ===================================== -->
+
+                        <li class="projects-menu">
+
+
+                            <!-- PROJECTS HEADING -->
+
+                            <span class="opener active">
+
+                                <i class="icon solid fa-laptop-code menu-icon"
+                                   aria-hidden="true"></i>
+
+                                Projects
+
+                            </span>
+
+
+                            <!-- PROJECTS LIST -->
+
+                            <ul>
+
+
+                                <!-- =====================================
+                                     CORE BANKING PROJECT
+                                ===================================== -->
+
+                                <li>
+
+
+                                    <a href="core-banking-intelligence.html"
+                                       aria-current="page">
+
+                                        Core Banking Intelligence Digest
+
+                                    </a>
+
+
+                                    <!-- =====================================
+                                         SECTION SUBMENUS
+                                    ===================================== -->
+
+                                    <ul class="project-section-links"
+                                        aria-label="Core Banking Intelligence Digest sections">
+
+
+                                        <li>
+
+                                            <a href="#overview">
+
+                                                Project Overview
+
+                                            </a>
+
+                                        </li>
+
+
+                                        <li>
+
+                                            <a href="#features">
+
+                                                Key Features
+
+                                            </a>
+
+                                        </li>
+
+
+                                        <li>
+
+                                            <a href="#architecture">
+
+                                                Solution Architecture
+
+                                            </a>
+
+                                        </li>
+
+
+                                        <li>
+
+                                            <a href="#testing">
+
+                                                Testing &amp; Evidence
+
+                                            </a>
+
+                                        </li>
+
+
+                                        <li>
+
+                                            <a href="#evolution">
+
+                                                Project Evolution
+
+                                            </a>
+
+                                        </li>
+
+
+                                        <li>
+
+                                            <a href="#reflection">
+
+                                                Lessons Learned
+
+                                            </a>
+
+                                        </li>
+
+
+                                    </ul>
+
+
+                                </li>
+
+
+                                <!--
+                                ADD FUTURE PROJECTS HERE
+
+                                Example:
+
+                                <li>
+                                    <a href="another-project.html">
+                                        Another Project
+                                    </a>
+                                </li>
+                                -->
+
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- =====================================
+                             SKILLS MATRIX
+                        ===================================== -->
 
                         <li>
+
                             <a href="../skills-matrix.html">
 
                                 <i class="icon solid fa-tasks menu-icon"
@@ -1594,12 +1968,15 @@
                                 Skills Matrix
 
                             </a>
+
                         </li>
+
 
 
                         <!-- ABOUT ME -->
 
                         <li>
+
                             <a href="../about.html">
 
                                 <i class="icon solid fa-user menu-icon"
@@ -1608,27 +1985,15 @@
                                 About Me
 
                             </a>
+
                         </li>
 
-
-                        <!-- PROJECTS -->
-
-                        <li>
-                            <a href="core-banking-intelligence.html"
-                               aria-current="page">
-
-                                <i class="icon solid fa-laptop-code menu-icon"
-                                   aria-hidden="true"></i>
-
-                                Projects
-
-                            </a>
-                        </li>
 
 
                         <!-- GITHUB -->
 
                         <li>
+
                             <a href="https://github.com/bwestlake"
                                target="_blank"
                                rel="noopener noreferrer">
@@ -1639,12 +2004,15 @@
                                 GitHub
 
                             </a>
+
                         </li>
+
 
 
                         <!-- LINKEDIN -->
 
                         <li>
+
                             <a href="https://www.linkedin.com/in/bernardwestlake/"
                                target="_blank"
                                rel="noopener noreferrer">
@@ -1655,50 +2023,19 @@
                                 LinkedIn
 
                             </a>
+
                         </li>
 
+
                     </ul>
+
 
                 </nav>
 
 
                 <!-- =====================================
-                     ON THIS PAGE
+                     COPYRIGHT FOOTER
                 ===================================== -->
-
-                <nav class="page-anchor-list"
-                     aria-label="On this page">
-
-                    <h3>On This Page</h3>
-
-                    <a href="#overview">
-                        Project Overview
-                    </a>
-
-                    <a href="#features">
-                        Key Features
-                    </a>
-
-                    <a href="#architecture">
-                        Architecture
-                    </a>
-
-                    <a href="#testing">
-                        Testing &amp; Evidence
-                    </a>
-
-                    <a href="#evolution">
-                        Project Evolution
-                    </a>
-
-                    <a href="#reflection">
-                        Lessons Learned
-                    </a>
-
-                </nav>
-
-
-                <!-- COPYRIGHT -->
 
                 <footer id="footer">
 
@@ -1707,6 +2044,7 @@
                         &copy; 2026 Bernard Westlake.
 
                         Design:
+
                         <a href="https://html5up.net">
                             HTML5 UP
                         </a>.
@@ -1722,10 +2060,10 @@
     </div>
 
 
-    <!-- =====================================
+    <!-- ==========================================
          SHARED HTML5 UP JAVASCRIPT
          Paths adjusted for projects/ directory
-    ===================================== -->
+    ========================================== -->
 
     <script src="../assets/js/jquery.min.js"></script>
 
@@ -1737,6 +2075,132 @@
 
     <script src="../assets/js/main.js"></script>
 
-</body>
-</html>
 
+    <!-- ==========================================
+         ACTIVE SECTION HIGHLIGHTING
+
+         Matches the Understanding AI module
+         navigation behaviour.
+    ========================================== -->
+
+    <script>
+
+        (function () {
+
+            // Find sidebar section navigation links.
+
+            const links = Array.from(
+                document.querySelectorAll(
+                    '.project-section-links a[href^="#"]'
+                )
+            );
+
+
+            // Match each link to its target section.
+
+            const sections = links
+                .map(link => {
+
+                    return document.getElementById(
+                        link.hash.slice(1)
+                    );
+
+                })
+                .filter(Boolean);
+
+
+            if (!sections.length) {
+                return;
+            }
+
+
+            // Highlight the current section.
+
+            function updateActiveSection() {
+
+                const marker = Math.min(
+                    window.innerHeight * 0.3,
+                    200
+                );
+
+                let current = sections[0];
+
+
+                sections.forEach(section => {
+
+                    if (
+                        section.getBoundingClientRect().top
+                        <= marker
+                    ) {
+                        current = section;
+                    }
+
+                });
+
+
+                // Handle the end of the page.
+
+                if (
+                    window.innerHeight + window.scrollY
+                    >= document.documentElement.scrollHeight - 2
+                ) {
+                    current = sections[sections.length - 1];
+                }
+
+
+                // Update highlighted sidebar links.
+
+                links.forEach(link => {
+
+                    if (
+                        link.hash === '#' + current.id
+                    ) {
+
+                        link.setAttribute(
+                            'aria-current',
+                            'location'
+                        );
+
+                    } else {
+
+                        link.removeAttribute(
+                            'aria-current'
+                        );
+
+                    }
+
+                });
+
+            }
+
+
+            // Update during scrolling and navigation.
+
+            window.addEventListener(
+                'scroll',
+                updateActiveSection,
+                { passive: true }
+            );
+
+            window.addEventListener(
+                'resize',
+                updateActiveSection
+            );
+
+            window.addEventListener(
+                'hashchange',
+                updateActiveSection
+            );
+
+
+            // Set the initial active section.
+
+            updateActiveSection();
+
+        })();
+
+    </script>
+
+</body>
+
+</html>

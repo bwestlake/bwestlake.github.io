@@ -3,25 +3,18 @@
 <!--
     Editorial by HTML5 UP
     html5up.net | @ajlkn
-    Free for personal and commercial use under
-    the CCA 3.0 license (html5up.net/license)
+    Free for personal and commercial use under the CCA 3.0 license
+    (html5up.net/license)
 -->
-
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8" />
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
           content="Launch into Computing: an MSc module portfolio documenting learning, assessments and personal reflection." />
 
-    <title>
-        Launch into Computing | ePortfolio
-    </title>
+    <title>Launch into Computing | ePortfolio</title>
 
     <link rel="stylesheet" href="assets/css/main.css" />
 
@@ -46,8 +39,7 @@
             scroll-behavior: smooth;
         }
 
-        body,
-        #main {
+        body, #main {
             background: var(--paper);
             color: var(--ink);
         }
@@ -63,7 +55,6 @@
         a:hover {
             color: var(--navy);
         }
-
 
         /* =====================================
            PAGE HEADER
@@ -108,7 +99,6 @@
             color: #abb5bd;
         }
 
-
         /* =====================================
            MAIN CONTENT
         ===================================== */
@@ -142,18 +132,15 @@
             margin-bottom: 1.8em;
         }
 
-
         /* =====================================
            MODULE OVERVIEW
         ===================================== */
 
         .overview-layout {
             display: grid;
-
             grid-template-columns:
                 minmax(0, 1.3fr)
                 minmax(240px, 0.9fr);
-
             gap: clamp(2em, 5vw, 5em);
             align-items: start;
         }
@@ -165,9 +152,8 @@
             margin: 0;
         }
 
-
         /* =====================================
-           APPLIED PROJECT SUMMARY
+           OVERVIEW IMAGE / PROJECT PANEL
         ===================================== */
 
         .project-note {
@@ -206,7 +192,6 @@
             line-height: 1.7;
         }
 
-
         /* =====================================
            LEARNING OUTCOMES
         ===================================== */
@@ -222,14 +207,11 @@
             display: grid;
             grid-template-columns: 3em minmax(0, 1fr);
             gap: 1em;
-
             padding: 1.1em 0;
             border-bottom: 1px solid var(--line);
-
             color: var(--ink);
             font-size: 0.96rem;
             line-height: 1.75;
-
             counter-increment: outcomes;
         }
 
@@ -244,29 +226,58 @@
             font-size: 0.9rem;
         }
 
-
         /* =====================================
            MODULE ARTEFACTS
+           NEW TRIANGULAR LAYOUT
         ===================================== */
 
         .artefact-grid {
             display: grid;
 
+            /* Four equal columns allow cards
+               to occupy two columns each. */
+
             grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(4, minmax(0, 1fr));
 
             gap: 1.4em;
+            align-items: stretch;
         }
+
+        /* Collaborative Discussion:
+           Top row, centred */
+
+        .artefact-grid > .artefact-card:nth-child(1) {
+            grid-column: 2 / 4;
+            grid-row: 1;
+        }
+
+        /* Python vs JavaScript:
+           Bottom row, right */
+
+        .artefact-grid > .artefact-card:nth-child(2) {
+            grid-column: 3 / 5;
+            grid-row: 2;
+        }
+
+        /* AI Enterprise Presentation:
+           Bottom row, left */
+
+        .artefact-grid > .artefact-card:nth-child(3) {
+            grid-column: 1 / 3;
+            grid-row: 2;
+        }
+
+        /* =====================================
+           ARTEFACT CARD STYLING
+        ===================================== */
 
         .artefact-card {
             display: flex;
             flex-direction: column;
-
             padding: 1.65em;
-
             border: 1px solid var(--line);
             border-top: 2px solid var(--teal);
-
             background: var(--paper);
             border-radius: 2px;
             min-width: 0;
@@ -292,7 +303,6 @@
             line-height: 1.8;
         }
 
-
         /* =====================================
            ARTEFACT LINKS
         ===================================== */
@@ -301,14 +311,11 @@
             display: inline-block;
             margin-top: auto;
             align-self: flex-start;
-
             color: var(--teal);
             border-bottom: 1px solid currentColor;
-
             font-size: 0.86rem;
             font-weight: 600;
             text-decoration: none;
-
             padding: 0 0 0.12em;
             line-height: 1.45;
         }
@@ -317,6 +324,11 @@
             color: var(--navy);
         }
 
+        /* Keep multiple links together */
+
+        .artefact-link + .artefact-link {
+            margin-top: 0.35em;
+        }
 
         /* =====================================
            MODULE REFLECTION
@@ -338,22 +350,18 @@
             margin-bottom: 0;
         }
 
-
         /* =====================================
            REFLECTION TWO-COLUMN LAYOUT
         ===================================== */
 
         .reflection-layout {
             display: grid;
-
             grid-template-columns:
                 minmax(0, 1.8fr)
                 minmax(220px, 0.8fr);
-
             gap: 2.5em;
             align-items: start;
         }
-
 
         /* =====================================
            REFLECTION NOTES PANEL
@@ -400,7 +408,6 @@
             margin: 0;
         }
 
-
         /* =====================================
            SECTION SCROLL POSITIONING
         ===================================== */
@@ -411,7 +418,6 @@
         #professional-reflection {
             scroll-margin-top: 1.5em;
         }
-
 
         /* =====================================
            SIDEBAR
@@ -454,16 +460,13 @@
             font-weight: 700;
         }
 
-
         /* =====================================
-           MODULE NAVIGATION
            KEEP CURRENT MODULE EXPANDED
         ===================================== */
 
         #menu .modules-menu > .opener.active + ul {
             display: block;
         }
-
 
         /* =====================================
            NESTED MODULE SECTION LINKS
@@ -486,13 +489,10 @@
 
         #menu ul.module-section-links > li > a {
             display: block;
-
             border: 0;
             border-left: 2px solid transparent;
-
             margin-left: -2px;
             padding: 0.48em 0.75em;
-
             color: var(--muted);
             font-size: 0.82rem;
             font-weight: 400;
@@ -500,7 +500,6 @@
             line-height: 1.5;
             text-transform: none;
             text-decoration: none;
-
             transition:
                 color 0.2s ease,
                 border-color 0.2s ease;
@@ -512,7 +511,7 @@
             background: rgba(23, 127, 131, 0.05);
         }
 
-        /* Current section highlighted in teal */
+        /* Highlight current section */
 
         #menu ul.module-section-links > li >
         a[aria-current="location"] {
@@ -521,7 +520,6 @@
             background: rgba(23, 127, 131, 0.05);
             font-weight: 600;
         }
-
 
         /* =====================================
            COPYRIGHT POSITIONING
@@ -539,7 +537,6 @@
             line-height: 1.7;
         }
 
-
         /* =====================================
            RESPONSIVE DESIGN
         ===================================== */
@@ -554,7 +551,6 @@
             .reflection-body {
                 max-width: 73ch;
             }
-
         }
 
         @media screen and (max-width: 980px) {
@@ -568,13 +564,33 @@
                 padding-top: 2.2em;
             }
 
+            /* Stack the triangular cards
+               on tablets and mobile devices */
+
+            .artefact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .artefact-grid > .artefact-card:nth-child(1),
+            .artefact-grid > .artefact-card:nth-child(2),
+            .artefact-grid > .artefact-card:nth-child(3) {
+                grid-column: 1;
+            }
+
+            .artefact-grid > .artefact-card:nth-child(1) {
+                grid-row: 1;
+            }
+
+            .artefact-grid > .artefact-card:nth-child(3) {
+                grid-row: 2;
+            }
+
+            .artefact-grid > .artefact-card:nth-child(2) {
+                grid-row: 3;
+            }
         }
 
         @media screen and (max-width: 700px) {
-
-            .artefact-grid {
-                grid-template-columns: 1fr;
-            }
 
             .content-section {
                 padding: 2.4em 0;
@@ -591,7 +607,6 @@
             .reflection-notes {
                 padding: 1.35em;
             }
-
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -599,41 +614,29 @@
             html {
                 scroll-behavior: auto;
             }
-
         }
 
     </style>
-
 </head>
-
 
 <body class="is-preload">
 
     <div id="wrapper">
-
 
         <!-- =====================================
              MAIN CONTENT
         ===================================== -->
 
         <div id="main">
-
             <div class="inner">
-
 
                 <!-- PAGE HEADER -->
 
                 <header id="header">
-
-                    <h1>
-                        Launch into Computing
-                    </h1>
-
+                    <h1>Launch into Computing</h1>
                 </header>
 
-
                 <section id="module-content">
-
 
                     <!-- =====================================
                          MODULE OVERVIEW
@@ -654,53 +657,32 @@
                             <div class="overview-copy">
 
                                 <p>
-                                    This module introduced me to the foundations of computing, covering software engineering, artificial intelligence, cybersecurity and data science. 
-                                    Building on my experience in banking technology, I focused particularly on the role of AI in addressing business challenges and the ethical 
-                                    considerations surrounding its adoption. The assessments also gave me an opportunity to explore programming in Python and JavaScript, while 
-                                    considering the importance of responsible software development, including the legal, ethical and professional responsibilities of computing 
-                                    practitioners.
+                                    This module introduced me to the foundations of computing, covering software engineering, artificial intelligence, cybersecurity and data science. Building on my experience in banking technology, I focused particularly on the role of AI in addressing business challenges and the ethical considerations surrounding its adoption. The assessments also gave me an opportunity to explore programming in Python and JavaScript, while considering the importance of responsible software development, including the legal, ethical and professional responsibilities of computing practitioners.
                                 </p>
 
                             </div>
 
-
-                            <!-- SELECTED PROJECT -->
+                            <!-- OVERVIEW IMAGE -->
 
                             <aside class="project-note"
-                                   aria-label="Selected project summary">
+                                   aria-label="Module overview illustration">
 
+                                <a href="images/ai-overview.jpg"
+                                   class="image fit">
 
-<a href="images/ai-overview.jpg" class="image fit">
-    <img
-        src="images/ai-overview.jpg"
-        alt="Abstract network visualisation representing artificial intelligence"
-        loading="lazy"
-    />
-</a>
-             
+                                    <img
+                                        src="images/ai-overview.jpg"
+                                        alt="Abstract network visualisation representing artificial intelligence"
+                                        loading="lazy"
+                                    />
 
-                            <!--    <p class="note-label">
-                                    Selected project
-                                </p>
-
-                                <h3>
-                                    Placeholder
-                                </h3>
-
-                                <p>
-                                    Placeholder
-                                </p>
-
-                                <div class="note-detail">
-                                    Placeholder
-                                </div> -->
+                                </a>
 
                             </aside>
 
                         </div>
 
                     </section>
-
 
                     <!-- =====================================
                          LEARNING OUTCOMES
@@ -717,19 +699,17 @@
                         </h2>
 
                         <p class="section-intro">
-                          The module was structured around four learning outcomes, covering the foundations of computing, its practical applications in enterprise environments, and the 
-                            ethical, legal and professional challenges associated with emerging technologies.
+                            The module was structured around four learning outcomes, covering the foundations of computing, its practical applications in enterprise environments, and the ethical, legal and professional challenges associated with emerging technologies.
                         </p>
 
                         <ol class="outcomes-list">
 
                             <li>
-                               Identify and critically analyse computing challenges and processes in business systems, accounting for the current enterprise landscape.
+                                Identify and critically analyse computing challenges and processes in business systems, accounting for the current enterprise landscape.
                             </li>
 
                             <li>
-                                Gather and synthesise information from multiple sources (including internet resources and business publications) to aid in the systematic design and   
-                                analysis of computing challenges.
+                                Gather and synthesise information from multiple sources (including internet resources and business publications) to aid in the systematic design and analysis of computing challenges.
                             </li>
 
                             <li>
@@ -737,16 +717,16 @@
                             </li>
 
                             <li>
-                               Articulate the legal, social, ethical, and professional issues faced by computing professionals.
+                                Articulate the legal, social, ethical, and professional issues faced by computing professionals.
                             </li>
 
                         </ol>
 
                     </section>
 
-
                     <!-- =====================================
                          MODULE ARTEFACTS
+                         TRIANGULAR CARD LAYOUT
                     ===================================== -->
 
                     <section
@@ -760,14 +740,15 @@
                         </h2>
 
                         <p class="section-intro">
-                        A selection of the discussion work and individual assessments I completed during the module.
+                            A selection of the discussion work and individual assessments I completed during the module.
                         </p>
-
 
                         <div class="artefact-grid">
 
-
-                            <!-- ARTEFACT 1 -->
+                            <!-- =====================================
+                                 TOP CENTRE CARD
+                                 COLLABORATIVE DISCUSSION
+                            ===================================== -->
 
                             <article class="artefact-card">
 
@@ -780,8 +761,7 @@
                                 </h3>
 
                                 <p>
-                                    Explored the impact of artificial intelligence on consumer lending, examining opportunities to improve credit decision-making alongside challenges 
-                                    relating to fairness, explainability and regulatory oversight. Engaged with peers to consider AI applications across other industries.
+                                    Explored the impact of artificial intelligence on consumer lending, examining opportunities to improve credit decision-making alongside challenges relating to fairness, explainability and regulatory oversight. Engaged with peers to consider AI applications across other industries.
                                 </p>
 
                                 <a
@@ -789,13 +769,17 @@
                                     href="artefacts/LIC-collaborative-discussion.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer">
+
                                     Read discussion summary →
+
                                 </a>
 
                             </article>
 
-
-                            <!-- ARTEFACT 2 -->
+                            <!-- =====================================
+                                 BOTTOM RIGHT CARD
+                                 PYTHON VS JAVASCRIPT
+                            ===================================== -->
 
                             <article class="artefact-card">
 
@@ -808,8 +792,7 @@
                                 </h3>
 
                                 <p>
-                                    Compared Python and JavaScript, examining their syntax, readability, error handling and suitability for different programming tasks through practical 
-                                    coding exercises.
+                                    Compared Python and JavaScript, examining their syntax, readability, error handling and suitability for different programming tasks through practical coding exercises.
                                 </p>
 
                                 <a
@@ -817,13 +800,17 @@
                                     href="artefacts/LIC-coding.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer">
+
                                     Read comparison report →
+
                                 </a>
 
                             </article>
 
-
-                            <!-- ARTEFACT 3 -->
+                            <!-- =====================================
+                                 BOTTOM LEFT CARD
+                                 AI ENTERPRISE PRESENTATION
+                            ===================================== -->
 
                             <article class="artefact-card">
 
@@ -831,66 +818,39 @@
                                     Individual Reflection Presentation
                                 </span>
 
-                                 <h3>
+                                <h3>
                                     Artificial Intelligence (AI) in the Enterprise: Innovation, Risk, and Responsible Governance
                                 </h3>
 
                                 <p>
-                                    Evaluated the opportunities, ethical challenges and security risks associated with enterprise AI adoption, examining regulatory and governance 
-                                    frameworks. Critically compared independent research with Generative AI-generated analysis, assessing accuracy, reliability and professional 
-                                    suitability.
+                                    Evaluated the opportunities, ethical challenges and security risks associated with enterprise AI adoption, examining regulatory and governance frameworks. Critically compared independent research with Generative AI-generated analysis, assessing accuracy, reliability and professional suitability.
                                 </p>
-
-                                <a
-                                    class="artefact-link"
-                                    href="artefacts/LIC-presentation-slides.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    See transcript →
-                                </a>
 
                                 <a
                                     class="artefact-link"
                                     href="artefacts/LIC-presentation-transcript.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer">
+
+                                    See transcript →
+
+                                </a>
+
+                                <a
+                                    class="artefact-link"
+                                    href="artefacts/LIC-presentation-slides.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
                                     See presentation slides →
+
                                 </a>
 
                             </article>
 
-
-                            <!-- ARTEFACT 4 -->
-
-                         <!--   <article class="artefact-card">
-
-                                <span class="artefact-type">
-                                    Placeholder
-                                </span>
-
-                                <h3>
-                                    Placeholder
-                                </h3>
-
-                                <p>
-                                    Placeholder
-                                </p>
-
-                                <a
-                                    class="artefact-link"
-                                    href="artefacts/placeholder.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    placeholder →
-                                </a>
-
-                            </article> -->
-
-
                         </div>
 
                     </section>
-
 
                     <!-- =====================================
                          MODULE REFLECTION
@@ -906,68 +866,33 @@
                             Module Reflection
                         </h2>
 
-
-                        <!-- TWO-COLUMN REFLECTION LAYOUT -->
-
                         <div class="reflection-layout">
-
 
                             <!-- REFLECTION TEXT -->
 
                             <div class="reflection-body">
 
                                 <p>
-                                    Launch into Computing provided me with a broader understanding of the different disciplines within computing, including software engineering, 
-                                    artificial intelligence, cybersecurity and data science. Although the module covered several areas, I decided to focus primarily on artificial 
-                                    intelligence again, as this was the main reason I had chosen to return to postgraduate study. Given my professional background in banking technology, 
-                                    I was particularly interested in exploring how AI could be applied within an enterprise environment, as well as the ethical and professional 
-                                    responsibilities associated with its adoption.
+                                    Launch into Computing provided me with a broader understanding of the different disciplines within computing, including software engineering, artificial intelligence, cybersecurity and data science. Although the module covered several areas, I decided to focus primarily on artificial intelligence again, as this was the main reason I had chosen to return to postgraduate study. Given my professional background in banking technology, I was particularly interested in exploring how AI could be applied within an enterprise environment, as well as the ethical and professional responsibilities associated with its adoption.
                                 </p>
 
                                 <p>
-                                    
+                                    Balancing the module alongside full-time work was challenging at times. I was only able to attend one seminar live due to work commitments and relied on the recordings for the remaining sessions. Although this allowed me to study at a time that suited me, I missed the opportunity to participate more actively in discussions. I also made a conscious decision not to complete the formative Python exercises, mainly because I wanted to prioritise the assessed work. I knew that I would eventually have to develop my programming skills as I progressed through the programme, so this was more a case of postponing the learning rather than avoiding it altogether. Looking back, I recognise that completing these exercises would probably have made some of the practical elements of the module easier.
                                 </p>
 
                                 <p>
-                                    Balancing the module alongside full-time work was challenging at times. I was only able to attend one seminar live due to work commitments and relied 
-                                    on the recordings for the remaining sessions. Although this allowed me to study at a time that suited me, I missed the opportunity to participate more 
-                                    actively in discussions. I also made a conscious decision not to complete the formative Python exercises, mainly because I wanted to prioritise the 
-                                    assessed work. I knew that I would eventually have to develop my programming skills as I progressed through the programme, so this was more a case of 
-                                    postponing the learning rather than avoiding it altogether. Looking back, I recognise that completing these exercises would probably have made some of 
-                                    the practical elements of the module easier.
+                                    Of the two individual end of module assignments, I was surprised to find the programming exercise and comparison of Python and JavaScript considerably easier than the recorded presentation. I had initially expected the programming assignment to be more challenging, particularly given my limited practical coding experience. However, I enjoyed examining how both languages approached the same problem and explaining the differences in their syntax, readability and error handling. It was also interesting to consider the ethical implications of what appeared to be a relatively straightforward programming task, particularly how decisions made during development could affect the accuracy and reliability of the results.
                                 </p>
 
                                 <p>
-                                    Of the two individual end of module assignments, I was surprised to find the programming exercise and comparison of Python and JavaScript considerably 
-                                    easier than the recorded presentation. I had initially expected the programming assignment to be more challenging, particularly given my limited 
-                                    practical coding experience. However, I enjoyed examining how both languages approached the same problem and explaining the differences in their 
-                                    syntax, readability and error handling. It was also interesting to consider the ethical implications of what appeared to be a relatively 
-                                    straightforward programming task, particularly how decisions made during development could affect the accuracy and reliability of the results.
+                                    The recorded presentation was a different experience and probably the most frustrating aspect of the module. This came as something of a surprise, as presenting is a regular part of my professional role, and I am comfortable communicating complex information to colleagues and senior stakeholders. However, I quickly discovered that delivering a recorded academic presentation was quite different from presenting at work. I was not accustomed to scripting my presentations in such detail, and having to balance a carefully prepared script with a natural delivery was more difficult than I had anticipated. The limited recording time added another challenge, as I wanted to explore the topic in sufficient depth without rushing or sounding as though I was simply reading from a script. I ended up having to significantly edit and re-record sections to improve the flow and remain within the time limit. Given how familiar I am with presenting professionally, I had not expected this assessment to require so much effort. It did, however, make me appreciate the differences between workplace presentations and academic communication, particularly the importance of structuring arguments carefully and being selective about what to include.
                                 </p>
 
                                 <p>
-                                    The recorded presentation was a different experience and probably the most frustrating aspect of the module. This came as something of a surprise, as 
-                                    presenting is a regular part of my professional role, and I am comfortable communicating complex information to colleagues and senior stakeholders. 
-                                    However, I quickly discovered that delivering a recorded academic presentation was quite different from presenting at work. I was not accustomed to 
-                                    scripting my presentations in such detail, and having to balance a carefully prepared script with a natural delivery was more difficult than I had 
-                                    anticipated. The limited recording time added another challenge, as I wanted to explore the topic in sufficient depth without rushing or sounding as 
-                                    though I was simply reading from a script. I ended up having to significantly edit and re-record sections to improve the flow and remain within the 
-                                    time limit. Given how familiar I am with presenting professionally, I had not expected this assessment to require so much effort. It did, however, 
-                                    make me appreciate the differences between workplace presentations and academic communication, particularly the importance of structuring arguments 
-                                    carefully and being selective about what to include.
-                                </p>
-
-                                 <p>
-                                     Reflecting on the module, I am pleased that I chose to concentrate on artificial intelligence, as it allowed me to explore the subject from a 
-                                     slightly different perspective and build on my existing professional experience. At the same time, the module reminded me that developing a broader 
-                                     understanding of computing is important, particularly as AI solutions depend on areas such as software engineering, data management and 
-                                     cybersecurity. I also recognise that my practical programming skills remain an area for development, especially having chosen not to complete the 
-                                     formative exercises. Overall, the module reinforced my interest in AI and its potential applications within financial services, while also giving me 
-                                     a better appreciation of the technical, ethical and communication skills I will need to develop throughout the remainder of the programme.
+                                    Reflecting on the module, I am pleased that I chose to concentrate on artificial intelligence, as it allowed me to explore the subject from a slightly different perspective and build on my existing professional experience. At the same time, the module reminded me that developing a broader understanding of computing is important, particularly as AI solutions depend on areas such as software engineering, data management and cybersecurity. I also recognise that my practical programming skills remain an area for development, especially having chosen not to complete the formative exercises. Overall, the module reinforced my interest in AI and its potential applications within financial services, while also giving me a better appreciation of the technical, ethical and communication skills I will need to develop throughout the remainder of the programme.
                                 </p>
 
                             </div>
-
 
                             <!-- =====================================
                                  REFLECTION NOTES
@@ -980,7 +905,6 @@
                                     Reflection Notes
                                 </h3>
 
-
                                 <!-- WHAT WENT WELL -->
 
                                 <div class="reflection-note">
@@ -990,12 +914,10 @@
                                     </h4>
 
                                     <p>
-                                        Finding the Python and JavaScript programming comparison more straightforward than expected, particularly the code explanation and ethical 
-                                        considerations.
+                                        Finding the Python and JavaScript programming comparison more straightforward than expected, particularly the code explanation and ethical considerations.
                                     </p>
 
                                 </div>
-
 
                                 <!-- BIGGEST CHALLENGE -->
 
@@ -1006,12 +928,10 @@
                                     </h4>
 
                                     <p>
-                                        Balancing the module alongside full-time work and adapting to the demands of a tightly scripted, timed academic presentation despite being 
-                                        accustomed to presenting professionally.
+                                        Balancing the module alongside full-time work and adapting to the demands of a tightly scripted, timed academic presentation despite being accustomed to presenting professionally.
                                     </p>
 
                                 </div>
-
 
                                 <!-- AREA FOR DEVELOPMENT -->
 
@@ -1026,7 +946,6 @@
                                     </p>
 
                                 </div>
-
 
                                 <!-- KEY TAKEAWAY -->
 
@@ -1048,13 +967,10 @@
 
                     </section>
 
-
                 </section>
 
             </div>
-
         </div>
-
 
         <!-- =====================================
              SIDEBAR NAVIGATION
@@ -1064,7 +980,6 @@
 
             <div class="inner">
 
-
                 <nav id="menu" aria-label="Main navigation">
 
                     <header class="major">
@@ -1072,7 +987,6 @@
                     </header>
 
                     <ul>
-
 
                         <!-- HOME -->
 
@@ -1089,7 +1003,6 @@
 
                         </li>
 
-
                         <!-- =====================================
                              MODULE NAVIGATION
                         ===================================== -->
@@ -1105,31 +1018,23 @@
 
                             </span>
 
-
                             <ul>
 
-
-                                <!-- =====================================
-                                     CURRENT MODULE
-                                ===================================== -->
+                                <!-- CURRENT MODULE -->
 
                                 <li>
 
-                                    <a href="understanding-ai.html"
+                                    <a href="launch-into-computing.html"
                                        aria-current="page">
 
                                         Launch into Computing
 
                                     </a>
 
-
-                                    <!-- =====================================
-                                         SECTION NAVIGATION
-                                    ===================================== -->
+                                    <!-- SECTION NAVIGATION -->
 
                                     <ul class="module-section-links"
-                                        aria-label="Understanding AI sections">
-
+                                        aria-label="Launch into Computing sections">
 
                                         <li>
                                             <a href="#module-overview">
@@ -1137,13 +1042,11 @@
                                             </a>
                                         </li>
 
-
                                         <li>
                                             <a href="#learning-outcomes">
                                                 Learning Outcomes
                                             </a>
                                         </li>
-
 
                                         <li>
                                             <a href="#artefacts">
@@ -1151,49 +1054,39 @@
                                             </a>
                                         </li>
 
-
                                         <li>
                                             <a href="#professional-reflection">
                                                 Module Reflection
                                             </a>
                                         </li>
 
-
                                     </ul>
 
                                 </li>
 
-
-                                <!-- LAUNCH INTO COMPUTING -->
+                                <!-- UNDERSTANDING AI -->
 
                                 <li>
 
                                     <a href="understanding-ai.html">
-
                                         Understanding Artificial Intelligence
-
                                     </a>
 
                                 </li>
-
 
                                 <!-- NUMERICAL ANALYSIS -->
 
                                 <li>
 
                                     <a href="numerical-analysis.html">
-
                                         Numerical Analysis
-
                                     </a>
 
                                 </li>
 
-
                             </ul>
 
                         </li>
-
 
                         <!-- SKILLS MATRIX -->
 
@@ -1210,7 +1103,6 @@
 
                         </li>
 
-
                         <!-- ABOUT ME -->
 
                         <li>
@@ -1225,7 +1117,6 @@
                             </a>
 
                         </li>
-
 
                         <!-- GITHUB -->
 
@@ -1244,11 +1135,9 @@
 
                         </li>
 
-
                     </ul>
 
                 </nav>
-
 
                 <!-- =====================================
                      COPYRIGHT
@@ -1261,7 +1150,6 @@
                         &copy; 2026 Bernard Westlake.
 
                         Design:
-
                         <a href="https://html5up.net">
                             HTML5 UP
                         </a>.
@@ -1270,14 +1158,11 @@
 
                 </footer>
 
-
             </div>
 
         </div>
 
-
     </div>
-
 
     <!-- =====================================
          HTML5 UP JAVASCRIPT
@@ -1288,7 +1173,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
 
     <!-- =====================================
          ACTIVE SECTION HIGHLIGHTING
@@ -1306,8 +1190,7 @@
                 )
             );
 
-
-            // Match each link to its page section.
+            // Match links to their respective sections.
 
             const sections = links
                 .map(link => {
@@ -1317,13 +1200,11 @@
                 })
                 .filter(Boolean);
 
-
             if (!sections.length) {
                 return;
             }
 
-
-            // Determine which section is being viewed.
+            // Determine which section is visible.
 
             function updateActiveSection() {
 
@@ -1333,7 +1214,6 @@
                 );
 
                 let current = sections[0];
-
 
                 sections.forEach(section => {
 
@@ -1346,8 +1226,7 @@
 
                 });
 
-
-                // Recognise the final section at page bottom.
+                // Recognise the last section at page bottom.
 
                 if (
                     window.innerHeight + window.scrollY
@@ -1356,8 +1235,7 @@
                     current = sections[sections.length - 1];
                 }
 
-
-                // Update the highlighted sidebar link.
+                // Update the highlighted navigation item.
 
                 links.forEach(link => {
 
@@ -1382,7 +1260,6 @@
 
             }
 
-
             // Update as the user navigates the page.
 
             window.addEventListener(
@@ -1401,7 +1278,6 @@
                 updateActiveSection
             );
 
-
             // Set initial highlight when page loads.
 
             updateActiveSection();
@@ -1410,7 +1286,5 @@
 
     </script>
 
-
 </body>
-
 </html>

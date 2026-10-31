@@ -1,996 +1,617 @@
 
 <!DOCTYPE HTML>
-<!--
-    Editorial by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use
-    under the CCA 3.0 license.
--->
-
+<!-- Editorial by HTML5 UP | html5up.net | CCA 3.0 license -->
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8" />
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1" />
-
-    <meta name="description"
-          content="Bernard (Ben) Westlake - Banking technology, core banking transformation and artificial intelligence." />
-
-    <title>Bernard (Ben) Westlake | About</title>
-
-    <link rel="stylesheet"
-          href="assets/css/main.css" />
-
-
-    <style>
-
-        /* ========================================
-           COLOUR PALETTE
-        ======================================== */
-
-        :root {
-            --navy: #20344a;
-            --teal: #177f83;
-            --ink: #354459;
-            --muted: #657287;
-            --line: #dce3e7;
-            --paper: #ffffff;
-            --surface: #f7f9fa;
-            --sidebar: #edf2f4;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body,
-        #main {
-            background: var(--paper);
-            color: var(--ink);
-        }
-
-        h1, h2, h3, strong {
-            color: var(--navy);
-        }
-
-        a {
-            color: var(--teal);
-        }
-
-        a:hover {
-            color: var(--navy);
-        }
-
-
-        /* ========================================
-           PAGE HEADER
-        ======================================== */
-
-        #header {
-            display: block;
-            border-bottom: 1px solid var(--line);
-            padding: 3.3em 0 2.5em;
-            margin-bottom: 0;
-        }
-
-        #header h1 {
-            font-size: clamp(2.25rem, 4vw, 3.7rem);
-            line-height: 1.14;
-            letter-spacing: -0.035em;
-            font-weight: 650;
-            margin: 0;
-        }
-
-        .page-subtitle {
-            color: var(--muted);
-            font-size: 0.93rem;
-            line-height: 1.7;
-            margin: 1em 0 0;
-        }
-
-
-        /* ========================================
-           MAIN CONTENT
-        ======================================== */
-
-        #page-content {
-            padding-bottom: 4em;
-        }
-
-        .content-section {
-            padding: 3.2em 0;
-            border-bottom: 1px solid var(--line);
-            scroll-margin-top: 1.5em;
-        }
-
-        .content-section:last-child {
-            border-bottom: none;
-        }
-
-        .section-heading {
-            font-size: clamp(1.55rem, 2.4vw, 1.95rem);
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-            margin: 0 0 0.85em;
-        }
-
-
-        /* ========================================
-           PROFILE LAYOUT
-        ======================================== */
-
-        .profile-layout {
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1.65fr)
-                minmax(230px, 0.85fr);
-
-            align-items: start;
-            gap: clamp(2em, 5vw, 4em);
-        }
-
-        .profile-role {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--teal);
-            letter-spacing: 0.015em;
-            margin-bottom: 1.5em;
-        }
-
-        .bio-copy p,
-        .section-copy p {
-            max-width: 78ch;
-            font-size: 1rem;
-            line-height: 1.9;
-            margin-bottom: 1.3em;
-        }
-
-        .bio-copy p:last-child,
-        .section-copy p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* ========================================
-           PROFILE PHOTO
-        ======================================== */
-
-        .profile-aside {
-            min-width: 0;
-        }
-
-        .portrait-frame {
-            border: 1px solid var(--line);
-            background: var(--surface);
-            padding: 0.65em;
-            margin: 0;
-        }
-
-        .portrait-placeholder {
-            min-height: 325px;
-            aspect-ratio: 4 / 5;
-            background: #e7edef;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            gap: 1em;
-            text-align: center;
-            color: var(--muted);
-        }
-
-        .portrait-placeholder .icon {
-            color: #8ca5aa;
-            font-size: 3.5rem;
-        }
-
-        .portrait-placeholder span {
-            font-size: 0.85rem;
-        }
-
-        .portrait-image {
-            display: block;
-            width: 100%;
-            height: auto;
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
-            object-position: center top;
-        }
-
-
-        /* ========================================
-           LINKEDIN AND EMAIL ICONS
-        ======================================== */
-
-        .profile-contact {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-
-            gap: 1.3em;
-
-            margin-top: 1.2em;
-            padding: 0.35em 0;
-        }
-
-        .contact-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 1.4em;
-            height: 1.4em;
-
-            padding: 0;
-            margin: 0;
-
-            border: none !important;
-            border-bottom: none !important;
-            box-shadow: none !important;
-            background: transparent !important;
-
-            color: var(--teal) !important;
-
-            font-size: 1.25rem;
-            line-height: 1;
-            text-decoration: none;
-
-            transition: color 0.2s ease;
-        }
-
-        .contact-icon:hover {
-            color: var(--navy) !important;
-        }
-
-        .contact-icon:focus-visible {
-            color: var(--navy) !important;
-            outline: 2px solid var(--teal);
-            outline-offset: 5px;
-        }
-
-        .contact-icon:before {
-            display: block;
-            line-height: 1;
-        }
-
-
-        /* ========================================
-           PROFESSIONAL INTERESTS
-        ======================================== */
-
-        .focus-list {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-
-            gap: 1.5em;
-            margin-top: 2em;
-        }
-
-        .focus-item {
-            border-top: 2px solid var(--teal);
-            padding-top: 1.1em;
-        }
-
-        .focus-item h3 {
-            font-size: 1rem;
-            margin: 0 0 0.6em;
-        }
-
-        .focus-item p {
-            font-size: 0.9rem;
-            color: var(--muted);
-            line-height: 1.75;
-            margin: 0;
-        }
-
-
-        /* ========================================
-           SIDEBAR
-        ======================================== */
-
-        #sidebar {
-            background: var(--sidebar);
-        }
-
-        #sidebar > .inner {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        #sidebar #menu {
-            flex-shrink: 0;
-        }
-
-        #sidebar header.major > :first-child {
-            border-bottom-color: var(--teal);
-        }
-
-        #menu ul a,
-        #menu ul span {
-            color: var(--navy);
-        }
-
-        #menu ul a:hover,
-        #menu ul span.opener:hover {
-            color: var(--teal);
-        }
-
-        #menu ul span.opener:before {
-            color: var(--teal);
-        }
-
-        #menu ul a[aria-current="page"] {
-            color: var(--teal);
-            font-weight: 700;
-        }
-
-
-        /* ========================================
-           SIDEBAR NAVIGATION ICONS
-        ======================================== */
-
-        #menu .menu-icon {
-            display: inline-block;
-            width: 1.4em;
-            margin-right: 0.65em;
-            text-align: center;
-            color: var(--teal);
-            font-size: 1em;
-            vertical-align: baseline;
-        }
-
-        #menu a:hover .menu-icon,
-        #menu .opener:hover .menu-icon {
-            color: var(--navy);
-        }
-
-        #menu ul a,
-        #menu ul span.opener {
-            line-height: 1.7;
-        }
-
-
-        /* ========================================
-           COPYRIGHT FOOTER
-        ======================================== */
-
-        #sidebar #footer {
-            margin-top: auto;
-            padding-top: 2em;
-            padding-bottom: 1em;
-        }
-
-        #sidebar #footer .copyright {
-            color: var(--muted);
-            font-size: 0.74rem;
-            line-height: 1.7;
-        }
-
-
-        /* ========================================
-           RESPONSIVE DESIGN
-        ======================================== */
-
-        @media screen and (max-width: 1050px) {
-
-            .profile-layout {
-                grid-template-columns:
-                    minmax(0, 1.4fr)
-                    minmax(210px, 0.8fr);
-            }
-
-        }
-
-        @media screen and (max-width: 760px) {
-
-            #header {
-                padding-top: 2.2em;
-            }
-
-            .content-section {
-                padding: 2.4em 0;
-            }
-
-            .profile-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-aside {
-                max-width: 360px;
-            }
-
-            .focus-list {
-                grid-template-columns: 1fr;
-                gap: 1.3em;
-            }
-
-        }
-
-        @media screen and (max-width: 440px) {
-
-            #header h1 {
-                font-size: 2.1rem;
-            }
-
-            .page-subtitle {
-                font-size: 0.82rem;
-            }
-
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            html {
-                scroll-behavior: auto;
-            }
-
-            .contact-icon {
-                transition: none;
-            }
-
-        }
-
-    </style>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bernard (Ben) Westlake — banking technology, core banking transformation and artificial intelligence." />
+  <title>Bernard (Ben) Westlake | About</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    :root {
+      --navy: #101f30;
+      --navy-soft: #182e43;
+      --teal: #67c5c1;
+      --white: #f7fafb;
+      --muted: #b4c5d0;
+      --line: rgba(224,242,246,.17);
+      --panel: #20364b;
+    }
+
+    html { scroll-behavior: smooth; }
+    body, #main { background: var(--navy); color: var(--white); }
+    #main > .inner { max-width: 1320px; }
+    #main h1, #main h2, #main h3, #main strong { color: var(--white); }
+    #main p { color: var(--muted); }
+    #main a { color: var(--teal); }
+    #main a:hover { color: var(--white); }
+
+    /* PAGE HEADER */
+    #header {
+      display: block;
+      padding: 4.5em 0 3.8em;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--teal) !important;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-weight: 700;
+      font-size: .74rem;
+      margin: 0 0 1.6em;
+    }
+
+    #header h1 {
+      font-size: clamp(2.8rem,5.5vw,5.5rem);
+      line-height: 1.07;
+      letter-spacing: -.055em;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem,1.8vw,1.25rem);
+      line-height: 1.7;
+      margin: 1.5em 0 0;
+      max-width: 680px;
+    }
+
+    .hero-rule {
+      width: 72px;
+      height: 3px;
+      background: var(--teal);
+      margin-top: 2.5em;
+    }
+
+    /* CONTENT SECTIONS */
+    .content-section {
+      padding: 4em 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 2em;
+    }
+
+    .content-section:last-child { border-bottom: 0; }
+
+    .section-kicker {
+      font-size: .75rem;
+      color: var(--teal) !important;
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-weight: 700;
+      margin: 0 0 .85em;
+    }
+
+    .section-heading {
+      font-size: clamp(1.65rem,2.8vw,2.5rem);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+      margin: 0 0 1em;
+    }
+
+    /* PROFESSIONAL PROFILE */
+    .profile-layout {
+      display: grid;
+      grid-template-columns: minmax(0,1.65fr) minmax(230px,.85fr);
+      gap: clamp(2em,5vw,5em);
+      align-items: start;
+    }
+
+    .profile-role {
+      color: var(--teal) !important;
+      font-weight: 700;
+      letter-spacing: .015em;
+      margin: 0 0 1.7em;
+    }
+
+    .bio-copy p, .section-copy p {
+      font-size: 1rem;
+      line-height: 1.95;
+      max-width: 75ch;
+      margin: 0 0 1.35em;
+    }
+
+    .bio-copy p:last-child,
+    .section-copy p:last-child { margin-bottom: 0; }
+
+    /* PROFILE PHOTO */
+    .portrait-frame {
+      margin: 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      background: var(--navy-soft);
+    }
+
+    .portrait-placeholder {
+      aspect-ratio: 4/5;
+      min-height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      background: linear-gradient(145deg,#304d60,#192d40);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .portrait-placeholder .icon {
+      font-size: 3rem;
+      color: var(--teal);
+    }
+
+    .portrait-placeholder span { font-size: .9rem; }
+
+    .portrait-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* SOCIAL LINKS */
+    .profile-contact {
+      display: flex;
+      gap: 1.3em;
+      align-items: center;
+      margin-top: 1.4em;
+    }
+
+    .contact-icon {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 1.5em;
+      height: 1.5em;
+      padding: 0 !important;
+      border: 0 !important;
+      border-bottom: 0 !important;
+      box-shadow: none !important;
+      background: none !important;
+      font-size: 1.3rem;
+      text-decoration: none !important;
+      color: var(--teal) !important;
+    }
+
+    .contact-icon:hover { color: var(--white) !important; }
+
+    .contact-icon:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 5px;
+    }
+
+    /* ACADEMIC BACKGROUND */
+    .academic-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+      gap: 3em;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 1.1em;
+    }
+
+    .education-item {
+      border-left: 2px solid var(--teal);
+      padding: .15em 0 .15em 1.15em;
+    }
+
+    .education-item strong {
+      display: block;
+      line-height: 1.5;
+      font-size: .95rem;
+    }
+
+    .education-item span {
+      display: block;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.7;
+    }
+
+    /* PROFESSIONAL INTERESTS */
+    .focus-list {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 1.25em;
+      margin-top: 2.5em;
+    }
+
+    .focus-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--teal);
+      padding: 1.6em;
+    }
+
+    .focus-item h3 {
+      font-size: 1.05rem;
+      margin: 0 0 .75em;
+    }
+
+    .focus-item p {
+      font-size: .9rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* SIDEBAR */
+    #sidebar { background: #eaf0f2; }
+
+    #sidebar > .inner {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    #sidebar #menu { flex-shrink: 0; }
+
+    #sidebar header.major > :first-child {
+      border-bottom-color: #177f83;
+    }
+
+    #menu ul a, #menu ul span { color: #20344a; }
+
+    #menu ul a:hover,
+    #menu ul span.opener:hover,
+    #menu ul a[aria-current="page"] {
+      color: #177f83;
+    }
+
+    #menu ul a[aria-current="page"] { font-weight: 700; }
+
+    #menu .menu-icon {
+      display: inline-block;
+      width: 1.4em;
+      margin-right: .65em;
+      text-align: center;
+      color: #177f83;
+    }
+
+    /* FOOTER */
+    #sidebar #footer {
+      margin-top: auto;
+      padding-top: 2em;
+      padding-bottom: 1em;
+    }
+
+    #sidebar #footer .copyright {
+      font-size: .74rem;
+      line-height: 1.7;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media screen and (max-width: 980px) {
+      .profile-layout {
+        grid-template-columns: minmax(0,1.3fr) minmax(200px,.8fr);
+      }
+      .academic-grid { gap: 2em; }
+    }
+
+    @media screen and (max-width: 760px) {
+      #header { padding: 2.8em 0; }
+      .content-section { padding: 2.7em 0; }
+      .profile-layout, .academic-grid { grid-template-columns: 1fr; }
+      .profile-aside { max-width: 340px; }
+      .focus-list { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
 
-
 <body class="is-preload">
-
-    <div id="wrapper">
-
-
-        <!-- =====================================
-             MAIN CONTENT
-        ====================================== -->
-
-        <div id="main">
-
-            <div class="inner">
-
-
-                <!-- PAGE HEADER -->
-
-                <header id="header">
-
-                    <h1>Bernard (Ben) Westlake</h1>
-
-                    <p class="page-subtitle">
-                        Banking Technology
-                        &middot;
-                        Core Banking Transformation
-                        &middot;
-                        Artificial Intelligence
-                    </p>
-
-                </header>
-
-
-                <div id="page-content">
-
-
-                    <!-- =====================================
-                         PROFESSIONAL BACKGROUND
-                    ====================================== -->
-
-                    <section class="content-section"
-                             id="profile">
-
-
-                        <div class="profile-layout">
-
-
-                            <!-- BIOGRAPHY -->
-
-                            <div class="bio-copy">
-
-
-                                <h2 class="section-heading">
-                                    Professional Background
-                                </h2>
-
-
-                                <p class="profile-role">
-                                    Delivery Lead Manager, Accenture UK
-                                </p>
-
-
-                                <p>
-                                    Bernard (Ben) Westlake brings
-                                    over eight years of experience
-                                    in core banking technology and
-                                    transformation, specialising in
-                                    banking products, solution design
-                                    and implementation. He is currently
-                                    a Delivery Lead Manager at Accenture
-                                    UK, supporting core banking
-                                    programmes and working with
-                                    business and technology stakeholders
-                                    to deliver complex change.
-                                </p>
-
-
-                                <p>
-                                    His work has included Temenos
-                                    Transact implementations, upgrades
-                                    and post-go-live support, covering
-                                    deposits, lending, accounts and
-                                    financial accounting. He has also
-                                    led business analysis teams and
-                                    contributed to product design,
-                                    data migration and testing.
-                                    Bernard holds Temenos Transact
-                                    accreditation and is Mambu
-                                    certified.
-                                </p>
-
-
-                                <p>
-                                    Having started his career in retail
-                                    banking and debt collections, he
-                                    brings first-hand knowledge of
-                                    banking operations to technology
-                                    delivery, alongside his consulting
-                                    and platform experience.
-                                </p>
-
-
-                            </div>
-
-
-
-                            <!-- =====================================
-                                 PROFILE PHOTO AND CONTACTS
-                            ====================================== -->
-
-                            <aside class="profile-aside"
-                                   aria-label="Profile photograph and contact links">
-
-
-                                <!-- PHOTO -->
-
-                                <figure class="portrait-frame">
-
-
-                                    <div class="portrait-placeholder"
-                                         role="img"
-                                         aria-label="Professional portrait placeholder">
-
-
-                                        <i class="icon solid fa-user"
-                                           aria-hidden="true"></i>
-
-
-                                        <span>
-                                            Professional photo
-                                        </span>
-
-
-                                    </div>
-
-
-                                    <!--
-
-                                    TO ADD YOUR OWN PHOTO:
-
-                                    Upload a photograph into
-                                    the GitHub images folder.
-
-                                    Name it:
-
-                                    profile.jpg
-
-                                    Replace the placeholder DIV
-                                    above with:
-
-                                    <img src="images/profile.jpg"
-                                         alt="Portrait of Bernard Westlake"
-                                         class="portrait-image" />
-
-                                    -->
-
-
-                                </figure>
-
-
-
-                                <!-- =====================================
-                                     LINKEDIN AND EMAIL ICONS
-                                ====================================== -->
-
-                                <div class="profile-contact"
-                                     aria-label="Contact links">
-
-
-                                    <!-- LINKEDIN -->
-
-                                    <a href="https://www.linkedin.com/in/bernardwestlake/"
-                                       class="icon brands fa-linkedin-in contact-icon"
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                       aria-label="View Bernard Westlake on LinkedIn"
-                                       title="LinkedIn">
-
-                                        <span class="label">
-                                            LinkedIn
-                                        </span>
-
-                                    </a>
-
-
-
-                                    <!-- EMAIL -->
-
-                                    <a href="mailto:Bernard.Westlake@gmail.com"
-                                       class="icon solid fa-envelope contact-icon"
-                                       aria-label="Send an email to Bernard Westlake"
-                                       title="Send an email">
-
-                                        <span class="label">
-                                            Email
-                                        </span>
-
-                                    </a>
-
-
-                                </div>
-
-
-                            </aside>
-
-
-                        </div>
-
-
-                    </section>
-
-
-
-                    <!-- =====================================
-                         ACADEMIC BACKGROUND
-                    ====================================== -->
-
-                    <section class="content-section"
-                             id="academic-background">
-
-
-                        <h2 class="section-heading">
-                            Academic Background
-                        </h2>
-
-
-                        <div class="section-copy">
-
-
-                            <p>
-                                Bernard holds a BA in English
-                                and Geography (Joint Major)
-                                from University College Dublin,
-                                an MPhil in Popular Literature
-                                from Trinity College Dublin,
-                                and a Higher Diploma in Science
-                                (FinTech) from the National
-                                College of Ireland.
-                            </p>
-
-
-                            <p>
-                                He is currently undertaking an
-                                MSc in Artificial Intelligence
-                                through the University of Essex
-                                Online. The programme builds on
-                                his financial technology experience,
-                                with a particular interest in
-                                machine learning, model explainability
-                                and the responsible application
-                                of AI in banking.
-                            </p>
-
-
-                        </div>
-
-
-                    </section>
-
-
-
-                    <!-- =====================================
-                         PROFESSIONAL INTERESTS
-                    ====================================== -->
-
-                    <section class="content-section"
-                             id="professional-interests">
-
-
-                        <h2 class="section-heading">
-                            Professional Interests
-                        </h2>
-
-
-                        <div class="section-copy">
-
-
-                            <p>
-                                Bernard's interests sit at the
-                                intersection of core banking
-                                technology, financial services
-                                and artificial intelligence.
-                                He is particularly interested in
-                                how banks can modernise existing
-                                platforms while adopting AI in
-                                ways that are effective,
-                                explainable and well governed.
-                            </p>
-
-
-                        </div>
-
-
-
-                        <!-- AREAS OF FOCUS -->
-
-                        <div class="focus-list">
-
-
-                            <div class="focus-item">
-
-                                <h3>Core Banking</h3>
-
-                                <p>
-                                    Modernisation of banking
-                                    platforms, products and
-                                    delivery.
-                                </p>
-
-                            </div>
-
-
-                            <div class="focus-item">
-
-                                <h3>Financial Technology</h3>
-
-                                <p>
-                                    Bringing business requirements
-                                    and technical solutions together.
-                                </p>
-
-                            </div>
-
-
-                            <div class="focus-item">
-
-                                <h3>Responsible AI</h3>
-
-                                <p>
-                                    Explainability, evaluation
-                                    and practical use of AI
-                                    in banking.
-                                </p>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </section>
-
+  <div id="wrapper">
+
+    <!-- MAIN CONTENT -->
+    <div id="main">
+      <div class="inner">
+
+        <header id="header">
+          <p class="eyebrow">Professional profile</p>
+          <h1>Bernard (Ben)<br />Westlake</h1>
+          <p class="hero-subtitle">
+            Banking Technology &nbsp;&middot;&nbsp;
+            Core Banking Transformation &nbsp;&middot;&nbsp;
+            Artificial Intelligence
+          </p>
+          <div class="hero-rule" aria-hidden="true"></div>
+        </header>
+
+        <main id="page-content">
+
+          <!-- PROFESSIONAL BACKGROUND -->
+          <section class="content-section" id="profile">
+            <div class="profile-layout">
+
+              <div class="bio-copy">
+                <p class="section-kicker">01 / Experience</p>
+                <h2 class="section-heading">Professional Background</h2>
+                <p class="profile-role">
+                  Delivery Lead Manager, Accenture UK
+                </p>
+
+                <p>
+                  Bernard (Ben) Westlake brings over eight years of
+                  experience in core banking technology and transformation,
+                  specialising in banking products, solution design and
+                  implementation. He is currently a Delivery Lead Manager
+                  at Accenture UK, supporting core banking programmes
+                  and working with business and technology stakeholders
+                  to deliver complex change.
+                </p>
+
+                <p>
+                  His work has included Temenos Transact implementations,
+                  upgrades and post-go-live support, covering deposits,
+                  lending, accounts and financial accounting. He has also
+                  led business analysis teams and contributed to product
+                  design, data migration and testing. Bernard holds
+                  Temenos Transact accreditation and is Mambu certified.
+                </p>
+
+                <p>
+                  Having started his career in retail banking and debt
+                  collections, he brings first-hand knowledge of banking
+                  operations to technology delivery, alongside his
+                  consulting and platform experience.
+                </p>
+              </div>
+
+              <!-- PROFILE PHOTO AND CONTACT LINKS -->
+              <aside class="profile-aside"
+                     aria-label="Profile photograph and contact links">
+
+                <figure class="portrait-frame">
+                  <div class="portrait-placeholder"
+                       role="img"
+                       aria-label="Professional portrait placeholder">
+                    <i class="icon solid fa-user" aria-hidden="true"></i>
+                    <span>Professional photo</span>
+                  </div>
+
+                  <!--
+                  To add your photograph, replace the placeholder
+                  div above with:
+
+                  <img src="images/profile.jpg"
+                       alt="Portrait of Bernard Westlake"
+                       class="portrait-image" />
+                  -->
+                </figure>
+
+                <div class="profile-contact" aria-label="Contact links">
+
+                  <a href="https://www.linkedin.com/in/bernardwestlake/"
+                     class="icon brands fa-linkedin-in contact-icon"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="View Bernard Westlake on LinkedIn"
+                     title="LinkedIn">
+                    <span class="label">LinkedIn</span>
+                  </a>
+
+                  <a href="mailto:Bernard.Westlake@gmail.com"
+                     class="icon solid fa-envelope contact-icon"
+                     aria-label="Send an email to Bernard Westlake"
+                     title="Send an email">
+                    <span class="label">Email</span>
+                  </a>
 
                 </div>
+              </aside>
+            </div>
+          </section>
 
+          <!-- ACADEMIC BACKGROUND -->
+          <section class="content-section" id="academic-background">
 
+            <p class="section-kicker">02 / Education</p>
+            <h2 class="section-heading">Academic Background</h2>
+
+            <div class="academic-grid">
+
+              <div class="section-copy">
+                <p>
+                  Bernard holds a BA in English and Geography (Joint Major)
+                  from University College Dublin, an MPhil in Popular
+                  Literature from Trinity College Dublin, and a Higher
+                  Diploma in Science (FinTech) from the National College
+                  of Ireland.
+                </p>
+
+                <p>
+                  He is currently undertaking an MSc in Artificial
+                  Intelligence through the University of Essex Online.
+                  The programme builds on his financial technology
+                  experience, with a particular interest in machine
+                  learning, model explainability and the responsible
+                  application of AI in banking.
+                </p>
+              </div>
+
+              <div class="education-list" aria-label="Qualifications">
+
+                <div class="education-item">
+                  <strong>MSc Artificial Intelligence — in progress</strong>
+                  <span>University of Essex Online</span>
+                </div>
+
+                <div class="education-item">
+                  <strong>Higher Diploma in Science (FinTech)</strong>
+                  <span>National College of Ireland</span>
+                </div>
+
+                <div class="education-item">
+                  <strong>MPhil Popular Literature</strong>
+                  <span>Trinity College Dublin</span>
+                </div>
+
+                <div class="education-item">
+                  <strong>BA English and Geography (Joint Major)</strong>
+                  <span>University College Dublin</span>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- PROFESSIONAL INTERESTS -->
+          <section class="content-section" id="professional-interests">
+
+            <p class="section-kicker">03 / Areas of focus</p>
+            <h2 class="section-heading">Professional Interests</h2>
+
+            <div class="section-copy">
+              <p>
+                Bernard's interests sit at the intersection of core
+                banking technology, financial services and artificial
+                intelligence. He is particularly interested in how
+                banks can modernise existing platforms while adopting
+                AI in ways that are effective, explainable and
+                well governed.
+              </p>
             </div>
 
-        </div>
-
-
-
-        <!-- =====================================
-             SIDEBAR NAVIGATION
-        ====================================== -->
-
-        <div id="sidebar">
-
-            <div class="inner">
-
-
-                <nav id="menu"
-                     aria-label="Portfolio navigation">
-
-
-                    <header class="major">
-                        <h2>Navigation</h2>
-                    </header>
-
-
-                    <ul>
-
-
-                        <!-- HOME -->
-
-                        <li>
-                            <a href="index.html">
-
-                                <i class="icon solid fa-home menu-icon"
-                                   aria-hidden="true"></i>
-
-                                Home
-
-                            </a>
-                        </li>
-
-
-
-                        <!-- MODULES -->
-
-                        <li>
-
-                            <span class="opener">
-
-                                <i class="icon solid fa-university menu-icon"
-                                   aria-hidden="true"></i>
-
-                                UoE E-Portfolio
-
-                            </span>
-
-
-                            <ul>
-
-                                <li>
-                                    <a href="/modules/understanding-ai.html">
-                                        Understanding Artificial Intelligence
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="/modules/launch-into-computing.html">
-                                        Launch Into Computing
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="/modules/numerical-analysis.html">
-                                        Numerical Analysis
-                                    </a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-                        <!-- SKILLS MATRIX -->
-
-                        <li>
-
-                            <a href="skills-matrix.html">
-
-                                <i class="icon solid fa-tasks menu-icon"
-                                   aria-hidden="true"></i>
-
-                                Skills Matrix
-
-                            </a>
-
-                        </li>
-
-
-
-                        <!-- ABOUT ME - CURRENT PAGE -->
-
-                        <li>
-
-                            <a href="about.html"
-                               aria-current="page">
-
-                                <i class="icon solid fa-user menu-icon"
-                                   aria-hidden="true"></i>
-
-                                About Me
-
-                            </a>
-
-                        </li>
-
-
-
-                        <!-- GITHUB -->
-
-                        <li>
-
-                            <a href="https://github.com/bwestlake"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                <i class="icon brands fa-github menu-icon"
-                                   aria-hidden="true"></i>
-
-                                GitHub
-
-                            </a>
-
-                        </li>
-
-
-
-                        <!-- LINKEDIN -->
-
-                        <li>
-
-                            <a href="https://www.linkedin.com/in/bernardwestlake/"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                <i class="icon brands fa-linkedin-in menu-icon"
-                                   aria-hidden="true"></i>
-
-                                LinkedIn
-
-                            </a>
-
-                        </li>
-
-
-                    </ul>
-
-
-                </nav>
-
-
-
-                <!-- =====================================
-                     COPYRIGHT FOOTER
-                ====================================== -->
-
-                <footer id="footer">
-
-
-                    <p class="copyright">
-
-                        &copy; 2026 Bernard Westlake.
-
-                        Design:
-                        <a href="https://html5up.net">
-                            HTML5 UP
-                        </a>.
-
-                    </p>
-
-
-                </footer>
-
+            <div class="focus-list">
+
+              <div class="focus-item">
+                <h3>Core Banking</h3>
+                <p>
+                  Modernisation of banking platforms, products and delivery.
+                </p>
+              </div>
+
+              <div class="focus-item">
+                <h3>Financial Technology</h3>
+                <p>
+                  Bringing business requirements and technical
+                  solutions together.
+                </p>
+              </div>
+
+              <div class="focus-item">
+                <h3>Responsible AI</h3>
+                <p>
+                  Explainability, evaluation and practical use
+                  of AI in banking.
+                </p>
+              </div>
 
             </div>
+          </section>
 
-        </div>
-
-
+        </main>
+      </div>
     </div>
 
+    <!-- SIDEBAR NAVIGATION -->
+    <div id="sidebar">
+      <div class="inner">
 
+        <nav id="menu" aria-label="Portfolio navigation">
+          <header class="major">
+            <h2>Navigation</h2>
+          </header>
 
-    <!-- =====================================
-         JAVASCRIPT
-    ====================================== -->
+          <ul>
+            <li>
+              <a href="index.html">
+                <i class="icon solid fa-home menu-icon"
+                   aria-hidden="true"></i>
+                Home
+              </a>
+            </li>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+            <li>
+              <span class="opener">
+                <i class="icon solid fa-university menu-icon"
+                   aria-hidden="true"></i>
+                UoE E-Portfolio
+              </span>
 
+              <ul>
+                <li>
+                  <a href="modules/understanding-ai.html">
+                    Understanding Artificial Intelligence
+                  </a>
+                </li>
+                <li>
+                  <a href="modules/launch-into-computing.html">
+                    Launch Into Computing
+                  </a>
+                </li>
+                <li>
+                  <a href="modules/numerical-analysis.html">
+                    Numerical Analysis
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="skills-matrix.html">
+                <i class="icon solid fa-tasks menu-icon"
+                   aria-hidden="true"></i>
+                Skills Matrix
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html" aria-current="page">
+                <i class="icon solid fa-user menu-icon"
+                   aria-hidden="true"></i>
+                About Me
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/bwestlake"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="icon brands fa-github menu-icon"
+                   aria-hidden="true"></i>
+                GitHub
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/bernardwestlake/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i class="icon brands fa-linkedin-in menu-icon"
+                   aria-hidden="true"></i>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- COPYRIGHT -->
+        <footer id="footer">
+          <p class="copyright">
+            &copy; 2026 Bernard Westlake.
+            Design:
+            <a href="https://html5up.net">HTML5 UP</a>.
+          </p>
+        </footer>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

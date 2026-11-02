@@ -1,271 +1,415 @@
 <!DOCTYPE HTML>
 <!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Editorial by HTML5 UP | html5up.net | CCA 3.0 license.
 -->
-<html>
-	<head>
-		<title>Bernard (Ben) Westlake | Artificial Intelligence e-Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bernard (Ben) Westlake — core banking transformation, financial technology and artificial intelligence portfolio." />
+  <title>Bernard (Ben) Westlake | Home</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <style>
+    /* Shared colours and typography from about.html */
+    :root {
+      --navy: #101f30;
+      --navy-soft: #182e43;
+      --teal: #67c5c1;
+      --white: #f7fafb;
+      --muted: #b4c5d0;
+      --line: rgba(224,242,246,.17);
+      --panel: #20364b;
+    }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+    html { scroll-behavior: smooth; }
+    body, #main { background: var(--navy); color: var(--white); }
+    #main > .inner { max-width: 1320px; }
+    #main h1, #main h2, #main h3, #main strong { color: var(--white); }
+    #main p { color: var(--muted); }
+    #main a { color: var(--teal); }
+    #main a:hover { color: var(--white); }
 
-							<!-- Header -->
-								<header id="header">
-									 <!-- <a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a> -->
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
-									</ul>
-								</header>
+    /* Same header treatment as About Me */
+    #header {
+      display: block;
+      padding: 4.5em 0 3.8em;
+      border-bottom: 1px solid var(--line);
+    }
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Bernard (Ben) Westlake</h1>
-											<p>Artificial Intelligence | e-Portfolio</p>
-										</header>
-										<p>
-											Welcome to my academic portfolio.
-										</p>
-										<p>
-											I am a banking technolgy and transformation professional,
-											specialising in core banking systems and technolgy delivery.
-										</p>
-										<p>
-											Currently, pursuing an MSc in Artificial Intelligence at
-											the University of Essex, while also working full time at
-											Accenture.
-										</p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-								</section>
+    .eyebrow {
+      color: var(--teal) !important;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-weight: 700;
+      font-size: .74rem;
+      margin: 0 0 1.6em;
+    }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Erat lacinia</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Portitor ullamcorper</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Sapien veroeros</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Quam lorem ipsum</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
-								</section>
+    #header h1 {
+      font-size: clamp(2.2rem,4vw,3.8rem);
+      line-height: 1.07;
+      letter-spacing: -.055em;
+      margin: 0;
+      font-weight: 700;
+    }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ipsum sed dolor</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
+    .hero-subtitle {
+      font-size: clamp(1rem,1.8vw,1.25rem);
+      line-height: 1.7;
+      margin: 1.5em 0 0;
+      max-width: 680px;
+    }
 
-						</div>
-					</div>
+    .hero-rule {
+      width: 72px;
+      height: 3px;
+      background: var(--teal);
+      margin-top: 2.5em;
+    }
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+    /* Consistent section headings and vertical rhythm */
+    .content-section {
+      padding: 4em 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 2em;
+    }
+    .content-section:last-child { border-bottom: 0; }
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
+    .section-kicker {
+      font-size: .75rem;
+      color: var(--teal) !important;
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-weight: 700;
+      margin: 0 0 .85em;
+    }
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Navigation</h2>
-									</header>
-									
-									<ul>
-										<li>
-											<a href="index.html">Home</a>
-										</li>
-										
-										<li>
-											<a href="about.html">About Me</a>
-										</li>
+    .section-heading {
+      font-size: clamp(1.65rem,2.8vw,2.5rem);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+      margin: 0 0 1em;
+    }
 
-										<li>
-											<span class="opener">UoE E-Portfolio</span>
-											<ul>
-												<li>
-													<a href="/modules/understanding-ai.html">
-														Understanding Artificial Intelligence
-													</a>
-												</li>
-												<li>
-													<a href="/modules/launch-into-computing.html">
-														Launch Into Computing
-													</a>
-												</li>
-												
-												<li>
-													<a href="/modules/numerical-analysis.html">
-														Numerical Analysis
-													</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="https://github.com/bwestlake">
-												GitHub
-											</a>
-										</li>
-									</ul>
-								</nav>
+    .section-copy p {
+      font-size: 1rem;
+      line-height: 1.95;
+      max-width: 75ch;
+      margin: 0 0 1.35em;
+    }
+    .section-copy p:last-child { margin-bottom: 0; }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section>
+    /* Home-specific links and navigation cards */
+    #main .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .65em;
+      margin-top: 1.5em;
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal);
+      padding-bottom: .25em;
+    }
+    #main .text-link:hover { border-bottom-color: var(--white); }
+    #main .text-link:focus-visible,
+    #main .portfolio-card a:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 5px;
+    }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
-									</ul>
-								</section>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 1.25em;
+      margin-top: 2.5em;
+    }
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+    .portfolio-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--teal);
+      padding: 1.8em;
+    }
 
-						</div>
-					</div>
+    .portfolio-card .card-icon {
+      color: var(--teal);
+      font-size: 1.45rem;
+      margin-bottom: 1.35em;
+    }
 
-			</div>
+    .portfolio-card h3 {
+      font-size: 1.1rem;
+      margin: 0 0 .75em;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    .portfolio-card p {
+      font-size: .9rem;
+      line-height: 1.8;
+      margin: 0 0 1.5em;
+    }
 
-	</body>
+    #main .portfolio-card a {
+      align-self: flex-start;
+      margin-top: auto;
+      font-size: .86rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal);
+      padding-bottom: .2em;
+    }
+    #main .portfolio-card a:hover { border-bottom-color: var(--white); }
+
+    /* Sidebar: same colours, icons and sticky footer as about.html */
+    #sidebar { background: #eaf0f2; }
+
+    #sidebar > .inner {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    #sidebar #menu { flex-shrink: 0; }
+
+    #sidebar header.major > :first-child {
+      border-bottom-color: #177f83;
+    }
+
+    #menu ul a, #menu ul span { color: #20344a; }
+
+    #menu ul a:hover,
+    #menu ul span.opener:hover,
+    #menu ul a[aria-current="page"] {
+      color: #177f83;
+    }
+
+    #menu ul a[aria-current="page"] { font-weight: 700; }
+
+    #menu .menu-icon {
+      display: inline-block;
+      width: 1.4em;
+      margin-right: .65em;
+      text-align: center;
+      color: #177f83;
+    }
+
+    #sidebar #footer {
+      margin-top: auto;
+      padding-top: 2em;
+      padding-bottom: 1em;
+    }
+
+    #sidebar #footer .copyright {
+      font-size: .74rem;
+      line-height: 1.7;
+    }
+
+    /* Responsive layout */
+    @media screen and (max-width: 980px) {
+      .portfolio-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+
+    @media screen and (max-width: 760px) {
+      #header { padding: 2.8em 0; }
+      .content-section { padding: 2.7em 0; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+  <div id="wrapper">
+
+    <!-- MAIN CONTENT -->
+    <div id="main">
+      <div class="inner">
+
+        <header id="header">
+          <p class="eyebrow">Professional &amp; Academic Portfolio</p>
+          <h1>Bernard (Ben) Westlake</h1>
+          <p class="hero-subtitle">
+            Core Banking Transformation <span aria-hidden="true">|</span>
+            Financial Technology <span aria-hidden="true">|</span>
+            Artificial Intelligence
+          </p>
+          <div class="hero-rule" aria-hidden="true"></div>
+        </header>
+
+        <main id="page-content">
+
+          <!-- INTRODUCTION -->
+          <section class="content-section" id="introduction">
+            <p class="section-kicker">01 / Introduction</p>
+            <h2 class="section-heading">Welcome</h2>
+
+            <div class="section-copy">
+              <p>
+                I am a banking technology and transformation professional,
+                specialising in core banking systems and technology delivery.
+                I currently work as a Delivery Lead Manager at Accenture UK
+                while studying towards an MSc in Artificial Intelligence
+                through the University of Essex Online.
+              </p>
+              <p>
+                This portfolio brings together my academic work, technical
+                projects and developing skills, with a particular focus on
+                the application of artificial intelligence in financial services.
+              </p>
+            </div>
+
+            <a class="text-link" href="about.html">
+              More about me <span aria-hidden="true">&rarr;</span>
+            </a>
+          </section>
+
+          <!-- PORTFOLIO NAVIGATION -->
+          <section class="content-section" id="explore">
+            <p class="section-kicker">02 / Explore</p>
+            <h2 class="section-heading">Explore the Portfolio</h2>
+
+            <div class="section-copy">
+              <p>
+                Explore my University of Essex learning portfolio, practical
+                projects and technical skills.
+              </p>
+            </div>
+
+            <div class="portfolio-grid">
+              <article class="portfolio-card">
+                <i class="icon solid fa-university card-icon" aria-hidden="true"></i>
+                <h3>UoE E-Portfolio</h3>
+                <p>
+                  Module overviews, formative activities, assessed work
+                  and reflections from my MSc in Artificial Intelligence.
+                </p>
+                <a href="modules/understanding-ai.html">
+                  Explore modules <span aria-hidden="true">&rarr;</span>
+                </a>
+              </article>
+
+              <article class="portfolio-card">
+                <i class="icon solid fa-laptop-code card-icon" aria-hidden="true"></i>
+                <h3>Projects</h3>
+                <p>
+                  Practical projects exploring core banking technology,
+                  intelligent systems and financial services innovation.
+                </p>
+                <a href="projects/core-banking-intelligence.html">
+                  View projects <span aria-hidden="true">&rarr;</span>
+                </a>
+              </article>
+
+              <article class="portfolio-card">
+                <i class="icon solid fa-tasks card-icon" aria-hidden="true"></i>
+                <h3>Skills Matrix</h3>
+                <p>
+                  An overview of technical, analytical and professional
+                  skills developed through academic study and industry experience.
+                </p>
+                <a href="skills-matrix.html">
+                  View skills <span aria-hidden="true">&rarr;</span>
+                </a>
+              </article>
+            </div>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- SIDEBAR NAVIGATION: mirrors about.html -->
+    <div id="sidebar">
+      <div class="inner">
+
+        <nav id="menu" aria-label="Portfolio navigation">
+          <header class="major">
+            <h2>Navigation</h2>
+          </header>
+
+          <ul>
+            <li>
+              <a href="index.html" aria-current="page">
+                <i class="icon solid fa-home menu-icon" aria-hidden="true"></i>
+                Home
+              </a>
+            </li>
+
+            <li>
+              <span class="opener">
+                <i class="icon solid fa-university menu-icon" aria-hidden="true"></i>
+                UoE E-Portfolio
+              </span>
+              <ul>
+                <li><a href="modules/understanding-ai.html">Understanding Artificial Intelligence</a></li>
+                <li><a href="modules/launch-into-computing.html">Launch Into Computing</a></li>
+                <li><a href="modules/numerical-analysis.html">Numerical Analysis</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="opener">
+                <i class="icon solid fa-laptop-code menu-icon" aria-hidden="true"></i>
+                Projects
+              </span>
+              <ul>
+                <li><a href="projects/core-banking-intelligence.html">Core Banking Intelligence Digest</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="skills-matrix.html">
+                <i class="icon solid fa-tasks menu-icon" aria-hidden="true"></i>
+                Skills Matrix
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html">
+                <i class="icon solid fa-user menu-icon" aria-hidden="true"></i>
+                About Me
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/bwestlake" target="_blank" rel="noopener noreferrer">
+                <i class="icon brands fa-github menu-icon" aria-hidden="true"></i>
+                GitHub
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/bernardwestlake/" target="_blank" rel="noopener noreferrer">
+                <i class="icon brands fa-linkedin-in menu-icon" aria-hidden="true"></i>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <footer id="footer">
+          <p class="copyright">
+            &copy; 2026 Bernard Westlake.
+            Design: <a href="https://html5up.net">HTML5 UP</a>.
+          </p>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT: same scripts and paths as about.html -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -784,6 +784,132 @@
             }
         }
 
+        
+            /* ==========================================
+               VERSION HISTORY — EXPANDABLE RELEASES
+            ========================================== */
+            
+            .version-history-section {
+                margin-top: 3.3em;
+                padding-top: 3.3em;
+                border-top: 1px solid var(--line);
+                scroll-margin-top: 2em;
+            }
+            
+            /* DROPDOWN LIST */
+            
+            .version-history-list {
+                display: grid;
+                gap: 1em;
+                margin-top: 1.8em;
+            }
+            
+            /* INDIVIDUAL RELEASE */
+            
+            .version-release {
+                background: var(--navy-soft);
+                border: 1px solid var(--line);
+                border-radius: 0.45em;
+                overflow: hidden;
+            }
+            
+            /* CLICKABLE HEADER */
+            
+            .version-release > summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1em;
+                padding: 1.35em 1.5em;
+                cursor: pointer;
+                list-style: none;
+            }
+            
+            .version-release > summary::-webkit-details-marker {
+                display: none;
+            }
+            
+            /* EXPAND / COLLAPSE ICON */
+            
+            .version-release > summary::after {
+                content: '+';
+                flex: none;
+                color: var(--teal);
+                font-size: 1.6rem;
+                line-height: 1;
+            }
+            
+            .version-release[open] > summary::after {
+                content: '\2212';
+            }
+            
+            .version-release[open] > summary {
+                background: var(--panel);
+            }
+            
+            .version-release > summary:focus-visible {
+                outline: 2px solid var(--teal);
+                outline-offset: -3px;
+            }
+            
+            /* VERSION TITLE */
+            
+            .version-release-title {
+                display: block;
+                color: var(--white);
+                font-weight: 700;
+                line-height: 1.5;
+            }
+            
+            /* STATUS LABEL */
+            
+            .version-release-status {
+                display: block;
+                margin-top: 0.35em;
+                color: var(--teal);
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+            }
+            
+            .version-release-status.planned {
+                color: var(--muted);
+            }
+            
+            /* EXPANDED CONTENT */
+            
+            .version-release-content {
+                padding: 1.5em;
+                border-top: 1px solid var(--line);
+            }
+            
+            /* DETAIL SECTIONS */
+            
+            .version-detail {
+                margin-bottom: 1.35em;
+            }
+            
+            .version-detail:last-child {
+                margin-bottom: 0;
+            }
+            
+            .version-detail h3 {
+                font-size: 0.98rem;
+                margin: 0 0 0.45em;
+            }
+            
+            .version-detail p {
+                font-size: 0.91rem;
+                line-height: 1.8;
+                margin: 0;
+            }
+            
+            .version-detail a {
+                display: inline-block;
+                margin-top: 0.45em;
+            }
+
     </style>
 
 </head>
@@ -1684,6 +1810,276 @@
 
                         </div>
 
+<!-- =====================================
+     07 VERSION HISTORY
+===================================== -->
+
+<section class="version-history-section"
+         id="version-history"
+         aria-labelledby="version-history-title">
+
+    <p class="section-kicker">
+        07 / Release Documentation
+    </p>
+
+    <h2 class="section-heading"
+        id="version-history-title">
+        Version History
+    </h2>
+
+    <p class="section-intro">
+        Explore each release to see the problem
+        addressed, the technical changes, testing
+        evidence and lessons learned. Planned
+        releases describe proposals rather than
+        completed functionality.
+    </p>
+
+    <div class="version-history-list">
+
+        <!-- =====================================
+             V1.0 — COMPLETED
+        ===================================== -->
+
+        <details class="version-release" open>
+
+            <summary>
+                <span>
+                    <span class="version-release-title">
+                        V1.0 — Initial Deployment
+                    </span>
+
+                    <span class="version-release-status">
+                        Completed · October 2026
+                    </span>
+                </span>
+            </summary>
+
+            <div class="version-release-content">
+
+                <div class="version-detail">
+                    <h3>The problem</h3>
+                    <p>
+                        Monitoring multiple core banking
+                        news sources manually was
+                        time-consuming. I wanted a
+                        consistent daily briefing.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>What I implemented</h3>
+                    <p>
+                        Google News RSS collection, 24-hour
+                        publication-date filtering, duplicate
+                        removal within each run and a daily
+                        email digest.
+
+                        No-news messages and feed-unavailable
+                        warnings handle different outcomes.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Technical decisions</h3>
+                    <p>
+                        Used Python, Google Colab for initial
+                        development, GitHub Actions for
+                        execution and Gmail SMTP for delivery.
+
+                        Stored email credentials in private
+                        GitHub repository secrets.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Testing and validation</h3>
+                    <p>
+                        Twelve automated unit tests,
+                        successful manual GitHub Actions
+                        execution and confirmation
+                        of email receipt.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Lessons learned</h3>
+                    <p>
+                        Moving from a development notebook
+                        to a cloud workflow, troubleshooting
+                        email authentication and distinguishing
+                        no-news results from source failures.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Supporting evidence</h3>
+                    <p>
+                        <a href="#testing">
+                            View V1.0 test results, email
+                            output and deployment screenshots
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </details>
+
+
+        <!-- =====================================
+             V1.1 — PLANNED
+        ===================================== -->
+
+        <details class="version-release">
+
+            <summary>
+                <span>
+                    <span class="version-release-title">
+                        V1.1 — Historical Tracking &amp;
+                        Adaptive Research
+                    </span>
+
+                    <span class="version-release-status planned">
+                        Planned
+                    </span>
+                </span>
+            </summary>
+
+            <div class="version-release-content">
+
+                <div class="version-detail">
+                    <h3>The problem</h3>
+                    <p>
+                        V1.0 removes duplicate headlines
+                        within a run but does not remember
+                        which stories appeared in
+                        earlier briefings.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Proposed improvements</h3>
+                    <p>
+                        Persist article history to reduce
+                        cross-day repetition.
+
+                        Explore AI-assisted decisions about
+                        which significant developments merit
+                        controlled follow-up research.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Technical implementation</h3>
+                    <p>
+                        To be documented after development:
+                        chosen storage approach, article
+                        identifiers, research tools,
+                        decision criteria and safeguards.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Planned testing</h3>
+                    <p>
+                        Verify that previously reported
+                        stories are excluded, newly published
+                        stories remain eligible and any
+                        follow-up research stays within
+                        defined limits.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Evidence and lessons</h3>
+                    <p>
+                        Add actual test results, screenshots
+                        and lessons learned when V1.1
+                        has been implemented.
+                    </p>
+                </div>
+
+            </div>
+
+        </details>
+
+
+        <!-- =====================================
+             V2.0 — PLANNED
+        ===================================== -->
+
+        <details class="version-release">
+
+            <summary>
+                <span>
+                    <span class="version-release-title">
+                        V2.0 — AI-Powered Intelligence
+                    </span>
+
+                    <span class="version-release-status planned">
+                        Planned
+                    </span>
+                </span>
+            </summary>
+
+            <div class="version-release-content">
+
+                <div class="version-detail">
+                    <h3>The problem</h3>
+                    <p>
+                        Headlines identify developments
+                        but do not always explain why
+                        they matter to banking
+                        technology professionals.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Proposed improvements</h3>
+                    <p>
+                        Introduce LLM-generated summaries
+                        and contextual analysis of the
+                        implications for banks, vendors
+                        and implementation partners.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Technical implementation</h3>
+                    <p>
+                        Document the model, prompt design,
+                        data flow, source-grounding method
+                        and cost controls when implemented.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Planned evaluation</h3>
+                    <p>
+                        Assess factual accuracy, relevance,
+                        source attribution and the handling
+                        of uncertain or incomplete reporting.
+                    </p>
+                </div>
+
+                <div class="version-detail">
+                    <h3>Evidence and lessons</h3>
+                    <p>
+                        Add actual before-and-after briefing
+                        examples and evaluation results
+                        when V2.0 is complete.
+                    </p>
+                </div>
+
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
 
                         <!-- DEVELOPMENT DISCLOSURE -->
 
@@ -1918,11 +2314,21 @@
                                         <li>
 
                                             <a href="#reflection">
-
                                                 Lessons Learned
-
                                             </a>
 
+                                        </li>
+                                        
+                                        <!-- VERSION HISTORY -->
+                                        
+                                        <li>
+                                        
+                                            <a href="#version-history">
+                                        
+                                                Version History
+                                        
+                                            </a>
+                                        
                                         </li>
 
 

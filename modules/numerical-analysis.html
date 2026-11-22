@@ -281,6 +281,282 @@
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
         }
+
+        
+/* ==========================================
+   NUMERICAL ANALYSIS — LEARNING ACTIVITIES
+   ========================================== */
+
+/* Two-column layout */
+
+#formative-assessments .formative-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 1.4rem;
+}
+
+
+/* Card appearance */
+
+#formative-assessments .formative-card {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  min-height: 0;
+
+  padding: 1.5rem;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  background: var(--paper);
+
+  box-shadow: 0 3px 12px rgba(32, 52, 74, 0.05);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+
+/* Hover effect */
+
+#formative-assessments .formative-card:hover {
+  transform: translateY(-3px);
+  border-color: #b9d6d7;
+
+  box-shadow:
+    0 9px 24px rgba(32, 52, 74, 0.10);
+}
+
+
+/* Unit number */
+
+#formative-assessments .unit-number {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: var(--teal);
+
+  font-size: 0.76rem;
+  line-height: 1.5;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+}
+
+
+/* Unit title */
+
+#formative-assessments .unit-title {
+  margin: 0 0 0.35rem;
+
+  color: var(--navy);
+
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+
+/* Optional subtitle */
+
+#formative-assessments .unit-subtitle {
+  margin: 0 0 0.8rem;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+
+/* Main card content */
+
+#formative-assessments .unit-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0 0 1rem;
+}
+
+#formative-assessments .unit-description {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-size: 0.89rem;
+  line-height: 1.65;
+}
+
+
+/* R visualisation thumbnails */
+
+#formative-assessments .unit-chart {
+  margin: 1rem 0 0;
+  padding: 0.5rem;
+
+  border: 1px solid #e8eef1;
+  border-radius: 9px;
+
+  background: #fff;
+  min-width: 0;
+}
+
+#formative-assessments .unit-chart img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+
+  object-fit: contain;
+}
+
+#formative-assessments .unit-chart figcaption {
+  margin: 0.3rem 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.68rem;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* Topic tags */
+
+#formative-assessments .unit-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+#formative-assessments .unit-tags span {
+  display: inline-block;
+
+  padding: 0.2rem 0.65rem;
+
+  border-radius: 6px;
+
+  background: #e2f1f1;
+  color: #15595e;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+
+/* Activity and reflection links */
+
+#formative-assessments .unit-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  column-gap: 1.15rem;
+  row-gap: 0.55rem;
+
+  padding-top: 0.8rem;
+
+  border-top: 1px solid var(--line);
+}
+
+#formative-assessments .unit-links a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.38rem;
+  margin: 0;
+  padding: 0 0 0.12rem;
+
+  color: var(--teal);
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.82rem;
+  line-height: 1.45;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+#formative-assessments .unit-links a:hover,
+#formative-assessments .unit-links a:focus-visible {
+  color: var(--navy);
+}
+
+#formative-assessments .unit-links a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+#formative-assessments .unit-links .icon {
+  font-size: 0.9rem;
+}
+
+
+/* Charts beside text on sufficiently wide cards */
+
+@container (min-width: 500px) {
+
+  #formative-assessments .unit-content--visual {
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(165px, 0.95fr);
+
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  #formative-assessments
+  .unit-content--visual .unit-chart {
+    margin: 0;
+  }
+
+}
+
+
+/* Mobile layout */
+
+@media screen and (max-width: 700px) {
+
+  #formative-assessments .formative-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #formative-assessments .formative-card {
+    padding: 1.2rem;
+  }
+
+}
+
+
+/* Accessibility: reduce animations if preferred */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #formative-assessments .formative-card {
+    transition: none;
+  }
+
+  #formative-assessments .formative-card:hover {
+    transform: none;
+  }
+
+}
+
     </style>
 </head>
 
@@ -338,121 +614,263 @@
                     </section>
 
                     <!-- SECTION 3: TWELVE FORMATIVE ASSESSMENTS -->
-                    <section class="content-section" id="formative-assessments" aria-labelledby="formative-title">
-                        <h2 class="section-heading" id="formative-title">Learning Activities</h2>
-                        <p class="section-intro">
-                            Practical exercises and learning activities completed across the twelve units.
-                            PDF links are placeholders until the corresponding files are uploaded.
-                        </p>
-                        <div class="formative-grid">
-                            <!-- Replace each href with the actual file path if different. -->
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 01</span>
-                                <h3>Unit 1</h3>
-                                <p>Types and Sources of Data and an Introduction to R: This activity introduces exploratory data 
-                                    analysis in R, examining the structure and characteristics of a COVID-19 dataset covering Indian 
-                                    States and Union Territories. R commands are used to identify variable types, count observations, 
-                                    determine the reporting period and identify the states with the highest reporting frequency.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-01.pdf">View activity &rarr;</a>
-                         <a class="artefact-link" href="/artefacts/NA-unit-01-reflection.pdf">View reflection &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 02</span>
-                                <h3>Unit 2</h3>
-                                <p>Data Structures in R: This activity explores the use of frequency tables, percentage calculations 
-                                    and binary variables in R to analyse COVID-19 recovery reporting patterns. The analysis 
-                                    distinguishes between daily state-level reports with and without recorded recoveries, using 
-                                    labelled categories to improve the interpretation and presentation of results.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-02.pdf">View activity &rarr;</a>
-                                <a class="artefact-link" href="/artefacts/NA-unit-02-reflection.pdf">View reflection &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 03</span>
-                                <h3>Unit 3</h3>
-                                <p>Data Management in R: This activity explores the use of 
-                                    binary and categorical variables in R to analyse COVID-19 
-                                    reporting patterns across Indian States and Union 
-                                    Territories. Frequency tables are used to examine death 
-                                    reporting, case classifications and state-level reporting 
-                                    frequencies.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-03.pdf">View activity &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 04</span>
-                                <h3>Unit 4</h3>
-                                <p>Probabilities, Probability Distributions, and Sampling: This unit introduces probability and its importance in statistical analysis and 
-                                    decision-making under uncertainty. The unit explores fundamental probability rules, discrete and continuous probability distributions, 
-                                    and their application to business problems. It also examines key sampling techniques, including simple random, stratified, systematic 
-                                    and cluster sampling, highlighting how representative samples support statistical inference and the generalisation of findings to wider 
-                                    populations.</p>
-                               <!-- <a class="artefact-link" href="/artefacts/NA-unit-04.pdf">View activity &rarr;</a> -->
-                                <a class="artefact-link" href="/artefacts/NA-unit-04-reflection.pdf">View reflection & seminar questions &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 05</span>
-                                <h3>Unit 5</h3>
-                                <p>Data Visualisation in R: This activity explores the use of 
-                                    plotting functions in R to visualise COVID-19 reporting 
-                                    patterns across Indian States and Union Territories. Bar 
-                                    charts, pie charts, histograms and line graphs are used 
-                                    to examine reporting frequencies, case severity, 
-                                    recoveries and trends over time.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-05.pdf">View activity &rarr;</a>
-                                <a class="artefact-link" href="/artefacts/NA-unit-05-reflection.pdf">View reflection &rarr;</a>
-                                <a class="artefact-link" href="/artefacts/NA-collaborative-intial-post.pdf">Collaborative Discussion Initial 
-                                    Post &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 06</span>
-                                <h3>Unit 6</h3>
-                                <p>Statistical Inference and Hypothesis Testing: This unit explores the principles of inferential 
-                                    statistics and their application to decision-making under uncertainty. Key topics include the normal 
-                                    distribution, confidence intervals, test statistics, and the formulation of null and alternative 
-                                    hypotheses. The unit also examines the interpretation of p-values and statistical significance when 
-                                    evaluating hypotheses and drawing conclusions about wider populations.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-06.pdf">View statistics test &rarr;</a>
-                                <a class="artefact-link" href="/artefacts/NA-unit-06-reflection.pdf">View reflection &rarr;</a>
-                                <a class="artefact-link" href="/artefacts/NA-collaborative-peer-post.pdf">Collaborative Discussion Peer 
-                                    Response &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 07</span>
-                                <h3>Unit 7</h3>
-                                <p>Assessment content to be added.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-07.pdf">View activity &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 08</span>
-                                <h3>Unit 8</h3>
-                                <p>Assessment content to be added.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-08.pdf">View activity &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 09</span>
-                                <h3>Unit 9</h3>
-                                <p>Assessment content to be added.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-09.pdf">View activity &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 10</span>
-                                <h3>Unit 10</h3>
-                                <p>Assessment content to be added.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-10.pdf">View activity &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 11</span>
-                                <h3>Unit 11</h3>
-                                <p>Assessment content to be added.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-11.pdf">View activity &rarr;</a>
-                            </article>
-                            <article class="artefact-card formative-card">
-                                <span class="artefact-type">Formative Assessment 12</span>
-                                <h3>Unit 12</h3>
-                                <p>Assessment content to be added.</p>
-                                <a class="artefact-link" href="/artefacts/NA-unit-12.pdf">View activity &rarr;</a>
-                            </article>
-                        </div>
-                    </section>
+                    <!-- LEARNING ACTIVITIES -->
+<section class="content-section"
+         id="formative-assessments"
+         aria-labelledby="formative-title">
+
+  <h2 class="section-heading" id="formative-title">
+    Learning Activities
+  </h2>
+
+  <p class="section-intro">
+    Practical exercises, reflections and statistical analyses
+    developed throughout the Numerical Analysis module using R.
+  </p>
+
+  <div class="formative-grid">
+
+    <!-- UNIT 01 -->
+    <article class="artefact-card formative-card">
+
+      <span class="unit-number">Unit 01</span>
+
+      <h3 class="unit-title">
+        Exploring COVID-19 Data
+      </h3>
+
+      <p class="unit-subtitle">
+        Types and Sources of Data and an Introduction to R
+      </p>
+
+      <div class="unit-content">
+        <p class="unit-description">
+          Explore a COVID-19 dataset covering Indian States
+          and Union Territories, using R to inspect variables,
+          observations and reporting dates.
+        </p>
+      </div>
+
+      <div class="unit-tags">
+        <span>R</span>
+        <span>Data exploration</span>
+      </div>
+
+      <div class="unit-links">
+        <a href="/artefacts/NA-unit-01.pdf">
+          <i class="icon regular fa-file-alt"></i>
+          Activity
+        </a>
+
+        <a href="/artefacts/NA-unit-01-reflection.pdf">
+          <i class="icon solid fa-book-open"></i>
+          Reflection
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- UNIT 02 -->
+    <article class="artefact-card formative-card">
+
+      <span class="unit-number">Unit 02</span>
+
+      <h3 class="unit-title">
+        Data Structures in R
+      </h3>
+
+      <div class="unit-content">
+        <p class="unit-description">
+          Use frequency tables, percentages and binary
+          variables to examine recovery reporting patterns
+          within the COVID-19 dataset.
+        </p>
+      </div>
+
+      <div class="unit-tags">
+        <span>R</span>
+        <span>Data structures</span>
+      </div>
+
+      <div class="unit-links">
+        <a href="/artefacts/NA-unit-02.pdf">
+          <i class="icon regular fa-file-alt"></i>
+          Activity
+        </a>
+
+        <a href="/artefacts/NA-unit-02-reflection.pdf">
+          <i class="icon solid fa-book-open"></i>
+          Reflection
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- UNIT 03 -->
+    <article class="artefact-card formative-card">
+
+      <span class="unit-number">Unit 03</span>
+
+      <h3 class="unit-title">
+        Data Management in R
+      </h3>
+
+      <div class="unit-content unit-content--visual">
+
+        <p class="unit-description">
+          Create binary and categorical variables to
+          analyse mortality reporting, case classifications
+          and reporting frequency by state.
+        </p>
+
+        <figure class="unit-chart">
+          <img
+            src="/images/numerical-analysis/unit03-state-frequency.svg"
+            alt="COVID-19 reporting frequency by Indian state"
+            loading="lazy"
+          />
+          <figcaption>
+            Selected reporting frequencies
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="unit-tags">
+        <span>R</span>
+        <span>Data management</span>
+      </div>
+
+      <div class="unit-links">
+        <a href="/artefacts/NA-unit-03.pdf">
+          <i class="icon regular fa-file-alt"></i>
+          Activity
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- UNIT 04 -->
+    <article class="artefact-card formative-card">
+
+      <span class="unit-number">Unit 04</span>
+
+      <h3 class="unit-title">
+        Probability &amp; Sampling
+      </h3>
+
+      <div class="unit-content">
+        <p class="unit-description">
+          Study probability rules, discrete and continuous
+          distributions, and sampling techniques used to draw
+          conclusions about wider populations.
+        </p>
+      </div>
+
+      <div class="unit-tags">
+        <span>Probability</span>
+        <span>Sampling</span>
+      </div>
+
+      <!-- Add links here when files are available -->
+
+    </article>
+
+
+    <!-- UNIT 05 -->
+    <article class="artefact-card formative-card">
+
+      <span class="unit-number">Unit 05</span>
+
+      <h3 class="unit-title">
+        Data Visualisation in R
+      </h3>
+
+      <div class="unit-content unit-content--visual">
+
+        <p class="unit-description">
+          Build and interpret bar charts, pie charts,
+          histograms and time-series plots to communicate
+          COVID-19 reporting patterns.
+        </p>
+
+        <figure class="unit-chart">
+          <img
+            src="/images/numerical-analysis/unit05-confirmed-trend.svg"
+            alt="COVID-19 confirmed cases by date"
+            loading="lazy"
+          />
+          <figcaption>
+            Confirmed cases over time
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="unit-tags">
+        <span>R</span>
+        <span>ggplot2</span>
+        <span>Visualisation</span>
+      </div>
+
+      <div class="unit-links">
+
+        <a href="/artefacts/NA-unit-05.pdf">
+          <i class="icon regular fa-file-alt"></i>
+          Activity
+        </a>
+
+        <a href="/artefacts/NA-unit-05-reflection.pdf">
+          <i class="icon solid fa-book-open"></i>
+          Reflection
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- UNIT 06 -->
+    <article class="artefact-card formative-card">
+
+      <span class="unit-number">Unit 06</span>
+
+      <h3 class="unit-title">
+        Statistical Inference
+      </h3>
+
+      <p class="unit-subtitle">
+        Hypothesis Testing
+      </p>
+
+      <div class="unit-content">
+        <p class="unit-description">
+          Explore confidence intervals, null and alternative
+          hypotheses, statistical significance and p-values
+          in decision-making under uncertainty.
+        </p>
+      </div>
+
+      <div class="unit-tags">
+        <span>Inference</span>
+        <span>Hypothesis testing</span>
+      </div>
+
+      <div class="unit-links">
+        <a href="/artefacts/NA-unit-06.pdf">
+          <i class="icon regular fa-file-alt"></i>
+          Statistics test
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+</section>
+
 
                     <!-- SECTION 4: TWO MODULE ASSIGNMENT PLACEHOLDERS -->
                     <section class="content-section" id="artefacts" aria-labelledby="artefacts-title">
